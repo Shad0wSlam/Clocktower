@@ -1,0 +1,735 @@
+[
+    {
+        "id": "_meta",
+        "name": "Homebrew Characters Library",
+        "author": "ShadowSlam"
+    },
+    {
+        "id": "thanatologist_shadowslam",
+        "name": "Thanatologist",
+        "team": "townsfolk",
+        "firstNight": 54,
+        "otherNight": 72,
+        "reminders": [
+            "Known"
+        ],
+        "setup": false,
+        "ability": "You start knowing a player. Each night*, if they died today or tonight, learn their character type and know a new player.",
+        "jinxes": [],
+        "special": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/thanatologist.png"
+        ]
+    },
+    {
+        "id": "cloudchaser_shadowslam",
+        "name": "Cloudchaser",
+        "team": "townsfolk",
+        "firstNight": 54,
+        "otherNight": 0,
+        "reminders": [
+            "?",
+            "?"
+        ],
+        "setup": false,
+        "ability": "You start knowing info. Each day, you may choose to learn 1 word relating to it or learn new info.",
+        "jinxes": [],
+        "special": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/cloudchaser.png",
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/evil/cloudchaser.png"
+        ]
+    },
+    {
+        "id": "jester_shadowslam",
+        "name": "Jester",
+        "team": "townsfolk",
+        "firstNight": 12,
+        "otherNight": 7,
+        "reminders": [
+            "Used Ability"
+        ],
+        "setup": true,
+        "ability": "You start knowing the Demon token. Demons & Minions learn false info & characters. When you die, or each night* you may, inform them of their characters.",
+        "jinxes": [],
+        "special": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/jester.png"
+        ]
+    },
+    {
+        "id": "hierophant_shadowslam",
+        "name": "Hierophant",
+        "team": "townsfolk",
+        "ability": "Each night, choose a player: learn 2 players, 1 they should consider & 1 they should not.",
+        "firstNight": 65,
+        "otherNight": 83,
+        "reminders": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/hierophant.png",
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/evil/hierophant.png"
+        ],
+        "setup": false
+    },
+    {
+        "id": "ahimsa_shadowslam",
+        "name": "Ahimsa",
+        "team": "townsfolk",
+        "ability": "Each night, you may choose 2 other players: while you have chosen equal good & evil players, all are safe from evil player's abilities.",
+        "firstNight": 22,
+        "otherNight": 10,
+        "reminders": [
+            "Chosen",
+            "Chosen",
+            "Chosen",
+            "Chosen",
+            "Chosen",
+            "Chosen",
+            "Chosen",
+            "Chosen"
+        ],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/ahimsa.png"
+        ],
+        "setup": false
+    },
+    {
+        "id": "convive_shadowslam",
+        "name": "Convive",
+        "team": "townsfolk",
+        "firstNightReminder": "The Convive points at a player. Indicate the direction of that player's closest Outsider from that player. If that player is the Drunk, additionally show the Drunk token and remove the 'is the Drunk' reminder token from them.",
+        "otherNightReminder": "The Convive points at a player. Indicate the direction of that player's closest Outsider from that player. If that player is the Drunk, additionally show the Drunk token and remove the 'is the Drunk' reminder token from them.",
+        "firstNight": 33,
+        "otherNight": 42,
+        "setup": true,
+        "ability": "Each night, choose a player: learn the direction of their closest Outsider. If they are the Drunk, learn this & they get true info, even if dead. [+the Drunk]",
+        "jinxes": [],
+        "special": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/convive.png"
+        ]
+    },
+    {
+        "id": "ordinator_shadowslam",
+        "name": "Ordinator",
+        "team": "townsfolk",
+        "firstNight": 0,
+        "otherNight": 71,
+        "reminders": [
+            "Voted",
+            "Voted",
+            "Voted",
+            "Voted",
+            "Voted"
+        ],
+        "setup": false,
+        "ability": "Each night*, learn the amount of evil players who voted on today's execution.",
+        "jinxes": [],
+        "special": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/ordinator.png"
+        ]
+    },
+    {
+        "id": "wandering_shadowslam",
+        "name": "Wandering",
+        "team": "townsfolk",
+        "firstNight": 54,
+        "otherNight": 74,
+        "setup": false,
+        "ability": "Each night*, learn if you were mad as an in-play character today, unless you have been mad as the Wandering.",
+        "jinxes": [],
+        "special": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/wandering.png"
+        ]
+    },
+    {
+        "id": "looking_glass_shadowslam",
+        "name": "Looking Glass",
+        "team": "townsfolk",
+        "firstNight": 0,
+        "otherNight": 74,
+        "setup": false,
+        "ability": "Each night*, learn the alignment of a player you were mad is evil today, unless you have been mad you were the Looking Glass.",
+        "jinxes": [],
+        "special": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/looking_glass.png"
+        ]
+    },
+    {
+        "id": "somnologist_shadowslam",
+        "name": "Somnologist",
+        "team": "townsfolk",
+        "firstNight": 1,
+        "otherNight": 1,
+        "setup": false,
+        "ability": "Each day, you may tell the Storyteller a statement about the game. If they agree & you die tonight, it becomes true.",
+        "jinxes": [],
+        "special": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/somnologist.png"
+        ]
+    },
+    {
+        "id": "hatsmith_shadowslam",
+        "name": "Hatsmith",
+        "team": "townsfolk",
+        "firstNight": 0,
+        "otherNight": 4,
+        "reminders": [
+            "No Ability"
+        ],
+        "setup": false,
+        "ability": "Once per game, at night*, choose a player and a Minion character: if not a Demon and not in-play, they become it.",
+        "jinxes": [
+            {
+                "id": "lil_monsta",
+                "reason": "Minions created by a Hatsmith do not wake to decide Lil Monsta's babysitter."
+            },
+            {
+                "id": "hatter",
+                "reason": "If the Hatter ability activates, Minions created by a Hatsmith do not wake with other Minions & Demons."
+            },
+            {
+                "id": "poppygrower",
+                "reason": "Minions created by a Hatsmith do not wake with other Minions & Demons for the Poppygrower ability."
+            }
+        ],
+        "special": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/hatsmith.png"
+        ]
+    },
+    {
+        "id": "highlander_shadowslam",
+        "name": "Highlander",
+        "team": "townsfolk",
+        "firstNight": 0,
+        "otherNight": 50,
+        "reminders": [
+            "Minion Dies"
+        ],
+        "setup": true,
+        "ability": "When you are executed, if another Highlander & a Minion live, you survive & a Minion dies tonight. [+0 to +2 Highlanders]",
+        "jinxes": [],
+        "special": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/highlander.png"
+        ]
+    },
+    {
+        "id": "mercenary_shadowslam",
+        "name": "Mercenary",
+        "team": "townsfolk",
+        "firstNightReminder": "Take a player selection from the demon",
+        "otherNightReminder": "If the Mercenary died in the night, show the player.",
+        "firstNight": 4,
+        "otherNight": 0,
+        "reminders": [
+            "Target"
+        ],
+        "setup": false,
+        "ability": "The Demon starts knowing a good player. If they die, good wins. If you die at night, learn them.",
+        "jinxes": [
+            {
+                "id": "summoner",
+                "reason": "The Summoner knows a good player instead of the Demon. They cannot choose that player for their ability."
+            },
+            {
+                "id": "snake_charmer",
+                "reason": "If the good Snake Charmer becomes a Demon, they learn a player for the Mercenary ability that night, replacing the previous player."
+            }
+        ],
+        "special": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/mercenary.png"
+        ]
+    },
+    {
+        "id": "anarchist_shadowslam",
+        "name": "Anarchist",
+        "team": "townsfolk",
+        "firstNight": 18,
+        "otherNight": 7,
+        "reminders": [
+            "Drunk"
+        ],
+        "setup": true,
+        "ability": "A player is drunk, even if dead. Each night, choose a player: they are safe from you. [1 Townsfolk is evil & knows the Demon, -1 Minion]",
+        "jinxes": [],
+        "special": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/anarchist.png",
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/evil/anarchist.png"
+        ]
+    },
+    {
+        "id": "poppymonger_shadowslam",
+        "name": "Poppymonger",
+        "team": "townsfolk",
+        "firstNight": 0,
+        "otherNight": 0,
+        "reminders": [
+            "Drunk",
+            "Has Ability"
+        ],
+        "setup": false,
+        "ability": "Your closest Minion neighbour is drunk, even if you died in the night. They learn if they are no longer drunk due to you.",
+        "jinxes": [],
+        "special": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/poppymonger.png"
+        ]
+    },
+    {
+        "id": "ill_omen_shadowslam",
+        "name": "Ill Omen",
+        "team": "outsider",
+        "firstNight": 54,
+        "otherNight": 0,
+        "reminders": [
+            "Omen",
+            "Omen",
+            "Omen"
+        ],
+        "setup": false,
+        "ability": "You start knowing good players equal to the base Minion count. If any live as good on the final day, your team loses, even if you are dead.",
+        "jinxes": [],
+        "special": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/ill_omen.png"
+        ]
+    },
+    {
+        "id": "gubbin_shadowslam",
+        "name": "Gubbin",
+        "team": "outsider",
+        "firstNight": 11,
+        "firstNightReminder": "Something happens tonight or today.",
+        "otherNight": 69,
+        "otherNightReminder": "Something happens tonight or today. Inform the Gubbin what happened yesterday.",
+        "reminders": [
+            "?",
+            "??"
+        ],
+        "setup": true,
+        "ability": "Each night, something happens today. Each night*, learn what yesterday's was.",
+        "jinxes": [],
+        "special": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/gubbin.png"
+        ]
+    },
+    {
+        "id": "neophyte_shadowslam",
+        "name": "Neophyte",
+        "team": "outsider",
+        "firstNight": 52,
+        "otherNight": 69,
+        "reminders": [
+            "Tutor",
+            "Drunk"
+        ],
+        "setup": true,
+        "ability": "Each night, choose 2 living players: they yield reversed info. [A Townsfolk's ability is making you drunk]",
+        "jinxes": [],
+        "special": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/neophyte.png"
+        ]
+    },
+    {
+        "id": "recombobulator_shadowslam",
+        "name": "Recombobulator",
+        "team": "outsider",
+        "firstNight": 0,
+        "otherNight": 45,
+        "reminders": [
+            "Died"
+        ],
+        "setup": false,
+        "ability": "Each night*, if you died, the Demon may choose a player & character of their type: they become it if not in-play.",
+        "jinxes": [
+            {
+                "id": "drunk",
+                "reason": "If the Demon chooses the Drunk player, they choose a Townsfolk character for the Drunk to think they become."
+            },
+            {
+                "id": "lunatic",
+                "reason": "The Demon learns which character the Lunatic chooses too if they think a Recombobulator has died."
+            },
+            {
+                "id": "summoner",
+                "reason": "If the Demon chooses to create a Summoner, deaths tonight are arbitrary."
+            },
+            {
+                "id": "legion",
+                "reason": "Legion cannot choose Legion players."
+            },
+            {
+                "id": "village_idiot",
+                "reason": "If a player would become the Village Idiot due to the Recombobulator, the drunk Village Idiot might change."
+            },
+            {
+                "id": "lil_monsta",
+                "reason": "If the Recombobulator would cause a Demon to become Lil Monsta, they instead become a Minion babysitting Lil Monsta tonight."
+            }
+        ],
+        "old_jinxes": [
+            {
+                "id": "drunk",
+                "reason": "If the Drunk would change characters due to the Recombobulator, instead the character they think they are changes."
+            },
+            {
+                "id": "lunatic",
+                "reason": "The Lunatic receives a fake Recombobulator choice, and the Demon learns their choice. If the Lunatic would change characters due to the Recombobulator, instead the character they think they are changes."
+            },
+            {
+                "id": "marionette",
+                "reason": "If the Marionette would change characters due to the Recombobulator, instead the character they think they are changes and does not learn 3 not in-play characters."
+            },
+            {
+                "id": "summoner",
+                "reason": "If there is no Demon, the Summoner chooses whether to use the Recombobulator's ability. If the Recombobulator would cause a Summoner to leave play before that Summoner uses their ability, the Summoner uses their ability immediately. The Summoner cannot create an in-play Demon. If the Summoner creates a not-in-play Demon, deaths tonight are arbitrary. "
+            },
+            {
+                "id": "legion",
+                "reason": "If the Recombobulator is used and Legion is in play, Legion's characters do not change. If the Recombobulator dies and a player becomes Legion, most players (including all evil players) then become evil Legion."
+            },
+            {
+                "id": "riot",
+                "reason": "If the Recombobulator is used and Riot is in play, a normal evil team is created from the Riot players. If the Recombobulator dies and the Demon becomes Riot, Minions become Riot too."
+            },
+            {
+                "id": "village_idiot",
+                "reason": "If a player would become the Village Idiot due to the Recombobulator, the drunk Village Idiot might change."
+            },
+            {
+                "id": "lil_monsta",
+                "reason": "If the Recombobulator would cause a Demon to become Lil Monsta, they instead become a Minion babysitting Lil Monsta tonight."
+            }
+        ],
+        "special": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/recombobulator.png"
+        ]
+    },
+    {
+        "id": "torpor_shadowslam",
+        "name": "Torpor",
+        "team": "outsider",
+        "firstNight": 0,
+        "otherNight": 0,
+        "reminders": [
+            "Torpor"
+        ],
+        "setup": false,
+        "ability": "If you are good, good cannot win, even if dead. Each day, 1 player may be chosen to pass this ability to, even if dead.",
+        "jinxes": [],
+        "special": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/torpor.png",
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/evil/torpor.png"
+        ]
+    },
+    {
+        "id": "tailor_shadowslam",
+        "name": "Tailor",
+        "team": "outsider",
+        "firstNight": 0,
+        "otherNight": 0,
+        "reminders": [
+            "No Ability"
+        ],
+        "setup": false,
+        "ability": "The first time an evil player would die by execution, they live & become a new character of their type, even if dead.",
+        "jinxes": [],
+        "special": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/tailor.png"
+        ]
+    },
+    {
+        "id": "birefringent_shadowslam",
+        "name": "Birefringent",
+        "team": "outsider",
+        "firstNight": 0,
+        "otherNight": 0,
+        "reminders": [],
+        "setup": false,
+        "ability": "All sober & healthy Townsfolk info is either true or false.",
+        "jinxes": [],
+        "special": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/birefringent.png"
+        ]
+    },
+    {
+        "id": "paranoiac_shadowslam",
+        "name": "Paranoiac",
+        "team": "outsider",
+        "firstNight": 8,
+        "otherNight": 0,
+        "reminders": [],
+        "setup": false,
+        "ability": "All other players might be evil & know you. If you guess they do, your team wins if right & loses if wrong. You can always do this.",
+        "jinxes": [],
+        "special": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/paranoiac.png",
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/evil/paranoiac.png"
+        ],
+        "flavour": "In case I don't see ya, good afternoon, good evening, and good night."
+    },
+    {
+        "id": "dissovant_shadowslam",
+        "name": "Dissovant",
+        "team": "minion",
+        "firstNightReminder": "Show the Dissovant their two good neighbours and prompt them to choose one of them. The Dissovant may indicate they wish to poison the other. Wake the chosen player and inform them they are evil, and place the Dissident reminder on the other. If the Dissovant chose to poison the Dissident, place the Poisoned reminder on them and the No Ability reminder on the Dissovant.",
+        "otherNightReminder": "The Dissovant may indicate they wish to poison the Dissident. If they do, place the Poisoned reminder on the Dissident until dusk and the No Ability reminder on the Dissovant.",
+        "firstNight": 37,
+        "otherNight": 11,
+        "reminders": [
+            "Evil",
+            "Dissident",
+            "Poisoned",
+            "No Ability"
+        ],
+        "setup": false,
+        "ability": "You start knowing your good neighbours and choose 1: they become evil. Once per game, at night, you may poison the other until dusk.",
+        "jinxes": [],
+        "special": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/minion/dissovant.png"
+        ]
+    },
+    {
+        "id": "sentry_shadowslam",
+        "name": "Sentry",
+        "team": "minion",
+        "firstNight": 29,
+        "otherNight": 22,
+        "reminders": [
+            "No Ability"
+        ],
+        "setup": true,
+        "ability": "You start knowing not in-play Outsiders. Once per game, at night*, choose a player and a not in-play Outsider they become. [-1 to +1 Outsiders]",
+        "jinxes": [],
+        "special": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/minion/sentry.png"
+        ]
+    },
+    {
+        "id": "biblioclast_shadowslam",
+        "name": "Biblioclast",
+        "team": "minion",
+        "firstNight": 29,
+        "otherNight": 0,
+        "reminders": [
+            "False",
+            "False",
+            "False",
+            "False"
+        ],
+        "setup": true,
+        "ability": "You start choosing a character for each not in-play Outsider. Chosen abilities yield false info. [-1 to +1 Outsiders]",
+        "jinxes": [],
+        "special": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/minion/biblioclast.png",
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/minion/good/biblioclast.png"
+        ]
+    },
+    {
+        "id": "graverobber_shadowslam",
+        "name": "Graverobber",
+        "team": "minion",
+        "firstNight": 26,
+        "otherNight": 11,
+        "reminders": [
+            "Bodysnatched"
+        ],
+        "setup": false,
+        "ability": "Each night, you see the Grimoire & may choose a player: while they are dead, you have their ability until you next choose.",
+        "jinxes": [],
+        "special": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/minion/graverobber.png"
+        ]
+    },
+    {
+        "id": "insider_shadowslam",
+        "name": "Insider",
+        "team": "minion",
+        "firstNight": 43,
+        "otherNight": 75,
+        "reminders": [
+            "Insider 1",
+            "Insider 2",
+            "Master 1",
+            "Master 2"
+        ],
+        "setup": true,
+        "ability": "Each night, choose a good player: tomorrow, your vote secretly doesn't count if they didn't vote. [+1 Insider that neighbours you]",
+        "jinxes": [
+            {
+                "id": "recombobulator_shadowslam",
+                "reason": "If multiple Insiders change character due to the Recombobulator, all but one become poisoned."
+            },
+            {
+                "id": "kazali",
+                "reason": "If the Kazali chooses to create a Insider, they choose an additional player to also become an evil Insider."
+            },
+            {
+                "id": "poppy_grower",
+                "reason": "If there is an active Poppygrower ability, the Insider may choose any other player."
+            },
+            {
+                "id": "magician",
+                "reason": "The Magician registers as evil to the Insider."
+            }
+        ],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/minion/insider.png"
+        ]
+    },
+    {
+        "id": "the_mechanism_shadowslam",
+        "name": "The Mechanism",
+        "team": "demon",
+        "firstNight": 38,
+        "otherNight": 11,
+        "reminders": [
+            "Poisoned",
+            "Poisoned",
+            "Poisoned",
+            "Poisoned",
+            "Poisoned"
+        ],
+        "setup": false,
+        "ability": "Each night, a player 1 further clockwise of each evil is poisoned, if Townsfolk, until dusk. After day 4, evil wins.",
+        "jinxes": [],
+        "special": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/demon/the_mechanism.png"
+        ]
+    },
+    {
+        "id": "the_queens_shadowslam",
+        "name": "The Queens",
+        "team": "demon",
+        "otherNightReminder": "Each The Queens points to a player. Mark one of the players chosen, or a Demon, with the Dead reminder token.",
+        "firstNight": 0,
+        "otherNight": 26,
+        "reminders": [
+            "Dead"
+        ],
+        "setup": true,
+        "ability": "Each night*, choose a player: 1 player chosen by Demons, or a Demon, dies. [1 Minion is The Queens]",
+        "jinxes": [
+            {
+                "id": "summoner",
+                "reason": "If the Summoner chooses to create The Queens, they must also choose an evil Minion to become The Queens."
+            },
+            {
+                "id": "clockmaker",
+                "reason": "The Queens also register as a Minion to the Clockmaker."
+            },
+            {
+                "id": "recombobulator_shadowslam",
+                "reason": "If multiple The Queens would change character due to the Recombobulator, only one becomes a Demon and the rest become Minions."
+            }
+        ],
+        "special": [
+            {
+                "type": "selection",
+                "name": "bag-duplicate"
+            }
+        ],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/demon/the_queens.png",
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/demon/good/the_queens.png"
+        ]
+    },
+    {
+        "id": "vaudevillian_shadowslam",
+        "name": "Vaudevillian",
+        "team": "demon",
+        "firstNight": 20,
+        "firstNightReminder": "Place the 'is the Marionette' reminder tokens on each good player next to the Demon. Wake the Demon and show them both Marionettes.",
+        "otherNight": 26,
+        "otherNightReminder": "The Vaudevillian points to a player. That player dies. Any abilities that would fail to work tonight, might work anyway.",
+        "reminders": [
+            "Dead",
+            "is the Marionette"
+        ],
+        "setup": true,
+        "ability": "Each night*, choose a player: they die. Abilities players think they have might work. [+1 Minion, 2 are Marionettes]",
+        "jinxes": [],
+        "special": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/demon/vaudevillian.png",
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/demon/good/vaudevillian.png"
+        ]
+    },
+    {
+        "id": "byguyle_shadowslam",
+        "name": "Byguyle",
+        "team": "demon",
+        "firstNight": 0,
+        "otherNight": 26,
+        "reminders": [
+            "Dead",
+            "Dead",
+            "Nominee"
+        ],
+        "setup": true,
+        "ability": "Each night*, choose a player: they die. If you were nominated today, another player of your nominee's type dies. [All Outsiders]",
+        "jinxes": [],
+        "special": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/demon/byguyle.png"
+        ]
+    },
+    {
+        "id": "tegumenta_shadowslam",
+        "name": "Tegumenta",
+        "team": "demon",
+        "firstNight": 0,
+        "otherNight": 26,
+        "otherNightReminder": "The Tegumenta points to as many players as they would like. The 1st player dies. If all the other players are the same character as the 1st, all the other players die too.",
+        "reminders": [
+            "Dead",
+            "Dead",
+            "Dead"
+        ],
+        "setup": true,
+        "ability": "Each night*, choose any players: the 1st dies & if all others are the 1st's character, they die. [Some characters are duplicates, +? Outsiders]",
+        "jinxes": [],
+        "special": [],
+        "image": []
+    },
+    {
+        "id": "parasite_shadowslam",
+        "name": "Parasite",
+        "team": "traveller",
+        "firstNight": 0,
+        "otherNight": 0,
+        "reminders": [
+            "Poisoned",
+            "True Info"
+        ],
+        "setup": true,
+        "ability": "Each day, choose a player: you move to share their seat & if you are good give true info or if evil poison them (if good).",
+        "jinxes": [],
+        "special": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/traveller/parasite.png",
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/traveller/good/parasite.png",
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/traveller/evil/parasite.png"
+        ]
+    }
+]

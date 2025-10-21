@@ -1,0 +1,82 @@
+[
+    {
+        "id": "_meta",
+        "name": "Tweaked Speculated Characters Library",
+        "author": "ShadowSlam"
+    },
+    {
+        "id": "patient_tweaked_speculated",
+        "name": "Patient",
+        "team": "townsfolk",
+        "firstNight": 0,
+        "otherNight": 6,
+        "setup": false,
+        "ability": "Once per game, at night*, choose to wake: choose a good character to gain the ability of for each night you were asleep.",
+        "jinxes": [],
+        "special": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/patient.png"
+        ]
+    },
+    {
+        "id": "beekeeper_tweaked_speculated",
+        "name": "Beekeeper",
+        "team": "townsfolk",
+        "firstNightReminder": "Mark an evil player as a Beekept Townsfolk if the Beekeeper added an Outsider, or as a Beekept Outsider if the Beekeeper removed an Outsider. Do not show them evil info.",
+        "firstNight": 3,
+        "otherNight": 0,
+        "reminders": [
+            "Beekept Townsfolk",
+            "Beekept Outsider",
+            "Guess used"
+        ],
+        "setup": true,
+        "ability": "One evil player registers as good and as the character you removed. If you publicly guess who it is (once per game), your team wins. [-1 or +1 Outsider]",
+        "jinxes": [],
+        "special": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/beekeeper.png",
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/evil/beekeeper.png"
+        ]
+    },
+    {
+        "id": "sicilian_tweaked_speculated",
+        "name": "Sicilian",
+        "team": "minion",
+        "firstNight": 35,
+        "otherNight": 23,
+        "reminders": [
+            "Check"
+        ],
+        "setup": false,
+        "ability": "Each night, you may choose a player (not yourself): if they are not executed today, their team wins. All players know the chosen player.",
+        "jinxes": [
+            {
+                "id": "character_6719a734d7c93",
+                "reason": "If the Senator ability is active, the Sicilian ability cannot announce or cause an evil player to win with only evil living neighbours."
+            },
+            {
+                "id": "vigormortis",
+                "reason": "If the Sicilian is dead, the Sicilian ability cannot cause a Minion to win on the final day."
+            }
+        ],
+        "special": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/minion/sicilian.png"
+        ]
+    },
+    {
+        "id": "vat_dweller_tweaked_speculated",
+        "name": "Vat Dweller",
+        "team": "minion",
+        "firstNight": 14,
+        "otherNight": 0,
+        "setup": true,
+        "ability": "Every Outsider is the same Outsider. Evil players start knowing which. [+? to -? Outsiders]",
+        "jinxes": [],
+        "special": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/minion/vat_dweller.png"
+        ]
+    }
+]
