@@ -311,7 +311,12 @@
         "setup": false,
         "ability": "On your 1st day, you may visit the Storyteller to become a non-listed character, even if drunk or poisoned.",
         "jinxes": [],
-        "special": [],
+        "special": [
+            {
+                "type": "selection",
+                "name": "bag-duplicate"
+            }
+        ],
         "image": [
             "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/machinist.png",
             "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/evil/machinist.png"
@@ -704,12 +709,16 @@
         "team": "minion",
         "firstNight": 0,
         "otherNight": 0,
-        "reminders": [
-        ],
+        "reminders": [],
         "setup": true,
         "ability": "If all good players die, good wins. The Demon can not kill the last living Damned. [+0 to +2 Damned]",
         "jinxes": [],
-        "special": [],
+        "special": [
+            {
+                "type": "selection",
+                "name": "bag-duplicate"
+            }
+        ],
         "image": [
             "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/minion/damned.png"
         ]

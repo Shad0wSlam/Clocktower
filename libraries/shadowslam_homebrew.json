@@ -350,19 +350,11 @@
             "Died"
         ],
         "setup": false,
-        "ability": "Each night*, if you died, the Demon may choose a player & character of their type: they become it if not in-play.",
+        "ability": "Each night*, if you died, the Demon may choose a player: they become a new character of their type.",
         "jinxes": [
             {
                 "id": "drunk",
-                "reason": "If the Demon chooses the Drunk player, they choose a Townsfolk character for the Drunk to think they become."
-            },
-            {
-                "id": "lunatic",
-                "reason": "The Demon learns which character the Lunatic chooses too if they think a Recombobulator has died."
-            },
-            {
-                "id": "summoner",
-                "reason": "If the Demon chooses to create a Summoner, deaths tonight are arbitrary."
+                "reason": "If the Demon chooses the Drunk player, the Townsfolk they think they are changes."
             },
             {
                 "id": "legion",
@@ -439,12 +431,12 @@
         "name": "Tailor",
         "team": "outsider",
         "firstNight": 0,
-        "otherNight": 0,
+        "otherNight": 10,
         "reminders": [
             "No Ability"
         ],
         "setup": false,
-        "ability": "The first time an evil player would die by execution, they live & become a new character of their type, even if dead.",
+        "ability": "The first time an evil player would die by execution, they live & become a new character of their type, even if you are dead.",
         "jinxes": [],
         "special": [],
         "image": [
@@ -684,10 +676,10 @@
         "reminders": [
             "Dead",
             "Dead",
-            "Nominee"
+            "Nominator"
         ],
         "setup": true,
-        "ability": "Each night*, choose a player: they die. If you were nominated today, another player of your nominee's type dies. [All Outsiders]",
+        "ability": "Each night*, choose a player: they die. If you were nominated today, another player of your nominator's type dies. [All Outsiders]",
         "jinxes": [],
         "special": [],
         "image": [
