@@ -41,29 +41,33 @@ body::after {
   z-index: 0;
 }
 
-body::before {
-  left: 0;
-}
+body::before { left: 0; }
+body::after { right: 0; }
 
-body::after {
-  right: 0;
-}
-
-/* --- Header Navigation --- */
+/* --- Sticky Translucent Header Navigation --- */
 header {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
   height: var(--header-height);
-  background-color: var(--bg-darker);
+  background-color: rgba(17, 17, 17, 0.8);
+  backdrop-filter: blur(8px);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-  z-index: 10;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
 }
 
+/* Optional subtle effect when scrolling (simulate solidifying header) */
+header.scrolled {
+  background-color: rgba(17, 17, 17, 0.95);
+  backdrop-filter: blur(4px);
+}
+
+/* Navigation Bar */
 nav {
   display: flex;
   gap: 2rem;
@@ -105,14 +109,14 @@ main {
   max-width: 1200px;
   margin: calc(var(--header-height) + 2rem) auto 2rem;
   padding: 1rem 2rem;
-  background: rgba(17, 17, 17, 0.8);
+  background: rgba(17, 17, 17, 0.85);
   border-radius: 12px;
-  box-shadow: 0 0 10px rgba(179, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(179, 0, 0, 0.25);
   z-index: 1;
   position: relative;
 }
 
-/* --- Footer (Optional) --- */
+/* --- Footer --- */
 footer {
   text-align: center;
   padding: 1rem;
@@ -124,6 +128,8 @@ footer {
 @media (max-width: 700px) {
   nav {
     gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   nav a {

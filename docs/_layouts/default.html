@@ -16,8 +16,17 @@
     <a id="skip-to-content" href="#content">Skip to the content.</a>
 
     <header class="page-header" role="banner">
+      <nav class="site-nav">
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/homebrew/' | relative_url }}">Homebrew</a>
+        <a href="{{ '/speculation/' | relative_url }}">Speculation</a>
+        <a href="{{ '/scripts/' | relative_url }}">Scripts</a>
+        <a href="{{ '/other/' | relative_url }}">Other</a>
+      </nav>
+      
       <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
       <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
+      
       {% if site.github.is_project_page %}
         <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
       {% endif %}
