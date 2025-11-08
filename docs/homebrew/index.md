@@ -35,76 +35,29 @@ permalink: /homebrew
     </div>
   </div>
 {% endfor %}
-<!-- 
+
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  const HEADER_HEIGHT = 110; // adjust to match your header height
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const gridWrappers = document.querySelectorAll('.character-grid-wrapper');
 
-  // === Create a single reusable tooltip element for all cards/links ===
-const tooltipEl = document.createElement('div');
-tooltipEl.className = 'character-tooltip-body';
-tooltipEl.style.transition = 'opacity 0.2s ease, transform 0.2s ease';
-document.body.appendChild(tooltipEl);
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const category = btn.dataset.category;
 
+      // Toggle active button
+      filterButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
 
-  // === Helper function to show tooltip at correct position ===
-  function showTooltip(target, text) {
-    tooltipEl.textContent = text;
-
-    const rect = target.getBoundingClientRect();
-    const scrollY = window.scrollY || window.pageYOffset;
-    const tooltipHeight = tooltipEl.offsetHeight;
-    const viewportHeight = window.innerHeight;
-
-    const spaceBelow = viewportHeight - rect.bottom;
-    const spaceAbove = rect.top - HEADER_HEIGHT;
-    const position = spaceBelow >= tooltipHeight + 10 ? 'bottom' : 'top';
-
-    tooltipEl.style.left = `${rect.left + rect.width / 2}px`;
-
-    if (position === 'bottom') {
-      tooltipEl.style.top = `${rect.bottom + 5 + scrollY}px`;
-      tooltipEl.style.transform = 'translateX(-50%) translateY(-8px)';
-    } else {
-      tooltipEl.style.top = `${rect.top - tooltipHeight - 5 + scrollY}px`;
-      tooltipEl.style.transform = 'translateX(-50%) translateY(-8px)';
-    }
-
-    tooltipEl.style.opacity = '0';
-    requestAnimationFrame(() => {
-      tooltipEl.style.opacity = '1';
-      tooltipEl.style.transform = 'translateX(-50%) translateY(0)';
-    });
-  }
-
-  function hideTooltip() {
-    tooltipEl.style.opacity = '0';
-    tooltipEl.style.transform = 'translateX(-50%) translateY(-8px)';
-  }
-
-  // === Character link tooltips (existing system) ===
-  document.querySelectorAll('.character-link').forEach(link => {
-    link.addEventListener('mouseenter', () => {
-      const abilityText = link.dataset.ability || 'Ability not found';
-      showTooltip(link, abilityText);
-    });
-    link.addEventListener('mouseleave', hideTooltip);
-  });
-
-  // === Character card tooltips (new unified system) ===
-  fetch("https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/libraries/shadowslam_homebrew.json")
-    .then(res => res.json())
-    .then(data => {
-      document.querySelectorAll('.character-card').forEach(card => {
-        const id = card.dataset.charid + "_shadowslam";
-        const charData = data.find(c => c.id === id);
-        const tooltipText = charData?.ability || "Ability not found.";
-
-        card.addEventListener('mouseenter', () => showTooltip(card, tooltipText));
-        card.addEventListener('mouseleave', hideTooltip);
+      // Show/hide grids
+      gridWrappers.forEach(wrapper => {
+        if (category === 'all' || wrapper.dataset.category === category) {
+          wrapper.style.display = 'block';
+        } else {
+          wrapper.style.display = 'none';
+        }
       });
-    })
-    .catch(err => console.error("Failed to load ability data:", err));
+    });
+  });
 });
-</script> -->
-
+</script>
