@@ -1,5 +1,6 @@
-remote_theme: pages-themes/cayman@v0.2.0
-plugins:
-- jekyll-remote-theme
 title: Library of ShadowSlam
-description: My repository of my personal published content
+description: The Library of ShadowSlam
+collections:
+  characters:
+    output: true
+    permalink: /homebrew/:name/

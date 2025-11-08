@@ -245,7 +245,8 @@
         "special": [],
         "image": [
             "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/mercenary.png"
-        ]
+        ],
+        "flavour": "Any mark for a price. Some find the cost too great, but I never find my target so."
     },
     {
         "id": "anarchist_shadowslam",

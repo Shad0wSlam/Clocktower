@@ -1,0 +1,271 @@
+/* ============================
+   Character Page Layout
+   ============================ */
+
+/* Main character page container */
+.character-page {
+  max-width: 1200px;
+  margin: 0;
+  padding: 2rem;
+  background: rgba(17,17,17,0.85);
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(179,0,0,0.25);
+}
+
+/* Remove outer .main-content styling only on character page */
+body.page-character .main-content {
+  background: transparent;
+  padding: 0;
+  box-shadow: none;
+}
+
+/* Character Header */
+.character-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.character-header .character-name {
+  font-size: 2rem;
+  color: var(--accent-red);
+  margin-bottom: 0.5rem;
+}
+.character-header .character-subtitle {
+  font-size: 1.2rem;
+  color: #bbb;
+  margin-bottom: 1.5rem;
+}
+
+/* === Top Section Layout === */
+.character-main-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Wrap summary and how-to-run together in a vertical flex container */
+.character-main-left-right {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0;
+}
+
+/* Inner row for Summary + How to Run side by side */
+.character-sub-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* Left: Summary column */
+.character-main-left {
+  flex: 1 1 0;
+  min-width: 220px;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+/* Middle: How to Run column */
+.character-main-middle {
+  flex: 1 1 0;
+  min-width: 220px;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+/* Normalize lists and paragraphs in both left/middle columns */
+.character-main-left ul,
+.character-main-middle ul {
+  padding-left: 1.25rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.character-main-left p,
+.character-main-middle p {
+  margin: 0.5rem 0;
+}
+
+/* Right: Image and associated info */
+.character-main-right {
+  flex: 0 0 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Character image container with glow */
+.character-image-container {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(179,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.character-image-container img.character-icon {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+.character-image-container img.character-icon:hover {
+  transform: scale(1.03);
+}
+
+/* Type / Artist / Flavour below image */
+.character-main-right p {
+  margin: 0.25rem 0;
+  font-size: 0.95rem;
+  text-align: center;
+  color: #f0f0f0;
+}
+.character-main-right .character-artist strong,
+.character-main-right .character-type strong {
+  color: var(--accent-red);
+}
+.character-main-right .character-flavour {
+  font-style: italic;
+  color: #ccc;
+  margin-top: 0.5rem;
+}
+
+/* How to Run and Notes */
+.character-howtorun {
+  margin: 0 0 1rem 0;
+}
+.character-note-box {
+  background: rgba(224,0,0,0.15);
+  color: #fff;
+  border-left: 3px solid var(--accent-red);
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  display: inline-block;
+  width: 100%;
+}
+
+/* Additional full-width content below summary/howtorun but not image */
+.character-content {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: left;
+  flex-basis: 100%;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .character-main-row {
+    flex-direction: column;
+  }
+  .character-main-right {
+    flex: 1 1 0;
+    width: 100%;
+    align-items: center;
+  }
+  .character-sub-row {
+    flex-direction: column;
+  }
+  .character-main-middle, .character-main-left {
+    width: 100%;
+  }
+}
+
+#character-compound pre {
+  background: rgba(0,0,0,0.7);
+  color: #f0f0f0;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  max-height: 400px;
+}
+
+#copy-compound-btn {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--accent-red);
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+#copy-compound-btn:hover {
+  background: var(--accent-red-glow);
+}
+
+#character-compound {
+  width: 100%;
+  max-height: 300px;
+  background: rgba(0,0,0,0.7);
+  color: #f0f0f0;
+  padding: 0.75rem;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+#character-compound pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow: auto;
+  max-height: 200px;
+}
+
+#copy-compound-btn {
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  background: var(--accent-red);
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#copy-compound-btn:hover {
+  background: var(--accent-red-glow);
+}
+
+.character-examples {
+  margin-top: 2rem;
+}
+
+.character-examples h2 {
+  font-size: 1.5rem;
+  color: var(--accent-red);
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--accent-red);
+  padding-bottom: 0.3rem;
+}
+
+.example-box {
+  background: rgba(24, 24, 24, 0.95);
+  border-left: 4px solid var(--accent-red);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease;
+}
+
+.example-box:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}

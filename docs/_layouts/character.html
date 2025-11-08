@@ -1,0 +1,160 @@
+---
+layout: default
+---
+
+{% comment %}
+Determine the character_id cleanly:
+- If front matter provides "id", use it.
+- Otherwise, fall back to page.name (the filename without extension).
+{% endcomment %}
+{% assign character_id = page.id | default: page.name | split: '/' | last | split: '.' | first %}
+{% assign char_member = nil %}
+{% assign char_group = nil %}
+
+{% for g in site.data.homebrew %}
+{% for m in g.members %}
+{% if m.id == character_id %}
+{% assign char_member = m %}
+{% assign char_group = g.group %}
+{% endif %}
+{% endfor %}
+{% endfor %}
+
+{% assign page_title = char_member.name | default: page.title | default: character_id %}
+
+<link rel="stylesheet" href="{{ '/assets/css/character.css' | relative_url }}">
+
+<article class="character-detail">
+
+  <!-- Character Header -->
+  <header class="character-header">
+    <h1 class="character-name">{{ page_title }}</h1>
+  </header>
+
+  <!-- Top row: left-right content + image -->
+  <div class="character-main-row">
+
+    <!-- Left and middle combined section -->
+    <div class="character-main-left-right">
+      <div class="character-sub-row">
+
+        <!-- Left column: Summary -->
+        <div class="character-main-left">
+          <h2>Summary</h2>
+          {% if char_member.ability %}
+          <p>"{{ char_member.ability }}"</p><br>
+          {% endif %}
+          {% if page.summary %}
+          {{ page.summary | markdownify }}
+          {% endif %}
+        </div>
+
+        <!-- Middle column: How to Run + Notes -->
+        <div class="character-main-middle">
+          {% if page.howtorun %}
+          <h2>How to Run</h2>
+          <section class="character-howtorun">
+            {{ page.howtorun | markdownify }}
+          </section>
+          {% endif %}
+          {% if page.notes %}
+          {% for note in page.notes %}
+          <div class="character-note-box">{{ note | markdownify }}</div>
+          {% endfor %}
+          {% endif %}
+        </div>
+
+      </div>
+
+      {% if page.examples %}
+      <section class="character-examples">
+        <h2>Examples</h2>
+        {% for example in page.examples %}
+        <div class="example-box">
+          {{ example | markdownify }}
+        </div>
+        {% endfor %}
+      </section>
+      {% endif %}
+
+
+      <!-- Additional content now directly below Summary/How-to -->
+      <section class="character-content">
+        {{ content }}
+      </section>
+    </div>
+
+    <!-- Right column: Image + Type/Artist/Flavour -->
+    <div class="character-main-right">
+      <div class="character-image-container">
+        <img
+          src="https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/{{ char_group | downcase | replace: ' ', '_' }}/{{ character_id }}.png"
+          alt="{{ page_title }}" class="character-icon">
+
+        <p class="character-type"><strong>Type:</strong> {{ char_group | capitalize }}</p>
+
+        {% if char_member.artist %}
+        <p class="character-artist"><strong>Artist:</strong> {{ char_member.artist }}</p>
+        {% endif %}
+        <p id="character-flavour" class="character-flavour"><em>Loading flavour...</em></p>
+
+        <section id="character-compound">
+          <h2>Character JSON</h2>
+          <pre id="compound-text">Loading...</pre>
+          <button id="copy-compound-btn">Copy</button>
+        </section>
+
+        <script>
+          const characterId = "{{ character_id }}_shadowslam";
+          const compoundTextEl = document.getElementById("compound-text");
+          const flavourEl = document.getElementById("character-flavour");
+          const copyBtn = document.getElementById("copy-compound-btn");
+
+          fetch("https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/libraries/shadowslam_homebrew.json")
+            .then(res => res.json())
+            .then(data => {
+              const charData = data.find(c => c.id === characterId);
+              if (charData) {
+                // JSON compound
+                compoundTextEl.textContent = JSON.stringify(charData, null, 2);
+                // Flavour text
+                if (charData.flavour) {
+                  flavourEl.innerHTML = `<em>${charData.flavour}</em>`;
+                } else {
+                  flavourEl.innerHTML = `<em>No flavour text provided.</em>`;
+                }
+              } else {
+                compoundTextEl.textContent = "Character data not found.";
+                flavourEl.innerHTML = `<em>Flavour not found.</em>`;
+              }
+            })
+            .catch(err => {
+              console.error(err);
+              compoundTextEl.textContent = "Error loading character data.";
+              flavourEl.innerHTML = `<em>Error loading flavour text.</em>`;
+            });
+
+          copyBtn.addEventListener("click", () => {
+            navigator.clipboard.writeText(compoundTextEl.textContent)
+              .then(() => alert("Character data copied to clipboard!"))
+              .catch(err => alert("Failed to copy: " + err));
+          });
+        </script>
+      </div>
+    </div>
+
+  </div>
+</article>
+
+<script>
+  (function waitForHeader() {
+    const characterName = "{{ page_title | strip_newlines | escape | replace: '"', '\"' }}";
+    const projectNameEl = document.getElementById('project-name');
+    if (projectNameEl && characterName) {
+      projectNameEl.textContent = characterName;
+      document.title = characterName;
+    } else {
+      setTimeout(waitForHeader, 100);
+    }
+  })();
+</script>

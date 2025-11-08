@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Welcome to the Library"
-permalink: /
+permalink: /other
 ---
 Welcome to ShadowSlam's Clocktower collection, name pending.
 

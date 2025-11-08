@@ -1,0 +1,189 @@
+/* =========================================
+   Blood on the Clocktower - Repository Theme
+   ========================================= */
+
+/* Root colors and sizing */
+:root {
+  --bg-dark: #1b1b1b;
+  --bg-darker: #111;
+  --text-light: #f0f0f0;
+  --accent-red: #b30000;
+  --accent-red-glow: #e00000;
+  --nav-color: #cccccc;
+  --header-height: 110px;
+  --side-border-width: 20px;
+  --font-main: "Montserrat", "Segoe UI", sans-serif;
+}
+
+/* Base page */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  font-family: var(--font-main);
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Background Side Borders */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: var(--side-border-width);
+  background: var(--accent-red);
+  z-index: 0;
+}
+body::before { left: 0; }
+body::after { right: 0; }
+
+/* Header */
+.page-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100vw;
+  background-color: rgba(17,17,17,0.8);
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+  z-index: 1000;
+  padding: 1rem 0 0.5rem;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+.header-top {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+.project-name {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--text-light);
+  margin: 0.3rem 0;
+}
+.project-tagline {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #bbb;
+  margin: 0;
+}
+
+/* Navigation */
+.site-nav {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  background-color: rgba(30,30,30,0.9);
+  padding: 0.6rem 1rem;
+  width: 100%;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.site-nav a {
+  text-decoration: none;
+  color: var(--nav-color);
+  font-weight: 600;
+  font-size: 1.05rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+.site-nav a:hover, .site-nav a:focus {
+  color: var(--accent-red);
+}
+.site-nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--accent-red);
+  transition: width 0.3s ease;
+}
+.site-nav a:hover::after, .site-nav a:focus::after {
+  width: 100%;
+}
+
+/* Main content */
+.main-content {
+  max-width: 1200px;
+  margin: 2rem auto 2rem;
+  background: rgba(17,17,17,0.85);
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(179,0,0,0.25);
+  padding: 2rem;
+  z-index: 1;
+  position: relative;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.character-link {
+  color: var(--accent-red);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.character-link {
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+/* Group-based coloring */
+.char-blue { color: #3399ff; }
+.char-red { color: #ff3333; }
+.char-purple { color: #9933ff; }
+
+/* Optional hover effect */
+.character-link:hover {
+  text-decoration: none;
+}
+
+.character-tooltip-body {
+    position: absolute;
+    pointer-events: none;
+    background: #fff;
+    color: #000;
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    min-width: 160px;
+    max-width: 300px;
+    white-space: normal;
+    word-wrap: break-word;
+    z-index: 9999;
+    opacity: 0;
+    transform: translateX(-50%) translateY(-6px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+@media (max-width: 600px) {
+    .character-tooltip-body {
+        max-width: 180px;
+        font-size: 0.85rem;
+    }
+}
+
+
+.character-tooltip-body.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+=

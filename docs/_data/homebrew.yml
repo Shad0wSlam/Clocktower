@@ -1,0 +1,42 @@
+- group: Townsfolk
+  plural: Townsfolk
+  members:
+    - id: mercenary
+      name: Mercenary
+      artist: gameicons
+    - id: ordinator
+      name: Ordinator
+      artist: gameicons
+
+- group: Outsider
+  plural: Outsiders
+  members:
+    - id: torpor
+      name: Torpor
+    - id: paranoiac
+      name: Paranoiac
+
+- group: Minion
+  plural: Minions
+  members:
+    - id: sentry
+      name: Sentry
+    - id: biblioclast
+      name: Biblioclast
+
+- group: Demon
+  plural: Demons
+  members:
+    - id: the_mechanism
+      name: The Mechanism
+    - id: the_queens
+      name: The Queens
+      artist: DarkArtist
+    - id: vaudevillian
+      name: Vaudevillian
+
+- group: Traveller
+  plural: Travellers
+  members:
+    - id: parasite
+      name: Parasite
