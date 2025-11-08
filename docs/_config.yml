@@ -3,4 +3,4 @@ description: The Library of ShadowSlam
 collections:
   characters:
     output: true
-    permalink: /homebrew/:name/
+    permalink: /homebrew/:name
