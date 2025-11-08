@@ -18,20 +18,7 @@
   transition: box-shadow 0.3s ease;
   position: relative;
   z-index: 0;
-}
-.character-card::before {
-  content: "";
-  position: absolute;
-  top: -5px; left: -5px; right: -5px; bottom: -5px;
-  border-radius: 20px;
-  box-shadow: 0 0 20px rgba(224,0,0,0.6);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-  z-index: -1;
-}
-.character-card:hover::before {
-  opacity: 1;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
 }
 .character-card a {
   text-decoration: none;
@@ -62,11 +49,62 @@
   font-size: 1.4rem;
   font-weight: 700;
   margin: 0.5rem 0 0;
-  color: var(--accent-red);
   transition: color 0.3s ease;
 }
-.character-card:hover .character-name {
-  color: var(--accent-red-glow);
+
+/* Glow effect when hovering over character name */
+.character-card:hover .char-blue,
+.char-blue:hover {
+  text-shadow: 0 0 6px #3297f4, 0 0 12px #3297f4;
+}
+
+.character-card:hover .char-red,
+.char-red:hover {
+  text-shadow: 0 0 6px #8c0e12, 0 0 12px #8c0e12;
+}
+
+.character-card:hover .char-purple,
+.char-purple:hover {
+  text-shadow: 0 0 6px #800080, 0 0 12px #800080;
+}
+
+.character-card:hover .char-yellow,
+.char-purple:hover {
+  text-shadow: 0 0 6px #d4af37, 0 0 12px #d4af37;
+}
+
+.character-card:hover .char-green,
+.char-purple:hover {
+  text-shadow: 0 0 6px #3f9651, 0 0 12px #3f9651;
+}
+
+.character-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Blue card glow */
+.character-card:hover:has(.char-blue) {
+  box-shadow: 0 0 10px #3297f4, 0 0 25px rgba(50, 151, 244, 0.4);
+}
+
+/* Red card glow */
+.character-card:hover:has(.char-red) {
+  box-shadow: 0 0 10px #8c0e12, 0 0 25px rgba(140, 14, 18, 0.45);
+}
+
+/* Purple card glow */
+.character-card:hover:has(.char-purple) {
+  box-shadow: 0 0 10px #800080, 0 0 25px rgba(128, 0, 128, 0.45);
+}
+
+/* Purple card glow */
+.character-card:hover:has(.char-yellow) {
+  box-shadow: 0 0 10px #d4af37, 0 0 25px rgba(212, 175, 55, 0.45);
+}
+
+/* Purple card glow */
+.character-card:hover:has(.char-green) {
+  box-shadow: 0 0 10px #3f9651, 0 0 25px rgba(63, 150, 81, 0.4);
 }
 
 /* Category Dividers */

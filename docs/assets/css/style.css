@@ -85,7 +85,10 @@ body::after { right: 0; }
   padding: 0.6rem 1rem;
   width: 100%;
   border-top: 1px solid rgba(255,255,255,0.1);
+  position: relative;
 }
+
+/* Links */
 .site-nav a {
   text-decoration: none;
   color: var(--nav-color);
@@ -93,10 +96,14 @@ body::after { right: 0; }
   font-size: 1.05rem;
   position: relative;
   transition: color 0.3s ease;
+  flex: 0 0 auto;
 }
-.site-nav a:hover, .site-nav a:focus {
+
+.site-nav a:hover,
+.site-nav a:focus {
   color: var(--accent-red);
 }
+
 .site-nav a::after {
   content: "";
   position: absolute;
@@ -107,9 +114,54 @@ body::after { right: 0; }
   background: var(--accent-red);
   transition: width 0.3s ease;
 }
-.site-nav a:hover::after, .site-nav a:focus::after {
+
+.site-nav a:hover::after,
+.site-nav a:focus::after {
   width: 100%;
 }
+
+/* === Scrollable nav for small screens === */
+@media (max-width: 700px) {
+  .site-nav {
+    justify-content: flex-start;
+    gap: 1.5rem;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+
+  /* Hide scrollbar but keep scrolling functional */
+  .site-nav::-webkit-scrollbar {
+    display: none;
+  }
+  .site-nav {
+    scrollbar-width: none;
+  }
+
+  /* Fading edges */
+  .site-nav::before,
+  .site-nav::after {
+    content: "";
+    position: sticky;
+    top: 0;
+    width: 2rem;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .site-nav::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(30,30,30,0.9) 60%, transparent);
+  }
+
+  .site-nav::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(30,30,30,0.9) 60%, transparent);
+  }
+}
+
 
 /* Main content */
 .main-content {
@@ -131,6 +183,10 @@ footer {
   font-size: 0.9rem;
 }
 
+footer a {
+  color: rgb(22, 106, 158)
+}
+
 .character-link {
   color: var(--accent-red);
   font-weight: 600;
@@ -144,9 +200,30 @@ footer {
 }
 
 /* Group-based coloring */
-.char-blue { color: #3399ff; }
-.char-red { color: #ff3333; }
-.char-purple { color: #9933ff; }
+.char-blue {
+  color: #3297f4;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.char-red {
+  color: #8c0e12;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.char-purple {
+  color: #800080;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.char-yellow {
+  color: #d4af37;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.char-green {
+  color: #3f9651;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
 
 /* Optional hover effect */
 .character-link:hover {
@@ -186,4 +263,3 @@ footer {
     opacity: 1;
     transform: translateX(-50%) translateY(0);
 }
-=

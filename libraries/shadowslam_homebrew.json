@@ -600,7 +600,11 @@
             "Poisoned",
             "Poisoned",
             "Poisoned",
-            "Poisoned"
+            "Poisoned",
+            "Day 1",
+            "Day 2",
+            "Day 3",
+            "Day 4"
         ],
         "setup": false,
         "ability": "Each night, a player 1 further clockwise of each evil is poisoned, if Townsfolk, until dusk. After day 4, evil wins.",

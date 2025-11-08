@@ -1,27 +1,22 @@
 ---
 layout: character
-id: mercenary
+id: parsite
 summary: |
-    The Mercenary keeps a good player alive, then finds them.
+    The Parasite attaches to a player.
 
-    - If the Mercenary's target dies by any means, including a Demon kill or execution, good wins.
-    - If the Mercenary dies, they no longer win if their target dies.
-    - If the Mercenary's target becomes evil, they are still the target.
+    - The Parasite must choose a player each day. If they have on a previous day and do not, it can be assumed they choose the player they last chose.
+    - The Parasite sits in the same seat as the player they have chosen. Abilities affecting neighbours register both the Parasite and their chosen player as a neighbour.
+    - The Parasite and their chosen player can vote separately, but their votes are counted at the same time.
 howtorun: |
-  While preparing the first night, put the **TARGET** reminder by any good character token. During the first night, wake the Demon. Show them the **THIS CHARACTER SELECTED YOU** info token, then the Mercenary token, then the player marked **TARGET**. Put that player to sleep.
+  During the day, once the Parasite chooses a player, move their token to share with the chosen player's. Mark the chosen player with the **TRUE INFO** reminder if the Parasite is good, or the **POISONED** reminder if the Parasite is evil and the chosen player is good.
 
-  If the Mercenary's target dies, declare that the game is over and the good team has won.
+  A player marked **TRUE INFO** receives true info whenever they receive info (even if they're also marked **DRUNK** or **POISONED**).
 
-  If the Mercenary died tonight, wake them and point to the player marked **TARGET**. Put the Mercenary to sleep.
+  A player marked **POISONED** is poisoned until the Parasite chooses a different player.
+examples:
+  - The good Parasite chooses the Fisherman, who neighbours the No Dashii. That day, the Fisherman chooses to receive their advice, and receives sober & healthy advice.
+  - The evil Parasite chooses the Oracle. That night, no evil players are dead but the Oracle receives a 1. The next day, the Parasite chooses the Demon. They are not poisoned, because the Demon is evil.
 ---
-
-## Examples
-
-The Demon is shown that the Mercenary's target is the Savant. That day, the Savant is executed. Good wins immediately.
-
-The Fortune Teller is the Mercenary's target. On the final day, only the Demon, the Fortune Teller and the Mercenary live. The Fortune Teller is executed, and good wins due to the Mercenary ability.
-
-The Demon, a Fang Gu, is shown the Barber as the Mercenary's target. On the 2nd night, they kill the Barber, dying and the Barber becomes an evil Fang Gu. On the 3rd night, the new Fang Gu kills the Mercenary. The Mercenary wakes and learns the new Fang Gu.
 
 ## Tips & Tricks
 

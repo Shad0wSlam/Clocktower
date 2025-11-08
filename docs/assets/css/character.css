@@ -12,27 +12,12 @@
   box-shadow: 0 0 15px rgba(179,0,0,0.25);
 }
 
-/* Remove outer .main-content styling only on character page */
-body.page-character .main-content {
-  background: transparent;
-  padding: 0;
-  box-shadow: none;
-}
-
-/* Character Header */
-.character-header {
+/* Character Title */
+.character-title {
   text-align: center;
-  margin-bottom: 1.5rem;
-}
-.character-header .character-name {
-  font-size: 2rem;
+  font-size: 1rem;
   color: var(--accent-red);
-  margin-bottom: 0.5rem;
-}
-.character-header .character-subtitle {
-  font-size: 1.2rem;
-  color: #bbb;
-  margin-bottom: 1.5rem;
+  margin-bottom: -2rem;
 }
 
 /* === Top Section Layout === */
@@ -99,6 +84,7 @@ body.page-character .main-content {
 /* Character image container with glow */
 .character-image-container {
   width: 100%;
+  margin-top: 2.5rem;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 0 15px rgba(179,0,0,0.25);
@@ -243,11 +229,11 @@ body.page-character .main-content {
   background: var(--accent-red-glow);
 }
 
-.character-examples {
+.character-headers {
   margin-top: 2rem;
 }
 
-.character-examples h2 {
+.character-headers h2 {
   font-size: 1.5rem;
   color: var(--accent-red);
   margin-bottom: 1rem;

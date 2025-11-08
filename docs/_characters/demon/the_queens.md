@@ -1,26 +1,19 @@
 ---
 layout: character
-id: sentry
-group: Sentry
+id: the_queens
 summary: |
-    The Mercenary keeps a good player alive, then finds them.
+    The Queens kill the town together, even if one of them die.
 
-    - If the Mercenary's target dies by any means, including a Demon kill or execution, good wins.
-    - If the Mercenary dies, they no longer win if their target dies.
-    - If the Mercenary's target becomes evil, they are still the target.
+    - The Queens wake together to learn who their Minions are, if any, and receive their bluffs. They can receive the same bluffs as each other, or different bluffs.
+    - A The Queens might die in the night, if the Storyteller thinks it is appropriate. This is often used to prevent both The Queens being alive on the final day.
 howtorun: |
-  While preparing the first night, put the **TARGET** reminder by any good character token. During the first night, wake the Demon. Show them the **THIS CHARACTER SELECTED YOU** info token, then the Mercenary token, then the player marked **TARGET**. Put that player to sleep.
+  While setting up the game, before putting the character tokens in the bag, remove one Minion character token and add a second The Queens character token. 
 
-  If the Mercenary died tonight, wake them and point to the player marked **TARGET**. Put the Mercenary to sleep.
+  Each night except the first, wake one The Queens. They point at any player. Put them to sleep, then repeat this with the other The Queens if they are alive. Choose a chosen player, or a The Queens, to **die** - mark them with a **DEAD** reminder and a shroud.
+examples:
+  - Anna and Emm are The Queens. On the first night, they wake together to learn that they have no Minions, and each receive their bluffs. The following night, each choose a player to die. The Storyteller decides that the player Anna chose dies. On the second day, Emm is executed. That night, only Anna wakes to choose a player to die.
+  - On the final night, both The Queens are alive, along with two good players. Each The Queens chooses one of the good players. The Storyteller chooses that one of The Queens dies.
 ---
-
-## Examples
-
-The Demon is shown that the Mercenary's target is the Savant. That day, the Savant is executed. Good wins immediately.
-
-The Fortune Teller is the Mercenary's target. On the final day, only the Demon, the Fortune Teller and the Mercenary live. The Fortune Teller is executed, and good wins due to the Mercenary ability.
-
-The Demon, a Fang Gu, is shown the Barber as the Mercenary's target. On the 2nd night, they kill the Barber, dying and the Barber becomes an evil Fang Gu. On the 3rd night, the new Fang Gu kills the Mercenary. The Mercenary wakes and learns the new Fang Gu.
 
 ## Tips & Tricks
 

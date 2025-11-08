@@ -27,7 +27,7 @@ Determine the character_id cleanly:
 <article class="character-detail">
 
   <!-- Character Header -->
-  <header class="character-header">
+  <header class="character-title">
     <h1 class="character-name">{{ page_title }}</h1>
   </header>
 
@@ -39,18 +39,20 @@ Determine the character_id cleanly:
       <div class="character-sub-row">
 
         <!-- Left column: Summary -->
-        <div class="character-main-left">
+        <div class="character-main-left character-headers">
           <h2>Summary</h2>
-          {% if char_member.ability %}
-          <p>"{{ char_member.ability }}"</p><br>
-          {% endif %}
+
+          <!-- 🔹 Replace static summary ability with dynamic JSON-loaded one -->
+          <p id="character-ability"><em>Loading ability...<br></em></p>
+          <br>
+
           {% if page.summary %}
           {{ page.summary | markdownify }}
           {% endif %}
         </div>
 
         <!-- Middle column: How to Run + Notes -->
-        <div class="character-main-middle">
+        <div class="character-main-middle character-headers">
           {% if page.howtorun %}
           <h2>How to Run</h2>
           <section class="character-howtorun">
@@ -67,7 +69,7 @@ Determine the character_id cleanly:
       </div>
 
       {% if page.examples %}
-      <section class="character-examples">
+      <section class="character-headers">
         <h2>Examples</h2>
         {% for example in page.examples %}
         <div class="example-box">
@@ -77,8 +79,7 @@ Determine the character_id cleanly:
       </section>
       {% endif %}
 
-
-      <!-- Additional content now directly below Summary/How-to -->
+      <!-- Additional content -->
       <section class="character-content">
         {{ content }}
       </section>
@@ -109,6 +110,7 @@ Determine the character_id cleanly:
           const compoundTextEl = document.getElementById("compound-text");
           const flavourEl = document.getElementById("character-flavour");
           const copyBtn = document.getElementById("copy-compound-btn");
+          const abilityEl = document.getElementById("character-ability"); // 🔹 New reference
 
           fetch("https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/libraries/shadowslam_homebrew.json")
             .then(res => res.json())
@@ -117,6 +119,14 @@ Determine the character_id cleanly:
               if (charData) {
                 // JSON compound
                 compoundTextEl.textContent = JSON.stringify(charData, null, 2);
+
+                // 🔹 Update ability dynamically
+                if (charData.ability) {
+                  abilityEl.innerHTML = `"${charData.ability}"`;
+                } else {
+                  abilityEl.innerHTML = `<em>Ability not found.</em>`;
+                }
+
                 // Flavour text
                 if (charData.flavour) {
                   flavourEl.innerHTML = `<em>${charData.flavour}</em>`;
@@ -125,12 +135,14 @@ Determine the character_id cleanly:
                 }
               } else {
                 compoundTextEl.textContent = "Character data not found.";
+                abilityEl.innerHTML = `<em>Ability not found.</em>`;
                 flavourEl.innerHTML = `<em>Flavour not found.</em>`;
               }
             })
             .catch(err => {
               console.error(err);
               compoundTextEl.textContent = "Error loading character data.";
+              abilityEl.innerHTML = `<em>Error loading ability.</em>`;
               flavourEl.innerHTML = `<em>Error loading flavour text.</em>`;
             });
 
@@ -142,7 +154,6 @@ Determine the character_id cleanly:
         </script>
       </div>
     </div>
-
   </div>
 </article>
 

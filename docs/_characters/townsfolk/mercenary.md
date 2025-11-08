@@ -15,7 +15,7 @@ howtorun: |
   If the Mercenary died tonight, wake them and point to the player marked **TARGET**. Put the Mercenary to sleep.
 examples:
   - The Demon is shown that the Mercenary's target is the [[Ordinator]]. That day, the [[Ordinator]] is executed. Good wins immediately.
-  - The Fortune Teller is the Mercenary's target. On the final day, only the [[The Queens]], the Fortune Teller and the Mercenary live. The Fortune Teller is executed, and good wins due to the Mercenary ability.
+  - "The Fortune Teller is the Mercenary's target. On the final day, only the [[The Queens]], the Fortune Teller and the Mercenary live. The Fortune Teller is executed, and good wins due to the Mercenary ability."
 ---
 
 

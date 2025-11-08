@@ -57,168 +57,172 @@
             </span>
         </footer>
     </main>
-    
-<script>
-window.CHARACTER_MAP = {};
-const HEADER_HEIGHT = 110;
 
-// Populate CHARACTER_MAP from Jekyll homebrew
-{% for g in site.data.homebrew %}
-{% for m in g.members %}
-window.CHARACTER_MAP["{{ m.name }}"] = {
-    id: "{{ m.id }}",
-    group: "{{ g.group }}",
-    ability: null
-};
-{% endfor %}
-{% endfor %}
+    <script>
+        window.CHARACTER_MAP = {};
+        const HEADER_HEIGHT = 110;
 
-// Global tooltip
-const tooltipEl = document.createElement('div');
-tooltipEl.className = 'character-tooltip-body';
-tooltipEl.style.opacity = '0';
-tooltipEl.style.position = 'absolute';
-tooltipEl.style.pointerEvents = 'none';
-tooltipEl.style.transition = 'opacity 0.2s ease, transform 0.2s ease';
-document.body.appendChild(tooltipEl);
+        // Populate CHARACTER_MAP from Jekyll homebrew
+        {% for g in site.data.homebrew %}
+        {% for m in g.members %}
+        window.CHARACTER_MAP["{{ m.name }}"] = {
+            id: "{{ m.id }}",
+            group: "{{ g.group }}",
+            ability: null
+        };
+        {% endfor %}
+        {% endfor %}
 
-function showTooltip(target, text) {
-    tooltipEl.textContent = text;
+        // Global tooltip
+        const tooltipEl = document.createElement('div');
+        tooltipEl.className = 'character-tooltip-body';
+        tooltipEl.style.opacity = '0';
+        tooltipEl.style.position = 'absolute';
+        tooltipEl.style.pointerEvents = 'none';
+        tooltipEl.style.transition = 'opacity 0.2s ease, transform 0.2s ease';
+        document.body.appendChild(tooltipEl);
 
-    const rect = target.getBoundingClientRect();
-    const scrollY = window.scrollY || window.pageYOffset;
-    const viewportHeight = window.innerHeight;
+        function showTooltip(target, text) {
+            tooltipEl.textContent = text;
 
-    const tooltipHeight = tooltipEl.offsetHeight;
+            const rect = target.getBoundingClientRect();
+            const scrollY = window.scrollY || window.pageYOffset;
+            const viewportHeight = window.innerHeight;
 
-    const spaceBelow = viewportHeight - rect.bottom;
-    const spaceAbove = rect.top - HEADER_HEIGHT;
-    let top = spaceBelow >= tooltipHeight + 8 ? rect.bottom + scrollY + 4
-            : spaceAbove >= tooltipHeight + 8 ? rect.top + scrollY - tooltipHeight - 4
-            : rect.bottom + scrollY + 4;
+            const tooltipHeight = tooltipEl.offsetHeight;
 
-    const left = rect.left + window.scrollX + rect.width / 2;
+            const spaceBelow = viewportHeight - rect.bottom;
+            const spaceAbove = rect.top - HEADER_HEIGHT;
+            let top = spaceBelow >= tooltipHeight + 8 ? rect.bottom + scrollY + 4
+                : spaceAbove >= tooltipHeight + 8 ? rect.top + scrollY - tooltipHeight - 4
+                    : rect.bottom + scrollY + 4;
 
-    tooltipEl.style.left = left + 'px';
-    tooltipEl.style.top = top + 'px';
-    tooltipEl.style.transform = 'translateX(-50%) translateY(-10px)';
-    tooltipEl.style.opacity = '0';
-    tooltipEl.style.display = 'block';
+            const left = rect.left + window.scrollX + rect.width / 2;
 
-    tooltipEl.getBoundingClientRect(); // Force reflow
+            tooltipEl.style.left = left + 'px';
+            tooltipEl.style.top = top + 'px';
+            tooltipEl.style.transform = 'translateX(-50%) translateY(-10px)';
+            tooltipEl.style.opacity = '0';
+            tooltipEl.style.display = 'block';
 
-    requestAnimationFrame(() => {
-        tooltipEl.style.transform = 'translateX(-50%) translateY(0)';
-        tooltipEl.style.opacity = '1';
-    });
-}
+            tooltipEl.getBoundingClientRect(); // Force reflow
 
-function hideTooltip() {
-    tooltipEl.style.opacity = '0';
-    tooltipEl.style.transform = 'translateX(-50%) translateY(-10px)';
-}
-
-// --- Parse [[Character]] links recursively ---
-function linkCharacters(node) {
-    if (!node || node.nodeType === Node.COMMENT_NODE) return;
-
-    // Skip tooltip container
-    if (node.nodeType === Node.ELEMENT_NODE && node.closest('.character-tooltip-body')) return;
-
-    if (node.nodeType === Node.TEXT_NODE) {
-        let text = node.nodeValue;
-        let replaced = false;
-
-        text = text.replace(/\[\[([^\[\]]+)\]\]/g, (match, charName) => {
-            const charData = window.CHARACTER_MAP[charName.trim()];
-            if (!charData) return match;
-
-            replaced = true;
-            let colorClass = '';
-            switch(charData.group.toLowerCase()) {
-                case 'townsfolk':
-                case 'outsider': colorClass = 'char-blue'; break;
-                case 'minion':
-                case 'demon': colorClass = 'char-red'; break;
-                case 'traveller': colorClass = 'char-purple'; break;
-            }
-
-            return `<a href="/homebrew/${charData.id}" class="character-link ${colorClass}" data-ability="Loading...">${charName}</a>`;
-        });
-
-        if (replaced) {
-            const frag = document.createDocumentFragment();
-            const temp = document.createElement('div');
-            temp.innerHTML = text;
-            while(temp.firstChild) frag.appendChild(temp.firstChild);
-            node.parentNode.replaceChild(frag, node);
-        }
-        return;
-    }
-
-    // Recurse over child nodes safely
-    Array.from(node.childNodes).forEach(child => linkCharacters(child));
-}
-
-// --- Attach link tooltips ---
-function attachLinkTooltips() {
-    document.querySelectorAll('.character-link').forEach(link => {
-        if (!link.dataset.tooltipBound) {
-            link.dataset.tooltipBound = "true";
-            link.addEventListener('mouseenter', () => {
-                showTooltip(link, link.dataset.ability || 'Ability not found');
+            requestAnimationFrame(() => {
+                tooltipEl.style.transform = 'translateX(-50%) translateY(0)';
+                tooltipEl.style.opacity = '1';
             });
-            link.addEventListener('mouseleave', hideTooltip);
         }
-    });
-}
 
-// --- Attach tooltips to character cards ---
-function attachCardTooltips() {
-    document.querySelectorAll('.character-card').forEach(card => {
-        if(!card.dataset.tooltipBound) {
-            card.dataset.tooltipBound = "true";
-            card.addEventListener('mouseenter', () => {
-                const charId = card.dataset.charid + "_shadowslam";
-                const charData = window.HOMEBREW_JSON?.find(c => c.id === charId);
-                const abilityText = charData?.ability || 'Ability not found';
-                showTooltip(card, abilityText);
-            });
-            card.addEventListener('mouseleave', hideTooltip);
+        function hideTooltip() {
+            tooltipEl.style.opacity = '0';
+            tooltipEl.style.transform = 'translateX(-50%) translateY(-10px)';
         }
-    });
-}
 
-// --- Fetch JSON ---
-fetch("https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/libraries/shadowslam_homebrew.json")
-    .then(res => res.json())
-    .then(data => {
-        window.HOMEBREW_JSON = data;
-        data.forEach(c => {
-            const idTrimmed = c.id.replace("_shadowslam","");
-            for(const name in window.CHARACTER_MAP){
-                if(window.CHARACTER_MAP[name].id === idTrimmed) {
-                    window.CHARACTER_MAP[name].ability = c.ability || 'Ability not found';
+        // --- Parse [[Character]] links recursively ---
+        function linkCharacters(node) {
+            if (!node || node.nodeType === Node.COMMENT_NODE) return;
+
+            // Skip tooltip container
+            if (node.nodeType === Node.ELEMENT_NODE && node.closest('.character-tooltip-body')) return;
+
+            if (node.nodeType === Node.TEXT_NODE) {
+                let text = node.nodeValue;
+                let replaced = false;
+
+                text = text.replace(/\[\[([^\[\]]+)\]\]/g, (match, charName) => {
+                    const charData = window.CHARACTER_MAP[charName.trim()];
+                    if (!charData) return match;
+
+                    replaced = true;
+                    let colorClass = '';
+                    switch (charData.group.toLowerCase()) {
+                        case 'townsfolk':
+                        case 'outsider': colorClass = 'char-blue'; break;
+                        case 'minion':
+                        case 'demon': colorClass = 'char-red'; break;
+                        case 'traveller': colorClass = 'char-purple'; break;
+                        case 'fabled': colorClass = 'char-yellow'; break;
+                        case 'loric': colorClass = 'char-green'; break;
+                    }
+
+                    const base = "{{ '/' | relative_url }}"; // Jekyll will replace this
+                    return `<a href="${base}homebrew/${charData.id}" class="character-link ${colorClass}" data-ability="Loading...">${charName}</a>`;
+
+                });
+
+                if (replaced) {
+                    const frag = document.createDocumentFragment();
+                    const temp = document.createElement('div');
+                    temp.innerHTML = text;
+                    while (temp.firstChild) frag.appendChild(temp.firstChild);
+                    node.parentNode.replaceChild(frag, node);
                 }
+                return;
             }
-        });
 
-        // Update links with real ability
-        document.querySelectorAll('.character-link').forEach(link => {
-            const charName = link.textContent.trim();
-            const charData = window.CHARACTER_MAP[charName];
-            if(charData && charData.ability) link.dataset.ability = charData.ability;
-        });
-    })
-    .catch(err => console.error('Failed to load ability data:', err));
+            // Recurse over child nodes safely
+            Array.from(node.childNodes).forEach(child => linkCharacters(child));
+        }
 
-// --- Initialize ---
-document.addEventListener("DOMContentLoaded", () => {
-    linkCharacters(document.body);
-    attachLinkTooltips();
-    attachCardTooltips();
-});
-</script>
+        // --- Attach link tooltips ---
+        function attachLinkTooltips() {
+            document.querySelectorAll('.character-link').forEach(link => {
+                if (!link.dataset.tooltipBound) {
+                    link.dataset.tooltipBound = "true";
+                    link.addEventListener('mouseenter', () => {
+                        showTooltip(link, link.dataset.ability || 'Ability not found');
+                    });
+                    link.addEventListener('mouseleave', hideTooltip);
+                }
+            });
+        }
+
+        // --- Attach tooltips to character cards ---
+        function attachCardTooltips() {
+            document.querySelectorAll('.character-card').forEach(card => {
+                if (!card.dataset.tooltipBound) {
+                    card.dataset.tooltipBound = "true";
+                    card.addEventListener('mouseenter', () => {
+                        const charId = card.dataset.charid + "_shadowslam";
+                        const charData = window.HOMEBREW_JSON?.find(c => c.id === charId);
+                        const abilityText = charData?.ability || 'Ability not found';
+                        showTooltip(card, abilityText);
+                    });
+                    card.addEventListener('mouseleave', hideTooltip);
+                }
+            });
+        }
+
+        // --- Fetch JSON ---
+        fetch("https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/libraries/shadowslam_homebrew.json")
+            .then(res => res.json())
+            .then(data => {
+                window.HOMEBREW_JSON = data;
+                data.forEach(c => {
+                    const idTrimmed = c.id.replace("_shadowslam", "");
+                    for (const name in window.CHARACTER_MAP) {
+                        if (window.CHARACTER_MAP[name].id === idTrimmed) {
+                            window.CHARACTER_MAP[name].ability = c.ability || 'Ability not found';
+                        }
+                    }
+                });
+
+                // Update links with real ability
+                document.querySelectorAll('.character-link').forEach(link => {
+                    const charName = link.textContent.trim();
+                    const charData = window.CHARACTER_MAP[charName];
+                    if (charData && charData.ability) link.dataset.ability = charData.ability;
+                });
+            })
+            .catch(err => console.error('Failed to load ability data:', err));
+
+        // --- Initialize ---
+        document.addEventListener("DOMContentLoaded", () => {
+            linkCharacters(document.body);
+            attachLinkTooltips();
+            attachCardTooltips();
+        });
+    </script>
 
 
 

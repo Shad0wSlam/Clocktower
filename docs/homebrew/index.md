@@ -18,6 +18,21 @@ permalink: /homebrew
     <div class="character-category">{{ group.plural }}</div>
     <div class="character-grid">
       {% for member in group.members %}
+
+        {% assign colorClass = "" %}
+        {% assign group_lower = group.group | downcase %}
+        {% if group_lower == "townsfolk" or group_lower == "outsider" %}
+          {% assign colorClass = "char-blue" %}
+        {% elsif group_lower == "minion" or group_lower == "demon" %}
+          {% assign colorClass = "char-red" %}
+        {% elsif group_lower == "traveller" %}
+          {% assign colorClass = "char-purple" %}
+        {% elsif group_lower == "fabled" %}
+          {% assign colorClass = "char-yellow" %}
+        {% elsif group_lower == "loric" %}
+          {% assign colorClass = "char-green" %}
+        {% endif %}
+
         <div class="character-card" data-charid="{{ member.id }}">
           <a href="{{ '/homebrew/' | append: member.id | relative_url }}">
             <div class="character-image-wrapper">
@@ -27,7 +42,7 @@ permalink: /homebrew
                 class="character-icon"
               >
             </div>
-            <div class="character-name">{{ member.name }}</div>
+            <div class="character-name {{ colorClass }}">{{ member.name }}</div>
           </a>
           <div class="character-tooltip" style="display:none">{{ member.name }}</div>
         </div>
