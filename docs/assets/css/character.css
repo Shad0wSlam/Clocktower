@@ -2,15 +2,6 @@
    Character Page Layout
    ============================ */
 
-/* Main character page container */
-.character-page {
-  max-width: 1200px;
-  margin: 0;
-  padding: 2rem;
-  background: rgba(17,17,17,0.85);
-  border-radius: 16px;
-  box-shadow: 0 0 15px rgba(179,0,0,0.25);
-}
 
 /* Character Title */
 .character-title {

@@ -1,0 +1,130 @@
+---
+layout: default
+---
+
+{% assign script_id = page.id | default: page.name | split: '/' | last | split: '.' | first %}
+{% assign script_type = nil %}
+
+{% for s in site.data.scripts %}
+  {% for m in s.scripts %}
+    {% if m.id == script_id %}
+      {% assign script_data = m %}
+      {% assign script_type = s.group %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+
+{% assign page_title = script_data.name | default: page.title | default: script_id %}
+
+<link rel="stylesheet" href="{{ '/assets/css/script.css' | relative_url }}">
+
+<article class="script-container">
+
+  {% if script_data %}
+    <!-- Header with logo -->
+    <div class="script-header">
+      <img src="https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/scripts/logo/{{ script_data.id }}.png" alt="Script Logo" class="script-logo">
+      <h1 class="script-title">{{ page_title }}</h1>
+      <div class="script-meta">
+        {% if script_data.authors %}
+          <span class="script-author">By {{ script_data.authors | join: ", " }}</span>
+        {% endif %}
+      </div>
+      <div class="script-tags">
+        {% if script_data.type %}
+          {% assign type_class = script_data.type | downcase | prepend: 'tag-type-' %}
+          <span class="tag {{ type_class }}">{{ script_data.type }}</span>
+        {% endif %}
+        {% if script_data.difficulty %}
+          {% assign diff_class = script_data.difficulty | downcase | prepend: 'tag-difficulty-' %}
+          <span class="tag {{ diff_class }}">{{ script_data.difficulty }}</span>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- Main content: Image + JSON -->
+    <div class="script-main">
+      <div class="script-image-wrapper">
+        <img src="https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/scripts/img/{{ script_data.id }}.png"
+             alt="{{ script_data.name }} Script"
+             class="script-image">
+      </div>
+
+      <div class="script-json-wrapper">
+        <h2>Script JSON</h2>
+        <pre id="script-json-box" class="json-box">Loading...</pre>
+        <div class="json-buttons">
+          <button id="copy-script-json">Copy</button>
+          <button id="download-script-json">Download JSON</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Additional content below -->
+    <div class="script-additional-content">
+      {% if script_data.description %}
+        <div class="script-description">{{ script_data.description | markdownify }}</div>
+      {% endif %}
+      {{ content }}
+    </div>
+
+  {% else %}
+    <p class="error">No script data found for ID: {{ script_data }}</p>
+  {% endif %}
+
+</article>
+
+<script>
+document.addEventListener("DOMContentLoaded", async () => {
+  const scriptId = "{{ script_id }}";
+  const scriptTitle = "{{ page_title }}";
+  const jsonBox = document.getElementById("script-json-box");
+  const copyBtn = document.getElementById("copy-script-json");
+  const downloadBtn = document.getElementById("download-script-json");
+
+  try {
+    const res = await fetch(`https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/scripts/json/${scriptId}.json`);
+    if (!res.ok) throw new Error("JSON not found");
+    const data = await res.json();
+
+    jsonBox.textContent = JSON.stringify(data, null, 2);
+
+    // Copy to clipboard
+    copyBtn.addEventListener("click", () => {
+      navigator.clipboard.writeText(jsonBox.textContent)
+        .then(() => alert("Script JSON copied to clipboard!"))
+        .catch(err => alert("Failed to copy: " + err));
+    });
+
+    // Download JSON file named after script title
+    downloadBtn.addEventListener("click", () => {
+      const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = `${scriptTitle}.json`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+    });
+
+  } catch (err) {
+    console.error("Error loading JSON:", err);
+    jsonBox.textContent = "Error loading script JSON data.";
+  }
+});
+</script>
+
+<script>
+  (function waitForHeader() {
+    const scriptName = "{{ page_title | strip_newlines | escape | replace: '"', '\"' }}";
+    const projectNameEl = document.getElementById('project-name');
+    if (projectNameEl && scriptName) {
+      projectNameEl.textContent = scriptName;
+      document.title = scriptName;
+    } else {
+      setTimeout(waitForHeader, 100);
+    }
+  })();
+</script>

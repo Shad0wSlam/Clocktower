@@ -1,0 +1,176 @@
+
+/* Header with logo and title layout */
+.script-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  position: relative;
+  border-bottom: 2px solid var(--accent-red);
+  padding-bottom: -1rem;
+}
+
+/* Logo much larger, top-left */
+.script-logo {
+  height: 100px; /* doubled from 50px */
+  width: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Title centered horizontally, ignoring logo */
+.script-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent-red);
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+/* Meta info under title */
+.script-meta {
+  font-size: 1rem;
+  color: #ccc;
+  flex-basis: 100%;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+/* Tags directly below title, centered and not affected by logo flex */
+.script-tags {
+  flex-basis: 100%;       /* make tags take full width in flex */
+  display: block;         /* ensure it's block-level */
+  text-align: center;     /* center inline tags */
+  margin-top: -6rem;    /* smaller top margin to move closer to title */
+}
+
+
+.script-tags .tag {
+  display: inline-block; /* ensure tags stay inline */
+}
+
+/* Tag styling reused from your overview page */
+.tag {
+  padding: 0.25rem 0.6rem;
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+  display: inline-block;
+  border: 1px solid transparent;
+  margin: 0.2rem;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* TYPE TAGS */
+.tag-type-vanilla {
+  background: rgba(128, 0, 128, 0.4);
+  border-color: rgba(128, 0, 128, 0.8);
+}
+.tag-type-hybrid {
+  background: rgba(255, 140, 0, 0.35);
+  border-color: rgba(255, 140, 0, 0.8);
+}
+
+/* DIFFICULTY TAGS */
+.tag-difficulty-beginner {
+  background: rgba(63, 150, 81, 0.4);
+  border-color: rgba(63, 150, 81, 0.8);
+}
+.tag-difficulty-intermediate {
+  background: rgba(212, 175, 55, 0.4);
+  border-color: rgba(212, 175, 55, 0.8);
+}
+.tag-difficulty-advanced {
+  background: rgba(255, 102, 0, 0.35);
+  border-color: rgba(255, 102, 0, 0.8);
+}
+.tag-difficulty-expert {
+  background: rgba(140, 14, 18, 0.4);
+  border-color: rgba(140, 14, 18, 0.8);
+}
+
+/* Main layout: image left/middle, JSON right */
+.script-main {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* Script image smaller */
+.script-image-wrapper {
+  flex: 2 1 55%;
+  text-align: center;
+}
+.script-image {
+  width: 90%; /* smaller width */
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(179,0,0,0.25);
+}
+
+/* JSON section on the right */
+.script-json-wrapper {
+  flex: 0 0 40%;
+  min-width: 250px;
+  color: var(--accent-red);
+}
+.json-box {
+  background: rgba(20,20,20,0.9);
+  color: #ddd;
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 0 15px rgba(179,0,0,0.25);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: 500px; /* smaller to keep readable */
+  font-family: monospace;
+  white-space: pre;
+}
+.json-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+.json-buttons button {
+  background: rgba(50,50,50,0.9);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 0.4rem;
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.json-buttons button:hover {
+  background: rgba(100,100,100,0.9);
+}
+
+/* Additional content below main layout */
+.script-additional-content {
+  margin-top: 2rem;
+  color: #ddd;
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+/* Ensure responsiveness */
+@media (max-width: 1024px) {
+  .script-main {
+    flex-direction: column;
+  }
+  .script-image-wrapper,
+  .script-json-wrapper {
+    flex: 1 1 100%;
+  }
+  .script-image {
+    width: 100%;
+  }
+}
+

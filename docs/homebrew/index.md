@@ -14,9 +14,9 @@ permalink: /homebrew
 </div>
 
 {% for group in site.data.homebrew %}
-  <div class="character-grid-wrapper" data-category="{{ group.group | downcase }}">
-    <div class="character-category">{{ group.plural }}</div>
-    <div class="character-grid">
+  <div class="overview-grid-wrapper" data-category="{{ group.group | downcase }}">
+    <div class="overview-category">{{ group.plural }}</div>
+    <div class="overview-grid">
       {% for member in group.members %}
 
         {% assign colorClass = "" %}

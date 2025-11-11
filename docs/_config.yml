@@ -4,3 +4,6 @@ collections:
   characters:
     output: true
     permalink: /homebrew/:title
+  scripts:
+    output: true
+    permalink: /script/:title
