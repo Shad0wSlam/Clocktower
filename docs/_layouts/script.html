@@ -21,9 +21,9 @@ layout: default
 <article class="script-container">
 
   {% if script_data %}
-    <!-- Header with logo -->
+    <!-- Header with optional logo -->
     <div class="script-header">
-      <img src="https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/scripts/logo/{{ script_data.id }}.png" alt="Script Logo" class="script-logo">
+      <img src="https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/scripts/logo/{{ script_data.id }}.png" onerror="this.remove()" class="script-logo">
       <h1 class="script-title">{{ page_title }}</h1>
       <div class="script-meta">
         {% if script_data.authors %}
@@ -92,14 +92,12 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     jsonBox.textContent = JSON.stringify(data, null, 2);
 
-    // Copy to clipboard
     copyBtn.addEventListener("click", () => {
       navigator.clipboard.writeText(jsonBox.textContent)
         .then(() => alert("Script JSON copied to clipboard!"))
         .catch(err => alert("Failed to copy: " + err));
     });
 
-    // Download JSON file named after script title
     downloadBtn.addEventListener("click", () => {
       const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
       const url = URL.createObjectURL(blob);
@@ -119,15 +117,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // Dynamically adjust JSON height to image height
   const adjustHeight = () => {
-  if (imageEl && jsonWrapper) {
-    const imgHeight = imageEl.clientHeight;
-    if (imgHeight > 0) {
-      // Slightly reduce the JSON wrapper height so it ends a bit above image bottom
-      jsonWrapper.style.maxHeight = (imgHeight - 30) + "px";
-      jsonBox.style.maxHeight = (imgHeight - 90) + "px";
+    if (imageEl && jsonWrapper) {
+      const imgHeight = imageEl.clientHeight;
+      if (imgHeight > 0) {
+        jsonWrapper.style.maxHeight = (imgHeight - 30) + "px";
+        jsonBox.style.maxHeight = (imgHeight - 90) + "px";
+      }
     }
-  }
-};
+  };
 
   imageEl.addEventListener("load", adjustHeight);
   window.addEventListener("resize", adjustHeight);

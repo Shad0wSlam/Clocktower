@@ -184,7 +184,22 @@
   .script-image {
     width: 100%;
   }
-  #script-json-box {
-    max-height: 400px;
+}
+
+/* Mobile: stack logo above title/tags */
+@media (max-width: 600px) {
+  .script-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .script-logo {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin-bottom: 1rem;
+  }
+  .script-tags {
+    margin-top: 0.5rem;
   }
 }
