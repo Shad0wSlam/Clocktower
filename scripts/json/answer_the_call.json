@@ -1,0 +1,278 @@
+[
+  {
+    "id": "_meta",
+    "author": "ShadowSlam & Alexa Anrein",
+    "name": "Answer the Call",
+    "firstNight": [
+      "dusk",
+      "amaniti_speculated",
+      "queen_speculated",
+      "magician",
+      "minioninfo",
+      "demoninfo",
+      "shacklewight_speculated",
+      "king",
+      "marionette",
+      "xaan",
+      "pirate_speculated",
+      "prisoner_speculated",
+      "pixie",
+      "damsel",
+      "witch_hunter_speculated",
+      "balloonist",
+      "shugenja",
+      "dawn"
+    ],
+    "otherNight": [
+      "palabra_de_dios_speculated",
+      "dusk",
+      "xaan",
+      "shacklewight_speculated",
+      "queen_of_lies_speculated",
+      "alhadikhia",
+      "plaguedoctor",
+      "witch_hunter_speculated",
+      "choirboy",
+      "damsel",
+      "insomniac_speculated",
+      "ravenkeeper",
+      "balloonist",
+      "mystic_speculated",
+      "king",
+      "dawn"
+    ]
+  },
+  "shugenja",
+  "pixie",
+  {
+    "id": "pirate_speculated",
+    "name": "Pirate",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/pirate.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/evil/pirate.png"
+    ],
+    "team": "townsfolk",
+    "ability": "You start knowing how many Pirates are in-play. If Pirates are the only good characters alive, good wins. [+0 to +2 Pirates]",
+    "firstNight": 40,
+    "otherNight": 0,
+    "firstNightReminder": "Show each Pirate the number of in-play Pirates.",
+    "setup": true,
+    "special": [
+      {
+        "type": "selection",
+        "name": "bag-duplicate"
+      }
+    ]
+  },
+  "balloonist",
+  "king",
+  {
+    "id": "witch_hunter_speculated",
+    "name": "Witch Hunter",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/witch_hunter.png"
+    ],
+    "team": "townsfolk",
+    "ability": "Each night, choose a player: you learn their alignment. If they are not executed tomorrow, they turn evil. You can not be evil.",
+    "firstNight": 59,
+    "otherNight": 65,
+    "reminders": [
+      "Chosen",
+      "Evil",
+      "Evil",
+      "Evil"
+    ],
+    "special": []
+  },
+  {
+    "id": "insomniac_speculated",
+    "name": "Insomniac",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/insomniac.png"
+    ],
+    "team": "townsfolk",
+    "ability": "Each night*, learn a character that died tonight.",
+    "firstNight": 0,
+    "otherNight": 68,
+    "jinxes": [
+      {
+        "id": "shacklewight_speculated",
+        "reason": "If the Shacklewight is in-play, the Insomniac learns a character who died by the Shacklewight today."
+      }
+    ],
+    "special": []
+  },
+  "alsaahir",
+  "ravenkeeper",
+  {
+    "id": "mystic_speculated",
+    "name": "Mystic",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/mystic.png"
+    ],
+    "team": "townsfolk",
+    "ability": "If you died at night, you are reborn as a good character of your choice on the final night, even if drunk or poisoned.",
+    "firstNight": 0,
+    "otherNight": 86,
+    "otherNightReminder": "If tonight is the final night and the Mystic is dead, inform the Mystic of the character they have become at dawn. They do not act as the new character tonight.",
+    "reminders": [
+      "Will be Reborn"
+    ],
+    "special": []
+  },
+  "choirboy",
+  {
+    "id": "queen_speculated",
+    "name": "Queen",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/queen.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/evil/queen.png"
+    ],
+    "team": "townsfolk",
+    "ability": "If both of your neighbours are good, they learn who you are. Anyone mad about a Queen being in-play might be executed.",
+    "firstNight": 17,
+    "otherNight": 0,
+    "firstNightReminder": "If both of the Queen's neighbours are good wake them and show them the 'This character selected you' card and then the Queen token",
+    "special": []
+  },
+  "magician",
+  {
+    "id": "prisoner_speculated",
+    "name": "Prisoner",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/outsider/prisoner.png"
+    ],
+    "team": "outsider",
+    "ability": "You may not vote. You know 1 not-in-play character. If most players vote to free you, become that character & alignment.",
+    "firstNight": 45,
+    "otherNight": 0,
+    "firstNightReminder": "Show the Prisoner a not-in-play character."
+  },
+  "plaguedoctor",
+  "damsel",
+  "puzzlemaster",
+  "xaan",
+  "marionette",
+  {
+    "id": "amaniti_speculated",
+    "name": "Amaniti",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/minion/amaniti.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/minion/good/amaniti.png"
+    ],
+    "team": "minion",
+    "ability": "Your neighbors register falsely to good players' abilities.",
+    "firstNight": 2,
+    "otherNight": 0,
+    "firstNightReminder": "Mark the Amaniti's neighbours with Registers Falsely",
+    "reminders": [
+      "Registers Falsely",
+      "Registers Falsely"
+    ],
+    "jinxes": [
+      {
+        "id": "ogre",
+        "reason": "The Amaniti's neighbours do not register falsely to the Ogre."
+      },
+      {
+        "id": "plaguedoctor",
+        "reason": "If the Plague Doctor dies, a living Minion gains the Amaniti ability in addition to their own ability, and learns this."
+      }
+    ]
+  },
+  {
+    "id": "scarecrow_speculated",
+    "name": "Scarecrow",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/minion/scarecrow.png"
+    ],
+    "team": "minion",
+    "ability": "To good players, you register as the Demon & the Demon registers as a Minion.",
+    "firstNight": 0,
+    "otherNight": 0,
+    "firstNightReminder": "Mark the Scarecrow with Registers as Demon, and the Demon with Registers as Minion.",
+    "reminders": [
+      "Registers as Minion",
+      "Registers as Demon"
+    ],
+    "jinxes": [
+      {
+        "id": "barber",
+        "reason": "If the Scarecrow receives the Barber choice, dead Demons register truthfully to the Barber ability."
+      },
+      {
+        "id": "hatter",
+        "reason": "The Hatter ability is unaffected by the Scarecrow's registration."
+      }
+    ],
+    "special": []
+  },
+  {
+    "id": "palabra_de_dios_speculated",
+    "name": "Palabra de Dios",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/demon/palabra_de_dios.png"
+    ],
+    "team": "demon",
+    "ability": "Each dusk*, for each good player with a hand raised, choose a player: they die. If no-one living raised a hand, evil wins.",
+    "firstNight": 0,
+    "otherNight": 1,
+    "reminders": [
+      "Raised",
+      "Raised",
+      "Raised",
+      "Raised",
+      "Dead",
+      "Dead",
+      "Dead",
+      "Dead"
+    ],
+    "special": []
+  },
+  {
+    "id": "shacklewight_speculated",
+    "name": "Shacklewight",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/demon/shacklewight.png"
+    ],
+    "team": "demon",
+    "ability": "Each night, choose any players: they all wake together. Tomorrow day, if 1 dies, they all die. 1 player must die each day.",
+    "firstNight": 24,
+    "otherNight": 43,
+    "reminders": [
+      "Shackled",
+      "Shackled",
+      "Shackled",
+      "Shackled",
+      "Shackled",
+      "Shackled",
+      "Shackled",
+      "Shackled"
+    ],
+    "special": []
+  },
+  {
+    "id": "queen_of_lies_speculated",
+    "name": "Queen of Lies",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/demon/queen_of_lies.png"
+    ],
+    "team": "demon",
+    "ability": "Each night*, choose 3 players (all players learn who): each chooses a different alive player, 2 of whom die.",
+    "firstNight": 0,
+    "otherNight": 43,
+    "reminders": [
+      "Duped",
+      "Duped",
+      "Duped",
+      "Chosen",
+      "Chosen",
+      "Chosen",
+      "Dead",
+      "Dead"
+    ],
+    "special": []
+  },
+  "alhadikhia",
+  "bootlegger"
+]

@@ -1,0 +1,272 @@
+[
+  {
+    "id": "_meta",
+    "author": "ShadowSlam",
+    "name": "Garden of Speculation",
+    "firstNight": [
+      "dusk",
+      "genius_speculated",
+      "amaniti_speculated",
+      "stableboy_speculated",
+      "minioninfo",
+      "snitch",
+      "demoninfo",
+      "marionette",
+      "wench_speculated",
+      "prisoner_speculated",
+      "coachman_speculated",
+      "steward",
+      "knight",
+      "noble",
+      "balloonist",
+      "general",
+      "dawn",
+      "leviathan"
+    ],
+    "otherNight": [
+      "dusk",
+      "genius_speculated",
+      "wench_speculated",
+      "stableboy_speculated",
+      "coachman_speculated",
+      "tycoon_speculated",
+      "balloonist",
+      "general",
+      "dawn",
+      "leviathan"
+    ]
+  },
+  "steward",
+  "knight",
+  "noble",
+  {
+    "id": "stableboy_speculated",
+    "name": "Stableboy",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/stableboy.png"
+    ],
+    "team": "townsfolk",
+    "ability": "Each night, you learn 1 in-play character.",
+    "firstNight": 16,
+    "otherNight": 48,
+    "special": []
+  },
+  "balloonist",
+  "general",
+  {
+    "id": "wench_speculated",
+    "name": "Wench",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/wench.png"
+    ],
+    "team": "townsfolk",
+    "ability": "Each night, you learn a player. They are drunk until dusk and any information they receive is false.",
+    "firstNight": 33,
+    "otherNight": 42,
+    "firstNightReminder": "Mark a player with the \"Drunk &amp; False info\" reminder token. Wake the Wench and point to that player.",
+    "otherNightReminder": "Mark a player with the \"Drunk &amp; False info\" reminder token. Wake the Wench and point to that player.",
+    "reminders": [
+      "Drunk & False info"
+    ]
+  },
+  {
+    "id": "genius_speculated",
+    "name": "Genius",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/genius.png"
+    ],
+    "team": "townsfolk",
+    "ability": "Each night, choose a good character: you have that ability until you choose again. You are drunk every other night until dusk.",
+    "firstNight": 2,
+    "otherNight": 2,
+    "firstNightReminder": "The Genius points to a good character on their sheet. Swap the character token with the Genius token and add the 'Is the Genius' reminder.",
+    "otherNightReminder": "The Genius points to a good character on their sheet. Swap the character token with the Genius' current token. On every other night, place the 'Drunk' reminder token on the Genius.",
+    "remindersGlobal": [
+      "is the Genius",
+      "Drunk"
+    ],
+    "special": [
+      {
+        "type": "reveal",
+        "name": "replace-character"
+      }
+    ]
+  },
+  {
+    "id": "tycoon_speculated",
+    "name": "Tycoon",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/tycoon.png"
+    ],
+    "team": "townsfolk",
+    "ability": "Each night*, learn if you shook hands with an evil player today. 1 player that you have ever shaken hands with is drunk.",
+    "firstNight": 0,
+    "otherNight": 60,
+    "otherNightReminder": "Choose whether or not to make a player the Tycoon shook hands with drunk. Wake the Tycoon and nod yes if they shook hands with an evil player, otherwise shake your head no.",
+    "reminders": [
+      "Shook hands",
+      "Drunk"
+    ]
+  },
+  {
+    "id": "astrologer_speculated",
+    "name": "Astrologer",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/astrologer.png"
+    ],
+    "team": "townsfolk",
+    "ability": "Each day, ask the Storyteller to tell you 1 piece of false information.",
+    "firstNight": 0,
+    "otherNight": 0
+  },
+  {
+    "id": "coachman_speculated",
+    "name": "Coachman",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/coachman.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/evil/coachman.png"
+    ],
+    "team": "townsfolk",
+    "ability": "Each day, choose a 1 word topic on which the Storyteller tells you 1 fact. If an alive neighbour is evil, you get false info.",
+    "firstNight": 50,
+    "otherNight": 50,
+    "firstNightReminder": "Mark the Coachman with False Info if a living neighbour is evil.",
+    "otherNightReminder": "Mark the Coachman with False Info if a living neighbour is evil.",
+    "reminders": [
+      "False Info"
+    ]
+  },
+  {
+    "id": "nun_speculated",
+    "name": "Nun",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/nun.png"
+    ],
+    "team": "townsfolk",
+    "ability": "Good Townsfolk can not be drunk, poisoned, or get false information.",
+    "firstNight": 0,
+    "otherNight": 0
+  },
+  "atheist",
+  {
+    "id": "occultist_the_bootleggers_anthology",
+    "name": "Occultist",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/borrowed/occultist.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/borrowed/occultist_evil.png"
+    ],
+    "team": "outsider",
+    "ability": "You might be executed unless you are mad about learning something new every day. Once per game, when you visit the Storyteller, you learn a fact.",
+    "firstNight": 0,
+    "otherNight": 0,
+    "reminders": [
+      "Interest Lost",
+      "Given "
+    ]
+  },
+  {
+    "id": "prisoner_speculated",
+    "name": "Prisoner",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/outsider/prisoner.png"
+    ],
+    "team": "outsider",
+    "ability": "You may not vote. You know 1 not-in-play character. If most players vote to free you, become that character & alignment.",
+    "firstNight": 45,
+    "otherNight": 0,
+    "firstNightReminder": "Show the Prisoner a not-in-play character."
+  },
+  "snitch",
+  "puzzlemaster",
+  "marionette",
+  {
+    "id": "amaniti_speculated",
+    "name": "Amaniti",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/minion/amaniti.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/minion/good/amaniti.png"
+    ],
+    "team": "minion",
+    "ability": "Your neighbors register falsely to good players' abilities.",
+    "firstNight": 2,
+    "otherNight": 0,
+    "firstNightReminder": "Mark the Amaniti's neighbours with Registers Falsely",
+    "reminders": [
+      "Registers Falsely",
+      "Registers Falsely"
+    ],
+    "jinxes": [
+      {
+        "id": "ogre",
+        "reason": "The Amaniti's neighbours do not register falsely to the Ogre."
+      },
+      {
+        "id": "plaguedoctor",
+        "reason": "If the Plague Doctor dies, a living Minion gains the Amaniti ability in addition to their own ability, and learns this."
+      }
+    ]
+  },
+  {
+    "id": "biblioclast_shadowslam",
+    "name": "Biblioclast",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/minion/biblioclast.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/minion/good/biblioclast.png"
+    ],
+    "team": "minion",
+    "ability": "You start choosing a character for each not in-play Outsider. Chosen abilities yield false info. [-1 to +1 Outsiders]",
+    "firstNight": 29,
+    "otherNight": 0,
+    "reminders": [
+      "False",
+      "False",
+      "False",
+      "False"
+    ],
+    "setup": true,
+    "special": []
+  },
+  {
+    "id": "daughter_of_nox_speculated",
+    "name": "Daughter of Nox",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/minion/daughter_of_nox.png"
+    ],
+    "team": "minion",
+    "ability": "Good's info is reversed. The 1st time each player names you: lose your ability (if they are good) or regain it (if they are evil).",
+    "firstNight": 0,
+    "otherNight": 0,
+    "reminders": [
+      "No ability"
+    ],
+    "jinxes": [
+      {
+        "id": "puzzlemaster",
+        "reason": "The Puzzlemaster is unaffected by the Daughter of Nox."
+      }
+    ]
+  },
+  {
+    "id": "virilus_speculated",
+    "name": "Virilus",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/demon/virilus.png"
+    ],
+    "team": "demon",
+    "ability": "Each night, choose a player to infect. Infected who nominate, die & infect the nominee. After day 4, evil wins.",
+    "firstNight": 0,
+    "otherNight": 0,
+    "reminders": [
+      "Infected",
+      "Infected",
+      "Infected",
+      "Infected",
+      "Infected",
+      "Infected",
+      "Infected",
+      "Infected"
+    ]
+  },
+  "leviathan",
+  "bootlegger"
+]

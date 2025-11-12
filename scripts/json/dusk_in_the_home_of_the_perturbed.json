@@ -1,0 +1,306 @@
+[
+  {
+    "id": "_meta",
+    "author": "ShadowSlam",
+    "name": "Dusk in the Home of the Perturbed",
+    "firstNight": [
+      "mole_speculated",
+      "dusk",
+      "amaniti_speculated",
+      "beekeeper_tweaked_speculated",
+      "barista",
+      "thief",
+      "vat_dweller_tweaked_speculated",
+      "queen_speculated",
+      "magician",
+      "minioninfo",
+      "casanova_speculated",
+      "scholar_speculated",
+      "demoninfo",
+      "king",
+      "wizard",
+      "blacksmith_speculated",
+      "pirate_speculated",
+      "huntsman",
+      "damsel",
+      "coachman_speculated",
+      "knight",
+      "dawn"
+    ],
+    "otherNight": [
+      "dusk",
+      "barista",
+      "thief",
+      "wizard",
+      "fanzazz_speculated",
+      "hwisp_speculated",
+      "le_cadeau_speculated",
+      "legion",
+      "casanova_speculated",
+      "coachman_speculated",
+      "choirboy",
+      "huntsman",
+      "damsel",
+      "farmer",
+      "king",
+      "dawn"
+    ]
+  },
+  "knight",
+  {
+    "id": "scholar_speculated",
+    "name": "Scholar",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/scholar.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/evil/scholar.png"
+    ],
+    "team": "townsfolk",
+    "ability": "You start knowing which Demon(s) & Minion(s) are in play.",
+    "firstNight": 22,
+    "otherNight": 0,
+    "firstNightReminder": "Show the Scholar every in-play evil character token."
+  },
+  {
+    "id": "blacksmith_speculated",
+    "name": "Blacksmith",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/blacksmith.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/evil/blacksmith.png"
+    ],
+    "team": "townsfolk",
+    "ability": "You start knowing how many Outsiders are in play. All Outsiders are drunk, even if you are dead. [-? to +? Outsiders]",
+    "firstNight": 39,
+    "otherNight": 0,
+    "firstNightReminder": "Show the Blacksmith the number of in-play outsiders.",
+    "reminders": [
+      "Drunk",
+      "Drunk",
+      "Drunk",
+      "Drunk"
+    ],
+    "setup": true,
+    "jinxes": [
+      {
+        "id": "marionette",
+        "reason": "If the Marionette thinks that they are the Blacksmith, -? to +? Outsiders might have been removed or added."
+      }
+    ]
+  },
+  {
+    "id": "pirate_speculated",
+    "name": "Pirate",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/pirate.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/evil/pirate.png"
+    ],
+    "team": "townsfolk",
+    "ability": "You start knowing how many Pirates are in-play. If Pirates are the only good characters alive, good wins. [+0 to +2 Pirates]",
+    "firstNight": 40,
+    "otherNight": 0,
+    "firstNightReminder": "Show each Pirate the number of in-play Pirates.",
+    "setup": true,
+    "special": [
+      {
+        "type": "selection",
+        "name": "bag-duplicate"
+      }
+    ]
+  },
+  "king",
+  {
+    "id": "coachman_speculated",
+    "name": "Coachman",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/coachman.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/evil/coachman.png"
+    ],
+    "team": "townsfolk",
+    "ability": "Each day, choose a 1 word topic on which the Storyteller tells you 1 fact. If an alive neighbour is evil, you get false info.",
+    "firstNight": 50,
+    "otherNight": 50,
+    "firstNightReminder": "Mark the Coachman with False Info if a living neighbour is evil.",
+    "otherNightReminder": "Mark the Coachman with False Info if a living neighbour is evil.",
+    "reminders": [
+      "False Info"
+    ]
+  },
+  "huntsman",
+  {
+    "id": "beekeeper_tweaked_speculated",
+    "name": "Beekeeper",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/beekeeper.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/evil/beekeeper.png"
+    ],
+    "team": "townsfolk",
+    "ability": "One evil player registers as good and as a Townsfolk or Outsider. If you publicly guess who it is (once per game), your team wins.",
+    "firstNight": 3,
+    "otherNight": 0,
+    "firstNightReminder": "Mark an evil player as Beekept. Do not show them evil info.",
+    "reminders": [
+      "Beekept",
+      "Guess used"
+    ],
+    "special": []
+  },
+  {
+    "id": "mole_speculated",
+    "name": "Mole",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/mole.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/evil/mole.png"
+    ],
+    "team": "townsfolk",
+    "ability": "You are a Minion & register as evil. If most Minions & Demons publicly guess you (once), your team loses, even if dead, drunk or poisoned.",
+    "firstNight": 1,
+    "otherNight": 0,
+    "firstNightReminder": "Wake the Mole and show them the Minion they are.",
+    "reminders": [
+      "Guess Used"
+    ],
+    "remindersGlobal": [
+      "is the Mole"
+    ],
+    "setup": true,
+    "special": [
+      {
+        "type": "reveal",
+        "name": "replace-character"
+      }
+    ]
+  },
+  "farmer",
+  "choirboy",
+  {
+    "id": "queen_speculated",
+    "name": "Queen",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/queen.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/evil/queen.png"
+    ],
+    "team": "townsfolk",
+    "ability": "If both of your neighbours are good, they learn who you are. Anyone mad about a Queen being in-play might be executed.",
+    "firstNight": 17,
+    "otherNight": 0,
+    "firstNightReminder": "If both of the Queen's neighbours are good wake them and show them the 'This character selected you' card and then the Queen token",
+    "special": []
+  },
+  "magician",
+  {
+    "id": "casanova_speculated",
+    "name": "Casanova",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/outsider/casanova.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/outsider/evil/casanova.png"
+    ],
+    "team": "outsider",
+    "ability": "Each night, choose a living player (not yourself): if they're executed & they are good, your team loses.",
+    "firstNight": 21,
+    "otherNight": 49,
+    "firstNightReminder": "The Casanova points to a player. Mark them with the \"Chosen\" reminder token.",
+    "otherNightReminder": "The Casanova points to a player. Mark them with the \"Chosen\" reminder token.",
+    "reminders": [
+      "Chosen"
+    ],
+    "special": []
+  },
+  "politician",
+  "damsel",
+  "heretic",
+  "wizard",
+  {
+    "id": "amaniti_speculated",
+    "name": "Amaniti",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/minion/amaniti.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/minion/good/amaniti.png"
+    ],
+    "team": "minion",
+    "ability": "Your neighbors register falsely to good players' abilities.",
+    "firstNight": 2,
+    "otherNight": 0,
+    "firstNightReminder": "Mark the Amaniti's neighbours with Registers Falsely",
+    "reminders": [
+      "Registers Falsely",
+      "Registers Falsely"
+    ],
+    "jinxes": [
+      {
+        "id": "ogre",
+        "reason": "The Amaniti's neighbours do not register falsely to the Ogre."
+      },
+      {
+        "id": "plaguedoctor",
+        "reason": "If the Plague Doctor dies, a living Minion gains the Amaniti ability in addition to their own ability, and learns this."
+      }
+    ]
+  },
+  "goblin",
+  {
+    "id": "vat_dweller_tweaked_speculated",
+    "name": "Vat Dweller",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/minion/vat_dweller.png"
+    ],
+    "team": "minion",
+    "ability": "Every Outsider is the same Outsider. Evil players start knowing which. [+? to -? Outsiders]",
+    "firstNight": 14,
+    "otherNight": 0,
+    "setup": true,
+    "special": []
+  },
+  {
+    "id": "hwisp_speculated",
+    "name": "Hwisp",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/demon/hwisp.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/demon/good/hwisp.png"
+    ],
+    "team": "demon",
+    "ability": "Each night*, choose a player: they die. If nominated by a Townsfolk, you die. If 2 Townsfolk nominate in a day, evil wins.",
+    "firstNight": 0,
+    "otherNight": 26,
+    "otherNightReminder": "The Hwisp points to a player. That player dies.",
+    "reminders": [
+      "Dead"
+    ]
+  },
+  "legion",
+  {
+    "id": "le_cadeau_speculated",
+    "name": "Le Cadeau",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/demon/le_cadeau.png"
+    ],
+    "team": "demon",
+    "ability": "Each night*, choose a player: they die. The 1st Townsfolk to nominate Le Cadeau becomes an evil Le Cadeau & you die tonight.",
+    "firstNight": 0,
+    "otherNight": 26,
+    "reminders": [
+      "Died",
+      "Once"
+    ],
+    "special": []
+  },
+  {
+    "id": "fanzazz_speculated",
+    "name": "Fanzazz",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/demon/fanzazz.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/demon/good/fanzazz.png"
+    ],
+    "team": "demon",
+    "ability": "Each night*, choose a player: they die & you become their alignment. If you die, your team loses. If only 2 players live, your team wins.",
+    "firstNight": 0,
+    "otherNight": 26,
+    "otherNightReminder": "The Fanzazz points to a player. They die and the Fanzazz becomes the alignment of that player.",
+    "reminders": [
+      "Dead"
+    ]
+  },
+  "thief",
+  "barista",
+  "beggar",
+  "scapegoat",
+  "bootlegger"
+]

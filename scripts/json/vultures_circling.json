@@ -1,0 +1,286 @@
+[
+  {
+    "id": "_meta",
+    "author": "ShadowSlam & Alexa Anrein",
+    "name": "Vultures Circling",
+    "firstNight": [
+      "dusk",
+      "kazali",
+      "queen_speculated",
+      "minioninfo",
+      "demoninfo",
+      "sicilian_tweaked_speculated",
+      "snakecharmer",
+      "palm_reader_speculated",
+      "organgrinder",
+      "blacksmith_speculated",
+      "prophet_speculated",
+      "pirate_speculated",
+      "fearmonger",
+      "pixie",
+      "shugenja",
+      "dawn"
+    ],
+    "otherNight": [
+      "dusk",
+      "machinist_speculated",
+      "patient_tweaked_speculated",
+      "snakecharmer",
+      "sicilian_tweaked_speculated",
+      "organgrinder",
+      "soul_hammer_speculated",
+      "fearmonger",
+      "nodashii",
+      "vigormortis",
+      "kazali",
+      "tycoon_speculated",
+      "palm_reader_speculated",
+      "hustler_speculated",
+      "dawn"
+    ]
+  },
+  "shugenja",
+  {
+    "id": "blacksmith_speculated",
+    "name": "Blacksmith",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/blacksmith.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/evil/blacksmith.png"
+    ],
+    "team": "townsfolk",
+    "ability": "You start knowing how many Outsiders are in play. All Outsiders are drunk, even if you are dead. [-? to +? Outsiders]",
+    "firstNight": 39,
+    "otherNight": 0,
+    "firstNightReminder": "Show the Blacksmith the number of in-play outsiders.",
+    "reminders": [
+      "Drunk",
+      "Drunk",
+      "Drunk",
+      "Drunk"
+    ],
+    "setup": true,
+    "jinxes": [
+      {
+        "id": "marionette",
+        "reason": "If the Marionette thinks that they are the Blacksmith, -? to +? Outsiders might have been removed or added."
+      }
+    ],
+    "special": []
+  },
+  "pixie",
+  {
+    "id": "pirate_speculated",
+    "name": "Pirate",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/pirate.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/evil/pirate.png"
+    ],
+    "team": "townsfolk",
+    "ability": "You start knowing how many Pirates are in-play. If Pirates are the only good characters alive, good wins. [+0 to +2 Pirates]",
+    "firstNight": 40,
+    "otherNight": 0,
+    "firstNightReminder": "Show each Pirate the number of in-play Pirates.",
+    "setup": true,
+    "special": [
+      {
+        "type": "selection",
+        "name": "bag-duplicate"
+      }
+    ]
+  },
+  "snakecharmer",
+  {
+    "id": "tycoon_speculated",
+    "name": "Tycoon",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/tycoon.png"
+    ],
+    "team": "townsfolk",
+    "ability": "Each night*, learn if you shook hands with an evil player today. 1 player that you have ever shaken hands with is drunk.",
+    "firstNight": 0,
+    "otherNight": 60,
+    "otherNightReminder": "Choose whether or not to make a player the Tycoon shook hands with drunk. Wake the Tycoon and nod yes if they shook hands with an evil player, otherwise shake your head no.",
+    "reminders": [
+      "Shook hands",
+      "Drunk"
+    ]
+  },
+  {
+    "id": "hustler_speculated",
+    "name": "Hustler",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/hustler.png"
+    ],
+    "team": "townsfolk",
+    "ability": "Each night*, learn the character that nominated you today. If you are mad about being the Hustler, you receive false info.",
+    "firstNight": 0,
+    "otherNight": 71,
+    "reminders": [
+      "Nominated Today",
+      "Revealed"
+    ],
+    "special": []
+  },
+  {
+    "id": "patient_tweaked_speculated",
+    "name": "Patient",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/patient.png"
+    ],
+    "team": "townsfolk",
+    "ability": "Once per game, at night*, choose to wake: choose a good character to gain the ability of for each night you were asleep.",
+    "firstNight": 0,
+    "otherNight": 6,
+    "special": []
+  },
+  {
+    "id": "prophet_speculated",
+    "name": "Prophet",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/prophet.png"
+    ],
+    "team": "townsfolk",
+    "ability": "On your 1st night, choose a day number: if all dead players are good that dawn, they are resurrected as Travellers.",
+    "firstNight": 40,
+    "otherNight": 0,
+    "special": []
+  },
+  {
+    "id": "machinist_speculated",
+    "name": "Machinist",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/machinist.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/evil/machinist.png"
+    ],
+    "team": "townsfolk",
+    "ability": "On your 1st day, you may visit the Storyteller to become a non-listed character, even if drunk or poisoned [+0 to +2 Machinists]",
+    "firstNight": 0,
+    "otherNight": 6,
+    "setup": true,
+    "special": []
+  },
+  "cannibal",
+  {
+    "id": "queen_speculated",
+    "name": "Queen",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/queen.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/evil/queen.png"
+    ],
+    "team": "townsfolk",
+    "ability": "If both of your neighbours are good, they learn who you are. Anyone mad about a Queen being in-play might be executed.",
+    "firstNight": 17,
+    "otherNight": 0,
+    "firstNightReminder": "If both of the Queen's neighbours are good wake them and show them the 'This character selected you' card and then the Queen token",
+    "special": []
+  },
+  {
+    "id": "palm_reader_speculated",
+    "name": "Palm Reader",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/palm_reader.png"
+    ],
+    "team": "townsfolk",
+    "ability": "The Demon attacks one night before it takes effect. Each night, you learn which player(s) the Demon attacked.",
+    "firstNight": 38,
+    "otherNight": 70,
+    "special": []
+  },
+  {
+    "id": "donkey_wrangler_speculated",
+    "name": "Donkey Wrangler",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/outsider/donkey_wrangler.png"
+    ],
+    "team": "outsider",
+    "ability": "If you are nominated, the Demon must be executed today, or your team loses. [Your token is square]",
+    "firstNight": 0,
+    "otherNight": 0,
+    "setup": true,
+    "special": []
+  },
+  {
+    "id": "tramp_speculated",
+    "name": "Tramp",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/outsider/tramp.png"
+    ],
+    "team": "outsider",
+    "ability": "If there are any votes to execute you, you might be executed immediately.",
+    "firstNight": 0,
+    "otherNight": 0,
+    "special": []
+  },
+  {
+    "id": "golden_child_speculated",
+    "name": "Golden Child",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/outsider/golden_child.png"
+    ],
+    "team": "outsider",
+    "ability": "The 1st player to nominate you, turns evil that night. You cannot nominate yourself 1st.",
+    "firstNight": 0,
+    "otherNight": 0,
+    "special": []
+  },
+  "puzzlemaster",
+  "fearmonger",
+  {
+    "id": "sicilian_tweaked_speculated",
+    "name": "Sicilian",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/minion/sicilian.png"
+    ],
+    "team": "minion",
+    "ability": "Each night, you may choose a player (not yourself): if they are not executed today, their team wins. All players know the chosen player.",
+    "firstNight": 35,
+    "otherNight": 23,
+    "reminders": [
+      "Check"
+    ],
+    "jinxes": [
+      {
+        "id": "character_6719a734d7c93",
+        "reason": "If the Senator ability is active, the Sicilian ability cannot announce or cause an evil player to win with only evil living neighbours."
+      },
+      {
+        "id": "vigormortis",
+        "reason": "If the Sicilian is dead, the Sicilian ability cannot cause a Minion to win on the final day."
+      }
+    ],
+    "special": []
+  },
+  "organgrinder",
+  {
+    "id": "senator_speculated",
+    "name": "Senator",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/minion/senator.png"
+    ],
+    "team": "minion",
+    "ability": "Players can only nominate their living neighbors, even if you are dead.",
+    "firstNight": 0,
+    "otherNight": 0,
+    "special": []
+  },
+  "nodashii",
+  {
+    "id": "soul_hammer_speculated",
+    "name": "Soul Hammer",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/demon/soul_hammer.png"
+    ],
+    "team": "demon",
+    "ability": "Each night*, choose a player: they die. After the final night, the dead may not talk to the living.",
+    "firstNight": 0,
+    "otherNight": 26,
+    "reminders": [
+      "Dead"
+    ],
+    "special": []
+  },
+  "kazali",
+  "vigormortis",
+  "bootlegger",
+  "spiritofivory"
+]

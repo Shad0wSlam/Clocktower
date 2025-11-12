@@ -1,0 +1,177 @@
+[
+  {
+    "id": "_meta",
+    "author": "ShadowSlam",
+    "name": "The Eleventh Hour",
+    "firstNight": [
+      "dusk",
+      "minioninfo",
+      "lunatic",
+      "demoninfo",
+      "marionette",
+      "sentry_shadowslam",
+      "dissovant_shadowslam",
+      "the_mechanism_shadowslam",
+      "amnesiac",
+      "chef",
+      "seamstress",
+      "noble",
+      "shugenja",
+      "villageidiot",
+      "general",
+      "mathematician",
+      "dawn"
+    ],
+    "otherNight": [
+      "dusk",
+      "dissovant_shadowslam",
+      "the_mechanism_shadowslam",
+      "sentry_shadowslam",
+      "lunatic",
+      "amnesiac",
+      "ordinator_shadowslam",
+      "towncrier",
+      "seamstress",
+      "villageidiot",
+      "general",
+      "mathematician",
+      "dawn"
+    ]
+  },
+  "chef",
+  "noble",
+  "shugenja",
+  "general",
+  "villageidiot",
+  "mathematician",
+  {
+    "id": "ordinator_shadowslam",
+    "name": "Ordinator",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/ordinator.png"
+    ],
+    "team": "townsfolk",
+    "ability": "Each night*, learn the amount of evil players who voted on today's execution.",
+    "firstNight": 0,
+    "otherNight": 71,
+    "reminders": [
+      "Voted",
+      "Voted",
+      "Voted",
+      "Voted",
+      "Voted"
+    ],
+    "special": []
+  },
+  "towncrier",
+  "savant",
+  "seamstress",
+  "fisherman",
+  "cannibal",
+  "amnesiac",
+  {
+        "id": "occultist_the_bootleggers_anthology",
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/borrowed/occultist.png",
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/borrowed/occultist_evil.png"
+        ],
+        "reminders": [
+            "Interest Lost",
+            "Given "
+        ],
+        "name": "Occultist",
+        "team": "outsider",
+        "ability": "You might be executed unless you are mad about learning something new every day. Once per game, when you visit the Storyteller, you learn a fact."
+    },
+  "lunatic",
+  "recluse",
+  "mutant",
+  {
+    "id": "dissovant_shadowslam",
+    "name": "Dissovant",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/minion/dissovant.png"
+    ],
+    "team": "minion",
+    "ability": "You start knowing your good neighbours and choose 1: they become evil. Once per game, at night, you may poison the other until dusk.",
+    "firstNight": 37,
+    "otherNight": 11,
+    "firstNightReminder": "Show the Dissovant their two good neighbours and prompt them to choose one of them. The Dissovant may indicate they wish to poison the other. Wake the chosen player and inform them they are evil, and place the Dissident reminder on the other. If the Dissovant chose to poison the Dissident, place the Poisoned reminder on them and the No Ability reminder on the Dissovant.",
+    "otherNightReminder": "The Dissovant may indicate they wish to poison the Dissident. If they do, place the Poisoned reminder on the Dissident until dusk and the No Ability reminder on the Dissovant.",
+    "reminders": [
+      "Evil",
+      "Dissident",
+      "Poisoned",
+      "No Ability"
+    ],
+    "special": []
+  },
+  {
+        "id": "esper_the_bootleggers_anthology",
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/borrowed/esper.png",
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/borrowed/esper_evil.png"
+        ],
+        "firstNightReminder": "Show the Esper the Grimoire. They select a character, a reminder, and a player by placing their Character, Reminder, and Player reminders by them. Wake the Demon; show them the marked character, reminder token, and point to the marked player.",
+        "otherNightReminder": "Show the Esper the Grimoire. They select a character, a reminder, and a player by placing their Character, Reminder, and Player reminders by them. Wake the Demon; show them the marked character, reminder token, and point to the marked player.",
+        "reminders": [
+            "Character",
+            "Reminder",
+            "Player",
+            "Is"
+        ],
+        "name": "Esper",
+        "team": "minion",
+        "ability": "Each night (even when dead), you see the Grimoire, then choose 1 character, 1 reminder & 1 player: the Demon is shown all 3. ",
+        "firstNight": 35.3,
+        "otherNight": 28.3,
+        "special": [
+            {
+                "name": "grimoire",
+                "type": "signal",
+                "time": "night"
+            }
+        ]
+    },
+  {
+    "id": "sentry_shadowslam",
+    "name": "Sentry",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/minion/sentry.png"
+    ],
+    "team": "minion",
+    "ability": "You start knowing not in-play Outsiders. Once per game, at night*, choose a player and a not in-play Outsider they become. [-1 to +1 Outsiders]",
+    "firstNight": 29,
+    "otherNight": 22,
+    "reminders": [
+      "No Ability"
+    ],
+    "setup": true,
+    "special": []
+  },
+  "marionette",
+  {
+    "id": "the_mechanism_shadowslam",
+    "name": "The Mechanism",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/demon/the_mechanism.png"
+    ],
+    "team": "demon",
+    "ability": "Each night, a player 1 further clockwise of each evil is poisoned, if Townsfolk, until dusk. After day 4, evil wins.",
+    "firstNight": 38,
+    "otherNight": 11,
+    "reminders": [
+      "Poisoned",
+      "Poisoned",
+      "Poisoned",
+      "Poisoned",
+      "Poisoned",
+      "Day 1",
+      "Day 2",
+      "Day 3",
+      "Day 4"
+    ],
+    "special": []
+  },
+  "bootlegger"
+]

@@ -1,0 +1,283 @@
+[
+  {
+    "id": "_meta",
+    "author": "ShadowSlam",
+    "name": "Zero Hour in the Manor of the Delinquent",
+    "firstNight": [
+      "dusk",
+      "mole_speculated",
+      "beekeeper_speculated",
+      "poppygrower",
+      "minioninfo",
+      "scholar_speculated",
+      "demoninfo",
+      "xaan",
+      "wizard",
+      "blacksmith_speculated",
+      "pirate_speculated",
+      "huntsman",
+      "damsel",
+      "knight",
+      "villageidiot",
+      "dawn"
+    ],
+    "otherNight": [
+      "dusk",
+      "poppygrower",
+      "xaan",
+      "wizard",
+      "hwisp_speculated",
+      "tipi_tipi_speculated",
+      "fanzazz_speculated",
+      "legion",
+      "huntsman",
+      "damsel",
+      "villageidiot",
+      "dawn"
+    ]
+  },
+  "knight",
+  {
+    "id": "scholar_speculated",
+    "name": "Scholar",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/scholar.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/evil/scholar.png"
+    ],
+    "team": "townsfolk",
+    "ability": "You start knowing which Demon(s) & Minion(s) are in play.",
+    "firstNight": 22,
+    "otherNight": 0,
+    "firstNightReminder": "Show the Scholar every in-play evil character token."
+  },
+  {
+    "id": "blacksmith_speculated",
+    "name": "Blacksmith",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/blacksmith.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/evil/blacksmith.png"
+    ],
+    "team": "townsfolk",
+    "ability": "You start knowing how many Outsiders are in play. All Outsiders are drunk, even if you are dead. [-? to +? Outsiders]",
+    "firstNight": 39,
+    "otherNight": 0,
+    "firstNightReminder": "Show the Blacksmith the number of in-play outsiders.",
+    "reminders": [
+      "Drunk",
+      "Drunk",
+      "Drunk",
+      "Drunk"
+    ],
+    "setup": true,
+    "jinxes": [
+      {
+        "id": "marionette",
+        "reason": "If the Marionette thinks that they are the Blacksmith, -? to +? Outsiders might have been removed or added."
+      }
+    ]
+  },
+  {
+    "id": "pirate_speculated",
+    "name": "Pirate",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/pirate.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/evil/pirate.png"
+    ],
+    "team": "townsfolk",
+    "ability": "You start knowing how many Pirates are in-play. If Pirates are the only good characters alive, good wins. [+0 to +2 Pirates]",
+    "firstNight": 40,
+    "otherNight": 0,
+    "firstNightReminder": "Show each Pirate the number of in-play Pirates.",
+    "setup": true,
+    "special": [
+      {
+        "type": "selection",
+        "name": "bag-duplicate"
+      }
+    ]
+  },
+  "villageidiot",
+  {
+    "id": "druid_speculated",
+    "name": "Druid",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/druid.png"
+    ],
+    "team": "townsfolk",
+    "ability": "Each day, you may publicly choose a player. If either of you die tonight, an alive Minion dies instead, if possible.",
+    "firstNight": 0,
+    "otherNight": 0,
+    "reminders": [
+      "Protected",
+      "Protected"
+    ]
+  },
+  "huntsman",
+  {
+    "id": "machinist_speculated",
+    "name": "Machinist",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/machinist.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/evil/machinist.png"
+    ],
+    "team": "townsfolk",
+    "ability": "On your 1st day, you may visit the Storyteller to become a non-listed character, even if drunk or poisoned. [+0 to +2 Machinists]",
+    "firstNight": 0,
+    "otherNight": 0,
+    "special": [
+      {
+        "type": "selection",
+        "name": "bag-duplicate"
+      }
+    ]
+  },
+  {
+    "id": "mole_speculated",
+    "name": "Mole",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/mole.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/evil/mole.png"
+    ],
+    "team": "townsfolk",
+    "ability": "You are a Minion too. If the Demon publicly guesses you (once), your team loses, even if dead, drunk or poisoned.",
+    "firstNight": 1,
+    "otherNight": 0,
+    "firstNightReminder": "Wake the Mole and show them the Minion they are.",
+    "reminders": [
+      "Guess Used"
+    ],
+    "remindersGlobal": [
+      "is the Mole"
+    ],
+    "setup": true,
+    "special": [
+      {
+        "type": "reveal",
+        "name": "replace-character"
+      }
+    ]
+  },
+  {
+    "id": "beekeeper_speculated",
+    "name": "Beekeeper",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/beekeeper.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/evil/beekeeper.png"
+    ],
+    "team": "townsfolk",
+    "ability": "You choose which 3 good characters (not the Beekeeper) the Demon gets as bluffs.",
+    "firstNight": 3,
+    "otherNight": 0,
+    "firstNightReminder": "Receive the bluffs from the Beekeeper",
+    "reminders": [
+      "Bluff",
+      "Bluff",
+      "Bluff"
+    ]
+  },
+  {
+    "id": "shaman_speculated",
+    "name": "Shaman",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/shaman.png"
+    ],
+    "team": "townsfolk",
+    "ability": "Evil players think that they are different evil characters.",
+    "firstNight": 0,
+    "otherNight": 0,
+    "setup": true
+  },
+  {
+    "id": "taxman_speculated",
+    "name": "Taxman",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/taxman.png"
+    ],
+    "team": "townsfolk",
+    "ability": "Evil cannot win. The first time evil would win, the Demon learns who you are.",
+    "firstNight": 0,
+    "otherNight": 0,
+    "reminders": [
+      "Prevented"
+    ],
+    "setup": true
+  },
+  "poppygrower",
+  "hermit",
+  "politician",
+  "damsel",
+  "heretic",
+  "wizard",
+  "xaan",
+  "goblin",
+  {
+    "id": "damned_speculated",
+    "name": "Damned",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/minion/damned.png"
+    ],
+    "team": "minion",
+    "ability": "If all good players die, good wins. The Demon can not kill the last living Damned. [+0 to +2 Damned]",
+    "firstNight": 0,
+    "otherNight": 0,
+    "setup": true,
+    "special": [
+      {
+        "type": "selection",
+        "name": "bag-duplicate"
+      }
+    ]
+  },
+  {
+    "id": "hwisp_speculated",
+    "name": "Hwisp",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/demon/hwisp.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/demon/good/hwisp.png"
+    ],
+    "team": "demon",
+    "ability": "Each night*, choose a player: they die. If nominated by a Townsfolk, you die. If 2 Townsfolk nominate in a day, evil wins.",
+    "firstNight": 0,
+    "otherNight": 26,
+    "otherNightReminder": "The Hwisp points to a player. That player dies.",
+    "reminders": [
+      "Dead"
+    ]
+  },
+  "legion",
+  {
+    "id": "tipi_tipi_speculated",
+    "name": "Tipi-Tipi",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/demon/tipi_tipi.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/demon/good/tipi_tipi.png"
+    ],
+    "team": "demon",
+    "ability": "Each night*, a player dies. On the final night, choose 2 players: the 1st is \"mad\" that the 2nd is not the Demon, or their team loses.",
+    "firstNight": 0,
+    "otherNight": 26,
+    "otherNightReminder": "Choose a player to die. If it is the final night, wake the Tipi-Tipi to point to 2 players. Inform the first they are mad the second is not the Demon.",
+    "reminders": [
+      "Dead",
+      "Mad",
+      "Mad At"
+    ]
+  },
+  {
+    "id": "fanzazz_speculated",
+    "name": "Fanzazz",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/demon/fanzazz.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/demon/good/fanzazz.png"
+    ],
+    "team": "demon",
+    "ability": "Each night*, choose a player: they die & you become their alignment. If you die, your team loses. If only 2 players live, your team wins.",
+    "firstNight": 0,
+    "otherNight": 26,
+    "otherNightReminder": "The Fanzazz points to a player. They die and the Fanzazz becomes the alignment of that player.",
+    "reminders": [
+      "Dead"
+    ]
+  },
+  "bootlegger"
+]

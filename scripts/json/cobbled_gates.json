@@ -1,0 +1,266 @@
+[
+  {
+    "id": "_meta",
+    "author": "ShadowSlam",
+    "name": "Cobbled Gates",
+    "firstNight": [
+      "dusk",
+      "mercenary_shadowslam",
+      "minioninfo",
+      "vaudevillian_shadowslam",
+      "demoninfo",
+      "marionette",
+      "lilmonsta",
+      "xaan",
+      "widow",
+      "snakecharmer",
+      "pukka",
+      "damsel",
+      "librarian",
+      "cloudchaser_shadowslam",
+      "empath",
+      "fortuneteller",
+      "clockmaker",
+      "dreamer",
+      "hierophant_shadowslam",
+      "villageidiot",
+      "general",
+      "dawn"
+    ],
+    "otherNight": [
+      "dusk",
+      "mercenary_shadowslam",
+      "xaan",
+      "snakecharmer",
+      "the_queens_shadowslam",
+      "vaudevillian_shadowslam",
+      "pukka",
+      "lilmonsta",
+      "damsel",
+      "ordinator_shadowslam",
+      "empath",
+      "fortuneteller",
+      "dreamer",
+      "hierophant_shadowslam",
+      "villageidiot",
+      "general",
+      "dawn"
+    ]
+  },
+  "clockmaker",
+  "librarian",
+  {
+    "id": "cloudchaser_shadowslam",
+    "name": "Cloudchaser",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/cloudchaser.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/evil/cloudchaser.png"
+    ],
+    "team": "townsfolk",
+    "ability": "You start knowing info. Each day, you may choose to learn 1 word relating to it or learn new info.",
+    "firstNight": 54,
+    "otherNight": 0,
+    "reminders": [
+      "?",
+      "?"
+    ],
+    "special": []
+  },
+  "empath",
+  {
+    "id": "hierophant_shadowslam",
+    "name": "Hierophant",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/hierophant.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/evil/hierophant.png"
+    ],
+    "team": "townsfolk",
+    "ability": "Each night, choose a player: learn 2 players, 1 they should consider & 1 they should not.",
+    "firstNight": 65,
+    "otherNight": 83,
+    "reminders": []
+  },
+  "general",
+  "villageidiot",
+  "snakecharmer",
+  "dreamer",
+  "fortuneteller",
+  {
+    "id": "ordinator_shadowslam",
+    "name": "Ordinator",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/ordinator.png"
+    ],
+    "team": "townsfolk",
+    "ability": "Each night*, learn the amount of evil players who voted on today's execution.",
+    "firstNight": 0,
+    "otherNight": 71,
+    "reminders": [
+      "Voted",
+      "Voted",
+      "Voted",
+      "Voted",
+      "Voted"
+    ],
+    "special": []
+  },
+  "fisherman",
+  {
+    "id": "mercenary_shadowslam",
+    "name": "Mercenary",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/mercenary.png"
+    ],
+    "team": "townsfolk",
+    "ability": "The Demon starts knowing a good player. If they die, good wins. If you die at night, learn them.",
+    "firstNight": 4,
+    "otherNight": 0,
+    "firstNightReminder": "Take a player selection from the demon",
+    "otherNightReminder": "If the Mercenary died in the night, show the player.",
+    "reminders": [
+      "Target"
+    ],
+    "jinxes": [
+      {
+        "id": "summoner",
+        "reason": "The Summoner knows a good player instead of the Demon. They cannot choose that player for their ability."
+      },
+      {
+        "id": "snake_charmer",
+        "reason": "If the good Snake Charmer becomes a Demon, they learn a player for the Mercenary ability that night, replacing the previous player."
+      }
+    ],
+    "special": []
+  },
+  {
+    "id": "ill_omen_shadowslam",
+    "name": "Ill Omen",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/ill_omen.png"
+    ],
+    "team": "outsider",
+    "ability": "You start knowing good players equal to the base Minion count. If any live as good on the final day, your team loses, even if you are dead.",
+    "firstNight": 54,
+    "otherNight": 0,
+    "reminders": [
+      "Omen",
+      "Omen",
+      "Omen"
+    ],
+    "special": []
+  },
+  {
+    "id": "torpor_shadowslam",
+    "name": "Torpor",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/torpor.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/evil/torpor.png"
+    ],
+    "team": "outsider",
+    "ability": "If you are good, good cannot win, even if dead. Each day, 1 player may be chosen to pass this ability to, even if dead.",
+    "firstNight": 0,
+    "otherNight": 0,
+    "reminders": [
+      "Torpor"
+    ],
+    "special": []
+  },
+  "damsel",
+  {
+    "id": "paranoiac_shadowslam",
+    "name": "Paranoiac",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/paranoiac.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/evil/paranoiac.png"
+    ],
+    "team": "outsider",
+    "ability": "All other players might be evil & know you. If you guess they do, your team wins if right & loses if wrong. You can always do this.",
+    "firstNight": 8,
+    "otherNight": 0,
+    "reminders": [],
+    "special": []
+  },
+  "widow",
+  "xaan",
+  "marionette",
+  "goblin",
+  "pukka",
+  "lilmonsta",
+  {
+    "id": "the_queens_shadowslam",
+    "name": "The Queens",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/demon/the_queens.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/demon/good/the_queens.png"
+    ],
+    "team": "demon",
+    "ability": "Each night*, choose a player: 1 player chosen by Demons, or a Demon, dies. [1 Minion is The Queens]",
+    "firstNight": 0,
+    "otherNight": 26,
+    "otherNightReminder": "Each The Queens points to a player. Mark one of the players chosen, or a Demon, with the Dead reminder token.",
+    "reminders": [
+      "Dead"
+    ],
+    "setup": true,
+    "jinxes": [
+      {
+        "id": "summoner",
+        "reason": "If the Summoner chooses to create The Queens, they must also choose an evil Minion to become The Queens."
+      },
+      {
+        "id": "clockmaker",
+        "reason": "The Queens also register as a Minion to the Clockmaker."
+      },
+      {
+        "id": "recombobulator_shadowslam",
+        "reason": "If multiple The Queens would change character due to the Recombobulator, only one becomes a Demon and the rest become Minions."
+      }
+    ],
+    "special": [
+      {
+        "type": "selection",
+        "name": "bag-duplicate"
+      }
+    ]
+  },
+  {
+    "id": "vaudevillian_shadowslam",
+    "name": "Vaudevillian",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/demon/vaudevillian.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/demon/good/vaudevillian.png"
+    ],
+    "team": "demon",
+    "ability": "Each night*, choose a player: they die. Abilities players think they have might work. [+1 Minion, 2 are Marionettes]",
+    "firstNight": 20,
+    "otherNight": 26,
+    "firstNightReminder": "Place the 'is the Marionette' reminder tokens on each good player next to the Demon. Wake the Demon and show them both Marionettes.",
+    "otherNightReminder": "The Vaudevillian points to a player. That player dies. Any abilities that would fail to work tonight, might work anyway.",
+    "reminders": [
+      "Dead",
+      "is the Marionette"
+    ],
+    "setup": true,
+    "special": []
+  },
+  {
+    "id": "parasite_shadowslam",
+    "name": "Parasite",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/traveller/parasite.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/traveller/good/parasite.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/traveller/evil/parasite.png"
+    ],
+    "team": "traveller",
+    "ability": "Each day, choose a player: you move to share their seat & if you are good give true info or if evil poison them (if good).",
+    "firstNight": 0,
+    "otherNight": 0,
+    "reminders": [
+      "Poisoned",
+      "True Info"
+    ],
+    "setup": true,
+    "special": []
+  },
+  "bootlegger"
+]
