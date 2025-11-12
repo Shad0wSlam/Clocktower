@@ -316,3 +316,71 @@ a, a:visited, a:hover, a:focus {
 .script-card:hover .tag-difficulty-expert {
   box-shadow: 0 0 14px rgba(140, 14, 18, 0.7);
 }
+
+/* --- Fade-in / Fade-out Animation --- */
+.fade-image {
+  opacity: 0;
+  transition: opacity 1s ease;
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  position: relative;
+  z-index: 0;
+  object-fit: contain;
+}
+.fade-image.loaded {
+  opacity: 1;
+}
+.fade-out {
+  opacity: 0;
+}
+
+/* --- Image Wrapping and Overlay --- */
+
+
+/* --- Fallback (script image) gets cropped and tinted --- */
+.script-image-wrapper img.fallback {
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+}
+.script-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1;
+  border-radius: 0.75rem;
+}
+.script-image-wrapper img.fallback ~ .script-image-overlay {
+  background: rgba(77, 77, 77, 0.35);
+}
+.script-card:hover img.fallback ~ .script-image-overlay {
+  background: none;
+}
+
+/* --- Text and Tag Layering --- */
+.script-info {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  padding-top: 0.6rem;
+}
+.script-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+/* --- Responsive adjustments --- */
+@media (max-width: 768px) {
+  .script-image-wrapper {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}

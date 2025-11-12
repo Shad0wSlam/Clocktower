@@ -26,19 +26,22 @@ permalink: /scripts
               <img
                 src="https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/scripts/logo/{{ script.id }}.png"
                 alt="{{ script.name }}"
-                class="script-icon"
+                class="script-icon fade-image"
+                onerror="this.onerror=null; this.classList.add('fallback'); this.classList.add('fade-out'); setTimeout(()=>{ this.src='https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/scripts/img/{{ script.id }}.png'; this.classList.remove('fade-out'); }, 200);"
+                onload="this.classList.add('loaded');"
               >
+              <div class="script-image-overlay"></div>
             </div>
             <div class="script-info">
               <div class="script-name">{{ script.name }}</div>
               <div class="script-tags">
                 {% if script.difficulty %}
-                    <span class="tag tag-difficulty tag-difficulty-{{ script.difficulty }}">{{ script.difficulty }}</span>
+                  <span class="tag tag-difficulty tag-difficulty-{{ script.difficulty | downcase }}">{{ script.difficulty }}</span>
                 {% endif %}
                 {% if script.type %}
-                    <span class="tag tag-type tag-type-{{ script.type }}">{{ script.type }}</span>
+                  <span class="tag tag-type tag-type-{{ script.type | downcase }}">{{ script.type }}</span>
                 {% endif %}
-                </div>
+              </div>
             </div>
           </a>
         </div>
@@ -72,3 +75,4 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 </script>
+

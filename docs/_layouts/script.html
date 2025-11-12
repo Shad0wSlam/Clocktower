@@ -45,7 +45,8 @@ layout: default
     <!-- Main content: Image + JSON -->
     <div class="script-main">
       <div class="script-image-wrapper">
-        <img src="https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/scripts/img/{{ script_data.id }}.png"
+        <img id="script-image"
+             src="https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/scripts/img/{{ script_data.id }}.png"
              alt="{{ script_data.name }} Script"
              class="script-image">
       </div>
@@ -55,7 +56,7 @@ layout: default
         <pre id="script-json-box" class="json-box">Loading...</pre>
         <div class="json-buttons">
           <button id="copy-script-json">Copy</button>
-          <button id="download-script-json">Download JSON</button>
+          <button id="download-script-json">Download Script</button>
         </div>
       </div>
     </div>
@@ -81,6 +82,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   const jsonBox = document.getElementById("script-json-box");
   const copyBtn = document.getElementById("copy-script-json");
   const downloadBtn = document.getElementById("download-script-json");
+  const imageEl = document.getElementById("script-image");
+  const jsonWrapper = document.querySelector(".script-json-wrapper");
 
   try {
     const res = await fetch(`https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/scripts/json/${scriptId}.json`);
@@ -113,18 +116,34 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error("Error loading JSON:", err);
     jsonBox.textContent = "Error loading script JSON data.";
   }
+
+  // Dynamically adjust JSON height to image height
+  const adjustHeight = () => {
+  if (imageEl && jsonWrapper) {
+    const imgHeight = imageEl.clientHeight;
+    if (imgHeight > 0) {
+      // Slightly reduce the JSON wrapper height so it ends a bit above image bottom
+      jsonWrapper.style.maxHeight = (imgHeight - 30) + "px";
+      jsonBox.style.maxHeight = (imgHeight - 90) + "px";
+    }
+  }
+};
+
+  imageEl.addEventListener("load", adjustHeight);
+  window.addEventListener("resize", adjustHeight);
+  adjustHeight();
 });
 </script>
 
 <script>
-  (function waitForHeader() {
-    const scriptName = "{{ page_title | strip_newlines | escape | replace: '"', '\"' }}";
-    const projectNameEl = document.getElementById('project-name');
-    if (projectNameEl && scriptName) {
-      projectNameEl.textContent = scriptName;
-      document.title = scriptName;
-    } else {
-      setTimeout(waitForHeader, 100);
-    }
-  })();
+(function waitForHeader() {
+  const scriptName = "{{ page_title | strip_newlines | escape | replace: '"', '\"' }}";
+  const projectNameEl = document.getElementById('project-name');
+  if (projectNameEl && scriptName) {
+    projectNameEl.textContent = scriptName;
+    document.title = scriptName;
+  } else {
+    setTimeout(waitForHeader, 100);
+  }
+})();
 </script>

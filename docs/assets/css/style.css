@@ -263,3 +263,23 @@ footer a {
     opacity: 1;
     transform: translateX(-50%) translateY(0);
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px; /* horizontal scrollbars */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--accent-red);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #222;
+}
+
+/* Firefox support */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-red) #222;
+}
