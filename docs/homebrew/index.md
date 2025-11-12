@@ -54,7 +54,7 @@ permalink: /homebrew
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const filterButtons = document.querySelectorAll('.filter-btn');
-  const gridWrappers = document.querySelectorAll('.character-grid-wrapper');
+  const gridWrappers = document.querySelectorAll('.overview-grid-wrapper');
 
   filterButtons.forEach(btn => {
     btn.addEventListener('click', () => {

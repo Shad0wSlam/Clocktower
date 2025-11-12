@@ -50,7 +50,7 @@ permalink: /scripts
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const filterButtons = document.querySelectorAll('.filter-btn');
-  const gridWrappers = document.querySelectorAll('.script-grid-wrapper');
+  const gridWrappers = document.querySelectorAll('.overview-grid-wrapper');
 
   filterButtons.forEach(btn => {
     btn.addEventListener('click', () => {
