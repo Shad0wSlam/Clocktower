@@ -171,35 +171,3 @@
   line-height: 1.6;
   font-size: 1.05rem;
 }
-
-/* Responsive */
-@media (max-width: 1024px) {
-  .script-main {
-    flex-direction: column;
-  }
-  .script-image-wrapper,
-  .script-json-wrapper {
-    flex: 1 1 100%;
-  }
-  .script-image {
-    width: 100%;
-  }
-}
-
-/* Mobile: stack logo above title/tags */
-@media (max-width: 600px) {
-  .script-header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .script-logo {
-    position: relative;
-    top: auto;
-    left: auto;
-    margin-bottom: 1rem;
-  }
-  .script-tags {
-    margin-top: 0.5rem;
-  }
-}

@@ -6,7 +6,6 @@
       artist: gameicons
     - id: ordinator
       name: Ordinator
-      artist: gameicons
 
 - group: Outsider
   plural: Outsiders
@@ -17,6 +16,9 @@
       name: Paranoiac
     - id: ill_omen
       name: Ill Omen
+    - id: gubbin
+      name: Gubbin
+      artist: bhamber
 
 - group: Minion
   plural: Minions
@@ -34,6 +36,8 @@
     - id: the_queens
       name: The Queens
       artist: DarkArtist
+    - id: krown
+      name: Krown
     - id: vaudevillian
       name: Vaudevillian
 

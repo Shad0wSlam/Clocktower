@@ -20,9 +20,12 @@ permalink: /scripts
     <div class="overview-category">{{ group.group }}</div>
     <div class="overview-grid">
       {% for script in group.scripts %}
-        <div class="script-card" data-scriptid="{{ script.id }}">
+        <div class="script-card" data-scriptid="{{ script.id }} {{ script_page }}">
           <a href="{{ '/script/' | append: script.id | relative_url }}">
             <div class="script-image-wrapper">
+          {% if script.synopsis %}
+            <div class="script-synopsis" style="display:none;">{{ script.synopsis }}</div>
+          {% endif %}
               <img
                 src="https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/scripts/logo/{{ script.id }}.png"
                 alt="{{ script.name }}"

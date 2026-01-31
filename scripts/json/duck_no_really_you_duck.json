@@ -1,0 +1,314 @@
+[
+  {
+    "id": "_meta",
+    "author": "ShadowSlam",
+    "name": "Duck. No, really. You. Duck!",
+    "firstNight": [
+      "dusk",
+      "mercenary_shadowslam",
+      "wraith",
+      "paranoiac_shadowslam",
+      "gubbin_shadowslam",
+      "minioninfo",
+      "demoninfo",
+      "engineer",
+      "lilmonsta",
+      "xaan",
+      "convive_shadowslam",
+      "wizard",
+      "snakecharmer",
+      "cloudchaser_shadowslam",
+      "corsair_the_arcanum",
+      "llongjawn_the_arcanum",
+      "noble",
+      "hierophant_shadowslam",
+      "shugenja",
+      "dawn"
+    ],
+    "otherNight": [
+      "dusk",
+      "wraith",
+      "engineer",
+      "xaan",
+      "wizard",
+      "snakecharmer",
+      "the_queens_shadowslam",
+      "lycanthrope",
+      "convive_shadowslam",
+      "llongjawn_the_arcanum",
+      "fanggu",
+      "lilmonsta",
+      "catch_hblmeme",
+      "banshee",
+      "gubbin_shadowslam",
+      "ordinator_shadowslam",
+      "corsair_the_arcanum",
+      "hierophant_shadowslam",
+      "dawn"
+    ]
+  },
+  "noble",
+  {
+    "id": "cloudchaser_shadowslam",
+    "name": "Cloudchaser",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/cloudchaser.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/evil/cloudchaser.png"
+    ],
+    "team": "townsfolk",
+    "ability": "You start knowing info. Each day, you may choose to learn 1 word relating to it or learn new info.",
+    "firstNight": 54,
+    "otherNight": 0,
+    "reminders": [
+      "?",
+      "?"
+    ],
+    "special": []
+  },
+  "shugenja",
+  {
+    "id": "hierophant_shadowslam",
+    "name": "Hierophant",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/hierophant.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/evil/hierophant.png"
+    ],
+    "team": "townsfolk",
+    "ability": "Each night, choose a player: learn 2 players, 1 they should consider & 1 they should not.",
+    "firstNight": 65,
+    "otherNight": 83,
+    "reminders": []
+  },
+  "snakecharmer",
+  {
+    "id": "convive_shadowslam",
+    "name": "Convive",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/convive.png"
+    ],
+    "team": "townsfolk",
+    "ability": "Each night, choose a player: learn the direction of their closest Outsider. If they are the Drunk, learn this & they get true info, even if dead. [+the Drunk]",
+    "firstNight": 33,
+    "otherNight": 42,
+    "firstNightReminder": "The Convive points at a player. Indicate the direction of that player's closest Outsider from that player. If that player is the Drunk, additionally show the Drunk token and remove the 'is the Drunk' reminder token from them.",
+    "otherNightReminder": "The Convive points at a player. Indicate the direction of that player's closest Outsider from that player. If that player is the Drunk, additionally show the Drunk token and remove the 'is the Drunk' reminder token from them.",
+    "setup": true,
+    "special": []
+  },
+  {
+    "id": "ordinator_shadowslam",
+    "name": "Ordinator",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/ordinator.png"
+    ],
+    "team": "townsfolk",
+    "ability": "Each night*, learn the amount of evil players who voted on today's execution.",
+    "firstNight": 0,
+    "otherNight": 71,
+    "reminders": [
+      "Voted",
+      "Voted",
+      "Voted",
+      "Voted",
+      "Voted"
+    ],
+    "special": []
+  },
+  "lycanthrope",
+  "savant",
+  "engineer",
+  {
+    "id": "catch_hblmeme",
+    "name": "Catch",
+    "image": [
+      "https://images-ext-1.discordapp.net/external/pCt_lLYK2s7B3MwkKSwMTL9gwNuWY4H1Hc5RZilJY98/https/i.imgur.com/WH0y2lo.png?format=webp&quality=lossless",
+      "https://images-ext-1.discordapp.net/external/HqtiyH-tkvyfawKmqe1mL78tGd4O-0pea2tiI5k_XDM/https/i.imgur.com/39cMiuO.png?format=webp&quality=lossless"
+    ],
+    "team": "townsfolk",
+    "ability": "If you die, the Storyteller throws a large, heavy object at you.",
+    "flavor": "Think fast!",
+    "firstNight": 0,
+    "otherNight": 58,
+    "otherNightReminder": "If the Catch died, throw a large, heavy object at them. If you haven't done this yet, do so now.",
+    "jinxes": [
+      {
+        "id": "matsuraid_hblreleased",
+        "reason": "If the Matsuraid is in play & the Catch is nominated, they use their ability."
+      }
+    ]
+  },
+  "banshee",
+  {
+    "id": "mercenary_shadowslam",
+    "name": "Mercenary",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/mercenary.png"
+    ],
+    "team": "townsfolk",
+    "ability": "The Demon starts knowing a good player. If they die, good wins. If you die at night, learn them.",
+    "firstNight": 4,
+    "otherNight": 0,
+    "firstNightReminder": "Take a player selection from the demon",
+    "otherNightReminder": "If the Mercenary died in the night, show the player.",
+    "reminders": [
+      "Target"
+    ],
+    "jinxes": [
+      {
+        "id": "summoner",
+        "reason": "The Summoner knows a good player instead of the Demon. They cannot choose that player for their ability. When a Demon is created, they learn the player."
+      },
+      {
+        "id": "snakecharmer",
+        "reason": "If the good Snake Charmer becomes a Demon, they learn a player for the Mercenary ability that night, replacing the previous player."
+      }
+    ],
+    "special": []
+  },
+  {
+    "id": "corsair_the_arcanum",
+    "name": "Corsair",
+    "image": [
+      "https://user-images.klutzbanana.com/b7tlg157zq51zbk1hgwvu169.png",
+      "https://user-images.klutzbanana.com/x1nas9np8oedmtwzsvgvutst.png"
+    ],
+    "team": "outsider",
+    "edition": "The Arcanum",
+    "ability": "You start knowing a clue about your Treasure. If the Demon finds it, evil wins, even if you are dead. [Treasure is hidden]",
+    "flavor": "Avast, It be the Isle of Ravenswood! We made it, laddies! Prepare yer shovels an' get diggin'!",
+    "firstNight": 56.11,
+    "otherNight": 76.11,
+    "firstNightReminder": "Wake the Corsair. Give a clue. Put the Corsair to sleep.",
+    "otherNightReminder": "Wake the Corsair. Give a clue. Put the Corsair to sleep.",
+    "setup": true,
+    "jinxes": [
+      {
+        "id": "philosopher",
+        "reason": "If the Philosopher gains the Corsair ability, Treasure is hidden, if there isn't any already."
+      }
+    ]
+  },
+  {
+    "id": "gubbin_shadowslam",
+    "name": "Gubbin",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/gubbin.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/evil/gubbin.png"
+    ],
+    "team": "outsider",
+    "ability": "Each night, something happens today. Each night*, learn what yesterday's was.",
+    "firstNight": 11,
+    "otherNight": 69,
+    "firstNightReminder": "Something happens tonight or today.",
+    "otherNightReminder": "Something happens tonight or today. Inform the Gubbin what happened yesterday.",
+    "reminders": [
+      "?",
+      "??"
+    ],
+    "setup": true,
+    "special": []
+  },
+  "drunk",
+  {
+    "id": "paranoiac_shadowslam",
+    "name": "Paranoiac",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/paranoiac.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/evil/paranoiac.png"
+    ],
+    "team": "outsider",
+    "ability": "All other players might be evil & know you. If you guess they do, your team wins if right & loses if wrong. You can always do this.",
+    "firstNight": 8,
+    "otherNight": 0,
+    "reminders": [],
+    "jinxes": [
+      {
+        "id": "fanggu",
+        "reason": "If all other players are evil and the Fang Gu causes the Paranoiac to become a Fang Gu, they secretly remain good."
+      }
+    ],
+    "special": []
+  },
+  "psychopath",
+  "wizard",
+  "xaan",
+  "wraith",
+  {
+    "id": "llongjawn_the_arcanum",
+    "name": "Llongjawn",
+    "image": [
+      "https://user-images.klutzbanana.com/dh8qng9mmj0ouiwlrr57bvgu.png",
+      "https://user-images.klutzbanana.com/nkt3r778dnn1wd0i7v29jjcl.png"
+    ],
+    "team": "demon",
+    "edition": "The Arcanum",
+    "ability": "Each night, you learn a clue to the Treasure. Each night*, choose a player: they die. [+the Corsair]",
+    "flavor": "Damnation seize my soul if I give you quarters, or take any from you.",
+    "firstNight": 56.1111,
+    "otherNight": 42.1111,
+    "firstNightReminder": "Wake the Llongjawn. Give a clue. Put the Llongjawn to sleep.",
+    "otherNightReminder": "Wake the Llongjawn. Give a clue. The Llongjawn chooses a player. Put a “Dead” reminder and a shroud on the chosen player. Put the Llongjawn to sleep.",
+    "reminders": [
+      "Dead"
+    ],
+    "setup": true,
+    "jinxes": [
+      {
+        "id": "pithag",
+        "reason": "If the Pit-Hag makes a Llongjawn, a good player becomes the Corsair & Treasure is hidden, if they aren't in play already."
+      },
+      {
+        "id": "hatter",
+        "reason": "If the Demon chooses to become a Llongjawn, a good player becomes the Corsair & Treasure is hidden, if they aren't in play already."
+      },
+      {
+        "id": "engineer",
+        "reason": "If the Engineer makes a Llongjawn, they become the Corsair & Treasure is hidden, if they aren't in play already."
+      }
+    ]
+  },
+  "lilmonsta",
+  {
+    "id": "the_queens_shadowslam",
+    "name": "The Queens",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/demon/the_queens.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/demon/good/the_queens.png"
+    ],
+    "team": "demon",
+    "ability": "Each night*, choose a player: 1 player chosen by Demons, or a Demon, dies. [-1 Minion, +1 The Queens]",
+    "firstNight": 0,
+    "otherNight": 26,
+    "otherNightReminder": "Each The Queens points to a player. Mark one of the players chosen, or a Demon, with the Dead reminder token.",
+    "reminders": [
+      "Dead"
+    ],
+    "setup": true,
+    "jinxes": [
+      {
+        "id": "summoner",
+        "reason": "If the Summoner chooses to create The Queens, they must also choose an evil Minion to become The Queens."
+      },
+      {
+        "id": "clockmaker",
+        "reason": "The Queens also register as a Minion to the Clockmaker."
+      },
+      {
+        "id": "recombobulator_shadowslam",
+        "reason": "If multiple The Queens would change character due to the Recombobulator, only one becomes a Demon and the rest become Minions."
+      },
+      {
+        "id": "engineer",
+        "reason": "If the Engineer makes The Queens, a Minion also becomes The Queens."
+      }
+    ],
+    "special": [
+      {
+        "type": "selection",
+        "name": "bag-duplicate"
+      }
+    ]
+  },
+  "fanggu",
+  "bootlegger"
+]

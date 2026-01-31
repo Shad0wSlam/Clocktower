@@ -136,7 +136,6 @@
       "False Info"
     ]
   },
-  "atheist",
   {
     "id": "nun_speculated",
     "name": "Nun",
@@ -148,6 +147,7 @@
     "firstNight": 0,
     "otherNight": 0
   },
+  "atheist",
   {
     "id": "occultist_the_bootleggers_anthology",
     "name": "Occultist",

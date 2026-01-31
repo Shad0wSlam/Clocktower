@@ -4,6 +4,7 @@
       name: Worlds Abound
       difficulty: advanced
       type: vanilla
+      synopsis: Three wildly different Demons, difficult to distinguish but essential that you must.
 
 - group: Homebrew
   scripts:
@@ -11,6 +12,7 @@
       name: The Eleventh Hour
       difficulty: advanced
       type: hybrid
+      synopsis: Built around the terrifyingly systematic demon, The Mechanism, a timer Demon, and accompanied by a host of terrifyingly tricky Minions.
     - id: cobbled_gates
       name: Cobbled Gates
       difficulty: intermediate
@@ -26,10 +28,12 @@
       name: Vultures Circling
       difficulty: intermediate
       type: hybrid
+      synopsis: Minions that use every trick in the book to halt town's executions, with a powerful Town to build traps nonetheless
     - id: answer_the_call
       name: Answer the Call
       difficulty: intermediate
       type: hybrid
+      synopsis: Blaringly loud Demons race the good team before they can sort through the uniquely solved Minion misinformation
     - id: garden_of_speculation
       name: Garden of Speculation
       difficulty: intermediate

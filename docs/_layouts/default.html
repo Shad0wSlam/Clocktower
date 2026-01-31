@@ -31,9 +31,9 @@
 
         <nav class="site-nav">
             <a href="{{ '/' | relative_url }}">Home</a>
-            <a href="{{ '/homebrew' | relative_url }}">Homebrew</a>
-            <a href="{{ '/speculation' | relative_url }}">Speculation</a>
-            <a href="{{ '/scripts' | relative_url }}">Scripts</a>
+            <a href="{{ '/homebrew' | relative_url }}">Clocktower Homebrew</a>
+            <a href="{{ '/scripts' | relative_url }}">Clocktower Scripts</a>
+            <a href="{{ '/speculation' | relative_url }}">Minecraft Datapacks</a>
             <a href="{{ '/other' | relative_url }}">Other</a>
         </nav>
 
@@ -84,35 +84,40 @@
         document.body.appendChild(tooltipEl);
 
         function showTooltip(target, text) {
-            tooltipEl.textContent = text;
+    tooltipEl.textContent = text;
 
-            const rect = target.getBoundingClientRect();
-            const scrollY = window.scrollY || window.pageYOffset;
-            const viewportHeight = window.innerHeight;
+    const rect = target.getBoundingClientRect();
+    const scrollY = window.scrollY || window.pageYOffset;
+    const viewportHeight = window.innerHeight;
 
-            const tooltipHeight = tooltipEl.offsetHeight;
+    const tooltipHeight = tooltipEl.offsetHeight;
 
-            const spaceBelow = viewportHeight - rect.bottom;
-            const spaceAbove = rect.top - HEADER_HEIGHT;
-            let top = spaceBelow >= tooltipHeight + 8 ? rect.bottom + scrollY + 4
-                : spaceAbove >= tooltipHeight + 8 ? rect.top + scrollY - tooltipHeight - 4
-                    : rect.bottom + scrollY + 4;
+    const spaceBelow = viewportHeight - rect.bottom;
+    const spaceAbove = rect.top - HEADER_HEIGHT;
+    let top = spaceBelow >= tooltipHeight + 8 ? rect.bottom + scrollY + 4
+        : spaceAbove >= tooltipHeight + 8 ? rect.top + scrollY - tooltipHeight - 4
+            : rect.bottom + scrollY + 4;
 
-            const left = rect.left + window.scrollX + rect.width / 2;
+    const left = rect.left + window.scrollX + rect.width / 2;
 
-            tooltipEl.style.left = left + 'px';
-            tooltipEl.style.top = top + 'px';
-            tooltipEl.style.transform = 'translateX(-50%) translateY(-10px)';
-            tooltipEl.style.opacity = '0';
-            tooltipEl.style.display = 'block';
+    tooltipEl.style.left = left + 'px';
+    tooltipEl.style.top = top + 'px';
 
-            tooltipEl.getBoundingClientRect(); // Force reflow
+    // Force fade-in every time
+    tooltipEl.style.display = 'block';
+    tooltipEl.style.transition = 'none'; // temporarily disable transition
+    tooltipEl.style.opacity = '0';
+    tooltipEl.style.transform = 'translateX(-50%) translateY(-10px)';
 
-            requestAnimationFrame(() => {
-                tooltipEl.style.transform = 'translateX(-50%) translateY(0)';
-                tooltipEl.style.opacity = '1';
-            });
-        }
+    tooltipEl.getBoundingClientRect(); // Force reflow
+
+    // Re-enable transition and fade in
+    tooltipEl.style.transition = 'opacity 0.2s ease, transform 0.2s ease';
+    requestAnimationFrame(() => {
+        tooltipEl.style.opacity = '1';
+        tooltipEl.style.transform = 'translateX(-50%) translateY(0)';
+    });
+}
 
         function hideTooltip() {
             tooltipEl.style.opacity = '0';
@@ -194,6 +199,26 @@
             });
         }
 
+        // --- Script card tooltip system ---
+        function attachScriptTooltips() {
+            document.querySelectorAll('.script-card').forEach(card => {
+                if (!card.dataset.tooltipBound) {
+                    card.dataset.tooltipBound = "true";
+
+                    card.addEventListener('mouseenter', (e) => {
+                        const synopsisDiv = card.querySelector('.script-synopsis');
+                        const text = synopsisDiv?.textContent || null;
+
+                        if (text != null) {
+                            showTooltip(card, text);
+                        }
+                    });
+
+                    card.addEventListener('mouseleave', hideTooltip);
+                }
+            });
+        }
+
         // --- Fetch JSON ---
         fetch("https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/libraries/shadowslam_homebrew.json")
             .then(res => res.json())
@@ -222,6 +247,7 @@
             linkCharacters(document.body);
             attachLinkTooltips();
             attachCardTooltips();
+            attachScriptTooltips();
         });
     </script>
 
