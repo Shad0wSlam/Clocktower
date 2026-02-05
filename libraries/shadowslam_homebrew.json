@@ -9,7 +9,9 @@
         "name": "Thanatologist",
         "team": "townsfolk",
         "firstNight": 54,
+        "firstNightReminder": "Point to the player marked **KNOW**.",
         "otherNight": 72,
+        "otherNightReminder": "If the player marked **KNOW** died today or tonight, point to the new player marked **KNOW**.",
         "reminders": [
             "Known"
         ],
@@ -26,6 +28,7 @@
         "name": "Cloudchaser",
         "team": "townsfolk",
         "firstNight": 54,
+        "firstNightReminder": "Choose info to give the Cloudchaser and give the signal for it.",
         "otherNight": 0,
         "reminders": [
             "?",
@@ -38,6 +41,25 @@
         "image": [
             "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/cloudchaser.png",
             "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/evil/cloudchaser.png"
+        ]
+    },
+    {
+        "id": "director_shadowslam",
+        "name": "Director",
+        "team": "townsfolk",
+        "firstNight": 64,
+        "otherNight": 63,
+        "reminders": [
+            "Know",
+            "Know"
+        ],
+        "setup": true,
+        "ability": "You start knowing 2 players, at least 1 of which is good. Each night*, if any are dead, know new players.",
+        "jinxes": [],
+        "special": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/director.png",
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/evil/director.png"
         ]
     },
     {
@@ -63,7 +85,9 @@
         "team": "townsfolk",
         "ability": "Each night, choose a player: learn 2 players, 1 they should consider & 1 they should not.",
         "firstNight": 65,
+        "firstNightReminder": "The Hierophant chooses a player. Point to 2 players once they have done so.",
         "otherNight": 83,
+        "otherNightReminder": "The Hierophant chooses a player. Point to 2 players once they have done so.",
         "reminders": [],
         "image": [
             "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/hierophant.png",
@@ -77,7 +101,9 @@
         "team": "townsfolk",
         "ability": "Each night, you may choose 2 other players: while you have chosen equal good & evil players, all are safe from evil.",
         "firstNight": 22,
+        "firstNightReminder": "The Ahimsa might choose 2 players. If they do, mark them as **CHOSEN**. ",
         "otherNight": 10,
+        "otherNightReminder": "The Ahimsa might choose 2 players. If they do, mark them as **CHOSEN**. ",
         "reminders": [
             "Chosen",
             "Chosen",
@@ -89,7 +115,8 @@
             "Chosen"
         ],
         "image": [
-            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/ahimsa.png"
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/ahimsa.png",
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/evil/ahimsa.png"
         ],
         "setup": false
     },
@@ -115,6 +142,7 @@
         "team": "townsfolk",
         "firstNight": 0,
         "otherNight": 71,
+        "otherNightReminder": "Give a finger signal.",
         "reminders": [
             "Voted",
             "Voted",
@@ -136,6 +164,7 @@
         "team": "townsfolk",
         "firstNight": 0,
         "otherNight": 60,
+        "otherNightReminder": "Swap the Demon and another player's tokens. Mark the previous Demon with **BEEN THE DEMON** and inform the players of the character change.",
         "reminders": [
             "Been the Demon",
             "Been the Demon",
@@ -184,20 +213,29 @@
         "team": "townsfolk",
         "firstNight": 0,
         "otherNight": 20,
+        "otherNightReminder": "The Landlord chooses a player. If a chosen player dies later tonight, wake a living Outsider and show the **YOU ARE** info token & a Townsfolk character token.",
+        "reminders": [
+            "Chosen",
+            "Chosen",
+            "Chosen",
+            "Chosen"
+        ],
         "setup": true,
-        "ability": "Each night*, choose a player: if a chosen player dies, a living Outsider becomes a Townsfolk. [+0 or +1 Outsider]",
+        "ability": "Each night*, choose another player: if a chosen player dies at night, a living Outsider becomes a Townsfolk. [+0 or +1 Outsider]",
         "jinxes": [],
         "special": [],
         "image": [
-            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/landlord.png"
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/landlord.png",
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/evil/landlord.png"
         ]
     },
     {
         "id": "somnologist_shadowslam",
         "name": "Somnologist",
         "team": "townsfolk",
-        "firstNight": 1,
-        "otherNight": 1,
+        "firstNight": 0,
+        "otherNight": 59,
+        "otherNightReminder": "If the Somnologist died tonight, make their statement today from true, if they have one.",
         "setup": false,
         "ability": "Each day, you may tell the Storyteller a statement about the game. If they agree & you die tonight, it becomes true.",
         "jinxes": [],
@@ -237,24 +275,6 @@
         ]
     },
     {
-        "id": "census_taker_shadowslam",
-        "name": "Census Taker",
-        "team": "townsfolk",
-        "firstNight": 0,
-        "otherNight": 0,
-        "reminders": [
-            "Guess Used"
-        ],
-        "setup": false,
-        "ability": "If you guess (once) that no Outsiders live today but not yesterday, learn the Demon, but guess wrong & get false info. [-1 to +1 Outsiders]",
-        "jinxes": [],
-        "special": [],
-        "image": [
-            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/census_taker.png",
-            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/evil/census_taker.png"
-        ]
-    },
-    {
         "id": "highlander_shadowslam",
         "name": "Highlander",
         "team": "townsfolk",
@@ -269,6 +289,41 @@
         "special": [],
         "image": [
             "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/highlander.png"
+        ]
+    },
+    {
+        "id": "big_hero_shadowslam",
+        "name": "Big Good Hero Saviour Man",
+        "team": "townsfolk",
+        "firstNight": 0,
+        "otherNight": 50,
+        "reminders": [
+            "Injured"
+        ],
+        "setup": true,
+        "ability": "If the Demon kills you, the Demon's ability becomes \"Each night*, a player might die.\"",
+        "jinxes": [],
+        "special": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/big_hero.png"
+        ]
+    },
+    {
+        "id": "census_taker_shadowslam",
+        "name": "Census Taker",
+        "team": "townsfolk",
+        "firstNight": 0,
+        "otherNight": 0,
+        "reminders": [
+            "Guess Used"
+        ],
+        "setup": true,
+        "ability": "If you guess (once) that today is the 1st day no Outsiders live, learn the Demon, but if wrong get false info. [-1 to +1 Outsiders]",
+        "jinxes": [],
+        "special": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/census_taker.png",
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/evil/census_taker.png"
         ]
     },
     {
@@ -349,7 +404,12 @@
         ],
         "setup": false,
         "ability": "You start knowing good players equal to the base Minion count. If any live as good on the final day, your team loses, even if you are dead.",
-        "jinxes": [],
+        "jinxes": [
+            {
+                "id": "legion",
+                "reason": "If Legion are in-play, the Ill Omen learns Legion players instead of good players."
+            }
+        ],
         "special": [],
         "image": [
             "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/ill_omen.png"
@@ -375,7 +435,7 @@
             "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/gubbin.png",
             "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/evil/gubbin.png"
         ],
-        "flavour": "Gubbin. Gub blubbin. Gubbin."
+        "flavour": "Gubbin. Gub glubbin. Gubbin."
     },
     {
         "id": "heartbreaker_shadowslam",
@@ -421,6 +481,7 @@
         "team": "outsider",
         "firstNight": 0,
         "otherNight": 45,
+        "otherNightReminder": "If the Recombobulator died, wake the Demon and show them the **THIS CHARACTER SELECTED YOU** & Recombobulator tokens. If the Demon chose a player, wake them next. Show the **YOU ARE** token & their new character token.",
         "reminders": [
             "Died"
         ],
@@ -493,7 +554,7 @@
             "Torpor"
         ],
         "setup": false,
-        "ability": "If you are good, you cannot win & the Demon acts while dead. Each day, you may publicly give this ability to a player, even if drunk, poisoned or dead.",
+        "ability": "If you are good, good can't win & the Demon acts while dead. Each day, you may publicly give this ability to a player, even if drunk, poisoned or dead.",
         "jinxes": [],
         "special": [],
         "image": [
@@ -527,6 +588,7 @@
         "team": "outsider",
         "firstNight": 0,
         "otherNight": 10,
+        "otherNightReminder": "If an evil player changed character from the Tailor today, show them the **YOU ARE** token, then their new character token.",
         "reminders": [
             "No Ability"
         ],
@@ -564,10 +626,16 @@
         "reminders": [],
         "setup": false,
         "ability": "All sober & healthy Townsfolk info is either true or false.",
-        "jinxes": [],
+        "jinxes": [
+            {
+                "id": "census_taker_shadowslam",
+                "reason": "If the Census Taker guesses wrong, their information is unaffected by the Birefringent."
+            }
+        ],
         "special": [],
         "image": [
-            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/birefringent.png"
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/birefringent.png",
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/evil/birefringent.png"
         ]
     },
     {
@@ -575,6 +643,7 @@
         "name": "Paranoiac",
         "team": "outsider",
         "firstNight": 8,
+        "firstNightReminder": "If all other players are evil, wake all players except the Paranoiac, show them the **YOU ARE** info token and a thumbs down. Then show them the **THIS PLAYER IS** & Paranoiac tokens, then point at the Paranoiac.",
         "otherNight": 0,
         "reminders": [],
         "setup": false,
@@ -601,13 +670,11 @@
         "firstNight": 37,
         "otherNight": 11,
         "reminders": [
-            "Evil",
-            "Dissident",
             "Poisoned",
-            "No Ability"
+            "Evil"
         ],
         "setup": false,
-        "ability": "You start knowing your good neighbours and choose 1: they become evil. Once per game, at night, you may poison the other until dusk.",
+        "ability": "You start knowing your good neighbours and choose 1: they are poisoned, even if you die. If you are executed, they become evil.",
         "jinxes": [],
         "special": [],
         "image": [
@@ -619,16 +686,22 @@
         "name": "Sentry",
         "team": "minion",
         "firstNight": 29,
+        "firstNightReminder": "Show the character tokens of all in-play Outsiders.",
         "otherNight": 22,
+        "otherNightReminder": "The Sentry might choose a player & not in-play Outsider character. Wake the player and show them the **YOU ARE** info token & their new character token.",
         "reminders": [
             "No Ability"
         ],
         "setup": true,
-        "ability": "You start knowing not in-play Outsiders. Once per game, at night*, choose a player and a not in-play Outsider they become. [-1 to +1 Outsiders]",
+        "ability": "You know the in-play Outsiders. Once per game, at night*, choose a player and a not in-play Outsider they become. [-1 to +1 Outsiders]",
         "jinxes": [
             {
                 "id": "heretic",
                 "reason": "The Sentry cannot start knowing the Heretic, and cannot create one."
+            },
+            {
+                "id": "damsel",
+                "reason": "If a Sentry creates a Damsel, the Storyteller chooses which player it is."
             }
         ],
         "special": [],
@@ -641,6 +714,7 @@
         "name": "Biblioclast",
         "team": "minion",
         "firstNight": 29,
+        "firstNightReminder": "For each Outsider that is not in-play, prompt the Biblioclast to choose a character. Mark each chosen character with **FALSE**",
         "otherNight": 0,
         "reminders": [
             "False",
@@ -649,7 +723,7 @@
             "False"
         ],
         "setup": true,
-        "ability": "You start choosing a character for each not in-play Outsider. Chosen abilities yield false info. [-1 to +1 Outsiders]",
+        "ability": "You start choosing adjacent characters for each not in-play Outsider. Chosen abilities yield false info. [-1 to +1 Outsiders]",
         "jinxes": [],
         "special": [],
         "image": [
@@ -662,7 +736,9 @@
         "name": "Graverobber",
         "team": "minion",
         "firstNight": 26,
+        "firstNightReminder": "Show the Grimoire for as long as the Graverobber needs. If the Graverobber chooses a player, mark the player as **BODYSNATCHED**.",
         "otherNight": 11,
+        "otherNightReminder": "Show the Grimoire for as long as the Graverobber needs. If the Graverobber chooses a player, mark the player as **BODYSNATCHED**.",
         "reminders": [
             "Bodysnatched"
         ],
@@ -671,7 +747,8 @@
         "jinxes": [],
         "special": [],
         "image": [
-            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/minion/graverobber.png"
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/minion/graverobber.png",
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/minion/good/graverobber.png"
         ]
     },
     {
@@ -711,28 +788,13 @@
         ]
     },
     {
-        "id": "graverobber_shadowslam",
-        "name": "Graverobber",
-        "team": "minion",
-        "firstNight": 26,
-        "otherNight": 11,
-        "reminders": [
-            "Bodysnatched"
-        ],
-        "setup": false,
-        "ability": "Each night, you see the Grimoire & may choose a player: while they are dead, you have their ability until you next choose.",
-        "jinxes": [],
-        "special": [],
-        "image": [
-            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/minion/graverobber.png"
-        ]
-    },
-    {
         "id": "the_mechanism_shadowslam",
         "name": "The Mechanism",
         "team": "demon",
-        "firstNight": 38,
-        "otherNight": 11,
+        "firstNight": 46,
+        "firstNightReminder": "Mark each player 1 step clockwise of each evil player as **POISONED**. Rotate it if it is on an evil player.",
+        "otherNight": 42,
+        "otherNightReminder": "Move each **POISONED** reminder 1 step clockwise. Rotate it if it is on an evil player.",
         "reminders": [
             "Poisoned",
             "Poisoned",
@@ -815,6 +877,35 @@
         ]
     },
     {
+        "id": "necronaut_shadowslam",
+        "name": "Necronaut",
+        "team": "demon",
+        "firstNight": 12,
+        "firstNightReminder": "Mark a good player with the 'Phylactery' reminder. Wake the Necronaut and show them the player, then show them the Minion token they have.",
+        "otherNight": 49,
+        "otherNightReminder": "The Necronaut points to a player. If they killed a Minion, decide which Minion ability the Phylactery gained and show them the token.",
+        "reminders": [
+            "Dead",
+            "Phylactery",
+            "1",
+            "2",
+            "3"
+        ],
+        "setup": true,
+        "ability": "Each night*, choose a player: they die. A good player (you know who) has a Minion ability you wake for. Killed Minions grant another.",
+        "jinxes": [
+            {
+                "id": "scarletwoman",
+                "reason": "If the Necronaut's good player has the Scarlet Woman ability & it would cause them to become the Demon, a living Minion does instead."
+            }
+        ],
+        "special": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/demon/necronaut.png",
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/demon/good/necronaut.png"
+        ]
+    },
+    {
         "id": "krown_shadowslam",
         "name": "Krown",
         "team": "demon",
@@ -837,8 +928,10 @@
         "id": "sclera_shadowslam",
         "name": "Sclera",
         "team": "demon",
-        "firstNight": 0,
+        "firstNight": 57,
+        "firstNightReminder": "Show the **THIS PLAYER IS** info token and indicate the Outsider category on script, then point at each Outsider player.",
         "otherNight": 26,
+        "otherNightReminder": "The Sclera chooses a player. If the player is an Outsider, prompt them to choose another player. Repeat this until they do not choose an Outsider.",
         "reminders": [
             "Dead",
             "Dead"
@@ -848,7 +941,8 @@
         "jinxes": [],
         "special": [],
         "image": [
-            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/demon/sclera.png"
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/demon/sclera.png",
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/demon/good/sclera.png"
         ]
     },
     {
@@ -857,6 +951,7 @@
         "team": "demon",
         "firstNight": 0,
         "otherNight": 26,
+        "otherNightReminder": "The Byguyle chooses a player. If a player is marked as **NOMINATOR**, kill a different player of that player's character type.",
         "reminders": [
             "Dead",
             "Dead",
@@ -867,7 +962,8 @@
         "jinxes": [],
         "special": [],
         "image": [
-            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/demon/byguyle.png"
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/demon/byguyle.png",
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/demon/good/byguyle.png"
         ]
     },
     {

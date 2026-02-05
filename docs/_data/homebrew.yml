@@ -6,6 +6,12 @@
       artist: gameicons
     - id: ordinator
       name: Ordinator
+    - id: landlord
+      name: Landlord
+    - id: hierophant
+      name: Hierophant
+    - id: cloudchaser
+      name: Cloudchaser
 
 - group: Outsider
   plural: Outsiders
@@ -27,6 +33,8 @@
       name: Sentry
     - id: biblioclast
       name: Biblioclast
+    - id: graverobber
+      name: Graverobber
 
 - group: Demon
   plural: Demons
