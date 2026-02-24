@@ -10,7 +10,7 @@
         "team": "townsfolk",
         "firstNight": 54,
         "firstNightReminder": "Point to the player marked **KNOW**.",
-        "otherNight": 72,
+        "otherNight": 75,
         "otherNightReminder": "If the player marked **KNOW** died today or tonight, point to the new player marked **KNOW**.",
         "reminders": [
             "Known"
@@ -80,6 +80,22 @@
         ]
     },
     {
+        "id": "pioneer_shadowslam",
+        "name": "Pioneer",
+        "team": "townsfolk",
+        "ability": "Each night, learn a completely fresh character.",
+        "firstNight": 74,
+        "firstNightReminder": "Show the  a character token you have never shown any player.",
+        "otherNight": 94,
+        "otherNightReminder": "Show the  a character token you have never shown any player.",
+        "reminders": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/pioneer.png",
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/evil/pioneer.png"
+        ],
+        "setup": false
+    },
+    {
         "id": "hierophant_shadowslam",
         "name": "Hierophant",
         "team": "townsfolk",
@@ -96,14 +112,30 @@
         "setup": false
     },
     {
-        "id": "ahimsa_shadowslam",
-        "name": "Ahimsa",
+        "id": "matchmaker_shadowslam",
+        "name": "Matchmaker",
         "team": "townsfolk",
-        "ability": "Each night, you may choose 2 other players: while you have chosen equal good & evil players, all are safe from evil.",
+        "ability": "Each night, choose a player (not yourself): if they are good, learn a non-Demon, else learn an arbitrary player.",
+        "firstNight": 56,
+        "firstNightReminder": "The Matchmaker chooses a player. Point to a player.",
+        "otherNight": 77,
+        "otherNightReminder": "The Matchmaker chooses a player. Point to a player.",
+        "reminders": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/matchmaker.png",
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/evil/matchmaker.png"
+        ],
+        "setup": false
+    },
+    {
+        "id": "ahimsaka_shadowslam",
+        "name": "Ahimsaka",
+        "team": "townsfolk",
+        "ability": "Each night, you may choose 2 players (not yourself): while you have chosen equal good & evil players, they are safe from evil.",
         "firstNight": 22,
-        "firstNightReminder": "The Ahimsa might choose 2 players. If they do, mark them as **CHOSEN**. ",
+        "firstNightReminder": "The Ahimsaka might choose 2 players. If they do, mark them as **CHOSEN**. ",
         "otherNight": 10,
-        "otherNightReminder": "The Ahimsa might choose 2 players. If they do, mark them as **CHOSEN**. ",
+        "otherNightReminder": "The Ahimsaka might choose 2 players. If they do, mark them as **CHOSEN**. ",
         "reminders": [
             "Chosen",
             "Chosen",
@@ -115,8 +147,28 @@
             "Chosen"
         ],
         "image": [
-            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/ahimsa.png",
-            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/evil/ahimsa.png"
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/ahimsaka.png",
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/evil/ahimsaka.png"
+        ],
+        "setup": false
+    },
+    {
+        "id": "rogue_shadowslam",
+        "name": "Rogue",
+        "team": "townsfolk",
+        "ability": "Each night, you learn & gain an in-play ability until dusk. Players with an ability you have are drunk (if you choose them, you are instead).",
+        "firstNight": 15,
+        "firstNightReminder": "Show the Rogue a character token. Until dusk, treat them as though they have the ability. Mark the other players with that ability as **DRUNK**",
+        "otherNight": 11,
+        "otherNightReminder": "Show the Rogue a character token. Until dusk, treat them as though they have the ability. Mark the other players with that ability as **DRUNK**",
+        "reminders": [
+            "Stolen",
+            "Drunk",
+            "Drunk"
+        ],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/rogue.png",
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/evil/rogue.png"
         ],
         "setup": false
     },
@@ -221,7 +273,7 @@
             "Chosen"
         ],
         "setup": true,
-        "ability": "Each night*, choose another player: if a chosen player dies at night, a living Outsider becomes a Townsfolk. [+0 or +1 Outsider]",
+        "ability": "Each night, choose another player: if a chosen player dies at night, a living Outsider becomes a Townsfolk. [+0 or +1 Outsider]",
         "jinxes": [],
         "special": [],
         "image": [
@@ -275,6 +327,25 @@
         ]
     },
     {
+        "id": "artificer_shadowslam",
+        "name": "Artificer",
+        "team": "townsfolk",
+        "firstNight": 0,
+        "otherNight": 0,
+        "reminders": [
+            "No Ability",
+            "Modified",
+            "Modified"
+        ],
+        "setup": false,
+        "ability": "Once per game, privately tell the Storyteller a modification to a Minion & Demon ability each, if they agree.",
+        "jinxes": [],
+        "special": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/artificer.png"
+        ]
+    },
+    {
         "id": "highlander_shadowslam",
         "name": "Highlander",
         "team": "townsfolk",
@@ -305,7 +376,8 @@
         "jinxes": [],
         "special": [],
         "image": [
-            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/big_hero.png"
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/big_hero.png",
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/evil/big_hero.png"
         ]
     },
     {
@@ -347,6 +419,10 @@
             {
                 "id": "snakecharmer",
                 "reason": "If the good Snake Charmer becomes a Demon, they learn a player for the Mercenary ability that night, replacing the previous player."
+            },
+            {
+                "id": "lycanthrope",
+                "reason": "The Mercenary's target cannot die to the Lycanthrope."
             }
         ],
         "special": [],
@@ -354,6 +430,25 @@
             "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/mercenary.png"
         ],
         "flavour": "Any mark for a price. Some find the cost too great, but I never find my target so."
+    },
+    {
+        "id": "paladin_shadowslam",
+        "name": "Paladin",
+        "team": "townsfolk",
+        "firstNight": 0,
+        "otherNight": 0,
+        "reminders": [
+            "Drunk",
+            "Drunk"
+        ],
+        "setup": true,
+        "ability": "Evil players you nominate are drunk until next dusk, unless they are already drunk or poisoned.",
+        "jinxes": [],
+        "special": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/paladin.png",
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/evil/paladin.png"
+        ]
     },
     {
         "id": "anarchist_shadowslam",
@@ -480,13 +575,13 @@
         "name": "Recombobulator",
         "team": "outsider",
         "firstNight": 0,
-        "otherNight": 45,
+        "otherNight": 59,
         "otherNightReminder": "If the Recombobulator died, wake the Demon and show them the **THIS CHARACTER SELECTED YOU** & Recombobulator tokens. If the Demon chose a player, wake them next. Show the **YOU ARE** token & their new character token.",
         "reminders": [
             "Died"
         ],
         "setup": false,
-        "ability": "Each night*, if you died, the Demon may choose a player: they become a new character of their type.",
+        "ability": "Each night, even if you died, the Demon may choose a player: they become a different character of their type.",
         "jinxes": [
             {
                 "id": "drunk",
@@ -693,7 +788,7 @@
             "No Ability"
         ],
         "setup": true,
-        "ability": "You know the in-play Outsiders. Once per game, at night*, choose a player and a not in-play Outsider they become. [-1 to +1 Outsiders]",
+        "ability": "You know the in-play Outsiders. Once per game, at night, choose a player and a not in-play Outsider they become. [-1 to +1 Outsiders]",
         "jinxes": [
             {
                 "id": "heretic",
@@ -702,6 +797,10 @@
             {
                 "id": "damsel",
                 "reason": "If a Sentry creates a Damsel, the Storyteller chooses which player it is."
+            },
+            {
+                "id": "politician",
+                "reason": "If the Sentry turns an evil player into the Politician, they can't turn good due to their own ability."
             }
         ],
         "special": [],
@@ -841,7 +940,7 @@
             },
             {
                 "id": "engineer",
-                "reason": "If the Engineer makes The Queens, a Minion also becomes The Queens."
+                "reason": "If the Engineer makes The Queens, a Minion also becomes The Queens. If the Engineer causes The Queens to become a Demon, 1 becomes a Demon and another becomes a Minion."
             }
         ],
         "special": [
@@ -909,14 +1008,14 @@
         "id": "krown_shadowslam",
         "name": "Krown",
         "team": "demon",
-        "otherNight": 26,
+        "otherNight": 55,
         "otherNightReminder": "At dusk, if no player is Krown & a player has signalled, wake the first player to have signalled. Show them they are the evil Krown, then put them to sleep. At night, wake the Krown and ask them to choose a player. If the Storyteller is Krown, choose a player. Mark that player as dead.",
         "reminders": [
             "Dead",
             "Taken the Krown"
         ],
         "setup": true,
-        "ability": "Each night*, choose a player: they die. 1st player to signal at dusk takes the evil Krown (Minions know). [The Storyteller is Krown]",
+        "ability": "Each night*, choose a player: they die. 1st player to signal at dusk* takes the evil Krown (Minions know). [The Storyteller is Krown]",
         "jinxes": [],
         "special": [],
         "image": [
@@ -928,16 +1027,19 @@
         "id": "sclera_shadowslam",
         "name": "Sclera",
         "team": "demon",
-        "firstNight": 57,
+        "firstNight": 37,
         "firstNightReminder": "Show the **THIS PLAYER IS** info token and indicate the Outsider category on script, then point at each Outsider player.",
-        "otherNight": 26,
+        "otherNight": 55,
         "otherNightReminder": "The Sclera chooses a player. If the player is an Outsider, prompt them to choose another player. Repeat this until they do not choose an Outsider.",
         "reminders": [
+            "Dead",
+            "Dead",
+            "Dead",
             "Dead",
             "Dead"
         ],
         "setup": true,
-        "ability": "Each night*, choose a player: they die & if they are an Outsider, choose again. You know all Outsiders. [+1 Outsider]",
+        "ability": "Each night*, choose a player: they die & if they are an Outsider, keep choosing. You know all Outsiders. [+1 Outsider]",
         "jinxes": [],
         "special": [],
         "image": [
@@ -950,7 +1052,7 @@
         "name": "Byguyle",
         "team": "demon",
         "firstNight": 0,
-        "otherNight": 26,
+        "otherNight": 55,
         "otherNightReminder": "The Byguyle chooses a player. If a player is marked as **NOMINATOR**, kill a different player of that player's character type.",
         "reminders": [
             "Dead",
@@ -971,7 +1073,7 @@
         "name": "Tegumenta",
         "team": "demon",
         "firstNight": 0,
-        "otherNight": 26,
+        "otherNight": 55,
         "otherNightReminder": "The Tegumenta points to as many players as they would like. The 1st player dies. If all the other players are the same character as the 1st, all the other players die too.",
         "reminders": [
             "Dead",

@@ -1,0 +1,317 @@
+[
+  {
+    "id": "_meta",
+    "author": "ShadowSlam",
+    "name": "Democracy versus Monarchy",
+    "firstNight": [
+      "dusk",
+      "gubbin_shadowslam",
+      "minioninfo",
+      "ahimsaka_shadowslam",
+      "demoninfo",
+      "graverobber_shadowslam",
+      "sclera_shadowslam",
+      "godfather",
+      "pukka",
+      "thanatologist_shadowslam",
+      "grandmother",
+      "hierophant_shadowslam",
+      "chambermaid",
+      "dawn"
+    ],
+    "otherNight": [
+      "dusk",
+      "ahimsaka_shadowslam",
+      "graverobber_shadowslam",
+      "landlord_shadowslam",
+      "gambler",
+      "exorcist",
+      "pukka",
+      "sclera_shadowslam",
+      "krown_shadowslam",
+      "byguyle_shadowslam",
+      "assassin",
+      "godfather",
+      "gossip",
+      "recombobulator_shadowslam",
+      "somnologist_shadowslam",
+      "gubbin_shadowslam",
+      "grandmother",
+      "thanatologist_shadowslam",
+      "hierophant_shadowslam",
+      "chambermaid",
+      "dawn"
+    ]
+  },
+  "grandmother",
+  {
+    "id": "thanatologist_shadowslam",
+    "name": "Thanatologist",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/thanatologist.png"
+    ],
+    "team": "townsfolk",
+    "ability": "You start knowing a player. Each night*, if they died today or tonight, learn their character type and know a new player.",
+    "firstNight": 54,
+    "otherNight": 75,
+    "firstNightReminder": "Point to the player marked **KNOW**.",
+    "otherNightReminder": "If the player marked **KNOW** died today or tonight, point to the new player marked **KNOW**.",
+    "reminders": [
+      "Known"
+    ],
+    "special": []
+  },
+  {
+    "id": "hierophant_shadowslam",
+    "name": "Hierophant",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/hierophant.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/evil/hierophant.png"
+    ],
+    "team": "townsfolk",
+    "ability": "Each night, choose a player: learn 2 players, 1 they should consider & 1 they should not.",
+    "firstNight": 65,
+    "otherNight": 83,
+    "firstNightReminder": "The Hierophant chooses a player. Point to 2 players once they have done so.",
+    "otherNightReminder": "The Hierophant chooses a player. Point to 2 players once they have done so.",
+    "reminders": []
+  },
+  "chambermaid",
+  {
+    "id": "ahimsaka_shadowslam",
+    "name": "Ahimsaka",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/ahimsa.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/evil/ahimsa.png"
+    ],
+    "team": "townsfolk",
+    "ability": "Each night, you may choose 2 players (not yourself): while you have chosen equal good & evil players, they are safe from evil.",
+    "firstNight": 22,
+    "otherNight": 10,
+    "firstNightReminder": "The Ahimsaka might choose 2 players. If they do, mark them as **CHOSEN**. ",
+    "otherNightReminder": "The Ahimsaka might choose 2 players. If they do, mark them as **CHOSEN**. ",
+    "reminders": [
+      "Chosen",
+      "Chosen",
+      "Chosen",
+      "Chosen",
+      "Chosen",
+      "Chosen",
+      "Chosen",
+      "Chosen"
+    ]
+  },
+  {
+    "id": "landlord_shadowslam",
+    "name": "Landlord",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/landlord.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/evil/landlord.png"
+    ],
+    "team": "townsfolk",
+    "ability": "Each night, choose another player: if a chosen player dies at night, a living Outsider becomes a Townsfolk. [+0 or +1 Outsider]",
+    "firstNight": 0,
+    "otherNight": 20,
+    "otherNightReminder": "The Landlord chooses a player. If a chosen player dies later tonight, wake a living Outsider and show the **YOU ARE** info token &amp; a Townsfolk character token.",
+    "reminders": [
+      "Chosen",
+      "Chosen",
+      "Chosen",
+      "Chosen"
+    ],
+    "setup": true,
+    "special": []
+  },
+  "gambler",
+  "exorcist",
+  "gossip",
+  "alsaahir",
+  {
+    "id": "somnologist_shadowslam",
+    "name": "Somnologist",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/somnologist.png"
+    ],
+    "team": "townsfolk",
+    "ability": "Each day, you may tell the Storyteller a statement about the game. If they agree & you die tonight, it becomes true.",
+    "firstNight": 0,
+    "otherNight": 59,
+    "otherNightReminder": "If the Somnologist died tonight, make their statement today from true, if they have one.",
+    "special": []
+  },
+  "fisherman",
+  "minstrel",
+  {
+    "id": "gubbin_shadowslam",
+    "name": "Gubbin",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/gubbin.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/evil/gubbin.png"
+    ],
+    "team": "outsider",
+    "ability": "Each night, something happens today. Each night*, learn what yesterday's was.",
+    "firstNight": 11,
+    "otherNight": 69,
+    "firstNightReminder": "Something happens tonight or today.",
+    "otherNightReminder": "Something happens tonight or today. Inform the Gubbin what happened yesterday.",
+    "reminders": [
+      "?",
+      "??"
+    ],
+    "setup": true,
+    "special": []
+  },
+  {
+    "id": "recombobulator_shadowslam",
+    "name": "Recombobulator",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/recombobulator.png"
+    ],
+    "team": "outsider",
+    "ability": "Each night, even if you died, the Demon may choose a player: they become a different character of their type.",
+    "firstNight": 0,
+    "otherNight": 59,
+    "otherNightReminder": "If the Recombobulator died, wake the Demon and show them the **THIS CHARACTER SELECTED YOU** &amp; Recombobulator tokens. If the Demon chose a player, wake them next. Show the **YOU ARE** token &amp; their new character token.",
+    "reminders": [
+      "Died"
+    ],
+    "jinxes": [
+      {
+        "id": "drunk",
+        "reason": "If the Demon chooses the Drunk player, the Townsfolk they think they are changes."
+      },
+      {
+        "id": "legion",
+        "reason": "Legion cannot choose Legion players."
+      },
+      {
+        "id": "villageidiot",
+        "reason": "If a player would become the Village Idiot due to the Recombobulator, the drunk Village Idiot might change."
+      },
+      {
+        "id": "lilmonsta",
+        "reason": "If the Recombobulator would cause a Demon to become Lil Monsta, they instead become a Minion babysitting Lil Monsta tonight."
+      }
+    ],
+    "special": []
+  },
+  {
+    "id": "king_of_storms_shadowslam",
+    "name": "King of Storms",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/king_of_storms.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/evil/king_of_storms.png"
+    ],
+    "team": "outsider",
+    "ability": "When a player dies, their good neighbour might die & so forth.",
+    "firstNight": 0,
+    "otherNight": 0,
+    "reminders": [
+      "Dead",
+      "Dead",
+      "Dead"
+    ],
+    "special": []
+  },
+  {
+    "id": "torpor_shadowslam",
+    "name": "Torpor",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/torpor.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/evil/torpor.png"
+    ],
+    "team": "outsider",
+    "ability": "If you are good, good can't win & the Demon acts while dead. Each day, you may publicly give this ability to a player, even if drunk, poisoned or dead.",
+    "firstNight": 0,
+    "otherNight": 0,
+    "reminders": [
+      "Torpor"
+    ],
+    "special": []
+  },
+  "godfather",
+  {
+    "id": "graverobber_shadowslam",
+    "name": "Graverobber",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/minion/graverobber.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/minion/good/graverobber.png"
+    ],
+    "team": "minion",
+    "ability": "Each night, you see the Grimoire & may choose a player: while they are dead, you have their ability until you next choose.",
+    "firstNight": 26,
+    "otherNight": 11,
+    "firstNightReminder": "Show the Grimoire for as long as the Graverobber needs. If the Graverobber chooses a player, mark the player as **BODYSNATCHED**.",
+    "otherNightReminder": "Show the Grimoire for as long as the Graverobber needs. If the Graverobber chooses a player, mark the player as **BODYSNATCHED**.",
+    "reminders": [
+      "Bodysnatched"
+    ],
+    "special": []
+  },
+  "assassin",
+  "mastermind",
+  "pukka",
+  {
+    "id": "sclera_shadowslam",
+    "name": "Sclera",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/demon/sclera.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/demon/good/sclera.png"
+    ],
+    "team": "demon",
+    "ability": "Each night*, choose a player: they die & if they are an Outsider, keep choosing. You know all Outsiders. [+1 Outsider]",
+    "firstNight": 37,
+    "otherNight": 55,
+    "firstNightReminder": "Show the **THIS PLAYER IS** info token and indicate the Outsider category on script, then point at each Outsider player.",
+    "otherNightReminder": "The Sclera chooses a player. If the player is an Outsider, prompt them to choose another player. Repeat this until they do not choose an Outsider.",
+    "reminders": [
+      "Dead",
+      "Dead",
+      "Dead",
+      "Dead",
+      "Dead"
+    ],
+    "setup": true,
+    "special": []
+  },
+  {
+    "id": "byguyle_shadowslam",
+    "name": "Byguyle",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/demon/byguyle.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/demon/good/byguyle.png"
+    ],
+    "team": "demon",
+    "ability": "Each night*, choose a player: they die. If you were nominated today, another player of your nominator's type dies. [Even Townsfolk]",
+    "firstNight": 0,
+    "otherNight": 55,
+    "otherNightReminder": "The Byguyle chooses a player. If a player is marked as **NOMINATOR**, kill a different player of that player's character type.",
+    "reminders": [
+      "Dead",
+      "Dead",
+      "Nominator"
+    ],
+    "setup": true,
+    "special": []
+  },
+  {
+    "id": "krown_shadowslam",
+    "name": "Krown",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/demon/krown.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/demon/good/krown.png"
+    ],
+    "team": "demon",
+    "ability": "Each night*, choose a player: they die. 1st player to signal at dusk* takes the evil Krown (Minions know). [The Storyteller is Krown]",
+    "firstNight": 0,
+    "otherNight": 55,
+    "otherNightReminder": "At dusk, if no player is Krown &amp; a player has signalled, wake the first player to have signalled. Show them they are the evil Krown, then put them to sleep. At night, wake the Krown and ask them to choose a player. If the Storyteller is Krown, choose a player. Mark that player as dead.",
+    "reminders": [
+      "Dead",
+      "Taken the Krown"
+    ],
+    "setup": true,
+    "special": []
+  },
+  "bootlegger"
+]

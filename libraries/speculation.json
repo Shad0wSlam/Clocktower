@@ -280,12 +280,28 @@
             "False Info"
         ],
         "setup": false,
-        "ability": "Each day, choose a 1 word topic on which the Storyteller tells you 1 fact. If an alive neighbour is evil, you get false info.",
+        "ability": "Each day, choose a 1-word topic on which the Storyteller gives a fact. If your neighbors are different alignments, it is false.",
         "jinxes": [],
         "special": [],
         "image": [
             "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/coachman.png",
             "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/evil/coachman.png"
+        ]
+    },
+    {
+        "id": "falconer_speculated",
+        "name": "Falconer",
+        "team": "townsfolk",
+        "firstNight": 0,
+        "otherNight": 0,
+        "reminders": [],
+        "setup": true,
+        "ability": "Each dusk*, you may visit the Storyteller to learn how many Townsfolk are still alive. [+0 or +1 Outsider]",
+        "jinxes": [],
+        "special": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/falconer.png",
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/evil/falconer.png"
         ]
     },
     {

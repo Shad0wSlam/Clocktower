@@ -139,32 +139,38 @@
   },
   "banshee",
   {
-    "id": "mercenary_shadowslam",
-    "name": "Mercenary",
-    "image": [
-      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/mercenary.png"
-    ],
-    "team": "townsfolk",
-    "ability": "The Demon starts knowing a good player. If they die, good wins. If you die at night, learn them.",
-    "firstNight": 4,
-    "otherNight": 0,
-    "firstNightReminder": "Take a player selection from the demon",
-    "otherNightReminder": "If the Mercenary died in the night, show the player.",
-    "reminders": [
-      "Target"
-    ],
-    "jinxes": [
-      {
-        "id": "summoner",
-        "reason": "The Summoner knows a good player instead of the Demon. They cannot choose that player for their ability. When a Demon is created, they learn the player."
-      },
-      {
-        "id": "snakecharmer",
-        "reason": "If the good Snake Charmer becomes a Demon, they learn a player for the Mercenary ability that night, replacing the previous player."
-      }
-    ],
-    "special": []
-  },
+        "id": "mercenary_shadowslam",
+        "name": "Mercenary",
+        "team": "townsfolk",
+        "firstNightReminder": "Take a player selection from the demon",
+        "otherNightReminder": "If the Mercenary died in the night, show the player.",
+        "firstNight": 4,
+        "otherNight": 0,
+        "reminders": [
+            "Target"
+        ],
+        "setup": false,
+        "ability": "The Demon starts knowing a good player. If they die, good wins. If you die at night, learn them.",
+        "jinxes": [
+            {
+                "id": "summoner",
+                "reason": "The Summoner knows a good player instead of the Demon. They cannot choose that player for their ability. When a Demon is created, they learn the player."
+            },
+            {
+                "id": "snakecharmer",
+                "reason": "If the good Snake Charmer becomes a Demon, they learn a player for the Mercenary ability that night, replacing the previous player."
+            },
+            {
+                "id": "lycanthrope",
+                "reason": "The Mercenary's target cannot die to the Lycanthrope."
+            }
+        ],
+        "special": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/mercenary.png"
+        ],
+        "flavour": "Any mark for a price. Some find the cost too great, but I never find my target so."
+    },
   {
     "id": "corsair_the_arcanum",
     "name": "Corsair",
@@ -185,6 +191,10 @@
       {
         "id": "philosopher",
         "reason": "If the Philosopher gains the Corsair ability, Treasure is hidden, if there isn't any already."
+      },
+      {
+        "id": "wraith",
+        "reason": "If the Storyteller is hiding Treasure, the Wraith must close their eyes until the Storyteller wakes them after hiding Treasure."
       }
     ]
   },
@@ -297,10 +307,10 @@
         "id": "recombobulator_shadowslam",
         "reason": "If multiple The Queens would change character due to the Recombobulator, only one becomes a Demon and the rest become Minions."
       },
-      {
-        "id": "engineer",
-        "reason": "If the Engineer makes The Queens, a Minion also becomes The Queens."
-      }
+            {
+                "id": "engineer",
+                "reason": "If the Engineer makes The Queens, a Minion also becomes The Queens. If the Engineer causes The Queens to become a Demon, 1 becomes a Demon and another becomes a Minion."
+            }
     ],
     "special": [
       {
