@@ -391,7 +391,12 @@
         ],
         "setup": true,
         "ability": "If you guess (once) that today is the 1st day no Outsiders live, learn the Demon, but if wrong get false info. [-1 to +1 Outsiders]",
-        "jinxes": [],
+        "jinxes": [
+            {
+                "id": "marionette",
+                "reason": "If the Marionette thinks that they are the Census Taker, an Outsider might have been added or removed during setup."
+            }
+        ],
         "special": [],
         "image": [
             "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/census_taker.png",
@@ -423,6 +428,10 @@
             {
                 "id": "lycanthrope",
                 "reason": "The Mercenary's target cannot die to the Lycanthrope."
+            },
+            {
+                "id": "vortox",
+                "reason": "The Demon knowing the Mercenary's target is unaffected by the Vortox ability."
             }
         ],
         "special": [],
@@ -589,7 +598,7 @@
             },
             {
                 "id": "legion",
-                "reason": "Legion cannot choose Legion players."
+                "reason": "Legion cannot choose Legion players for the Recombobulator ability."
             },
             {
                 "id": "villageidiot",
@@ -710,6 +719,24 @@
         "special": [],
         "image": [
             "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/necrophysicist.png"
+        ]
+    },
+    {
+        "id": "gondolier_shadowslam",
+        "name": "Gondolier",
+        "team": "outsider",
+        "firstNight": 1,
+        "firstNightReminder": "Decide which Traveller ability you have. If it acts now, or tonight, use its ability.",
+        "otherNight": 0,
+        "reminders": [
+        ],
+        "setup": false,
+        "ability": "The Storyteller starts with a Traveller ability.",
+        "jinxes": [],
+        "special": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/gondolier.png",
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/evil/gondolier.png"
         ]
     },
     {
@@ -996,6 +1023,10 @@
             {
                 "id": "scarletwoman",
                 "reason": "If the Necronaut's good player has the Scarlet Woman ability & it would cause them to become the Demon, a living Minion does instead."
+            },
+            {
+                "id": "marionette",
+                "reason": "If the Necronaut's good player has the Marionette ability, they think they have their ability but do not."
             }
         ],
         "special": [],
@@ -1105,5 +1136,18 @@
             "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/traveller/good/parasite.png",
             "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/traveller/evil/parasite.png"
         ]
+    },
+    {
+        "id": "shadowslam_shadowslam",
+        "name": "ShadowSlam",
+        "team": "loric",
+        "firstNight": 0,
+        "otherNight": 0,
+        "reminders": [],
+        "setup": false,
+        "ability": "Players who are \"mad\" they might be wrong might be executed.",
+        "jinxes": [],
+        "special": [],
+        "image": []
     }
 ]

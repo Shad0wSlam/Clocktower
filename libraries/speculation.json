@@ -297,7 +297,12 @@
         "reminders": [],
         "setup": true,
         "ability": "Each dusk*, you may visit the Storyteller to learn how many Townsfolk are still alive. [+0 or +1 Outsider]",
-        "jinxes": [],
+        "jinxes": [
+            {
+                "id": "marionette",
+                "reason": "If the Marionette thinks that they are the Falconer, an Outsider might have been added during setup."
+            }
+        ],
         "special": [],
         "image": [
             "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/speculation/townsfolk/falconer.png",
