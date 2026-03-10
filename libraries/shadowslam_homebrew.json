@@ -9,9 +9,9 @@
         "name": "Thanatologist",
         "team": "townsfolk",
         "firstNight": 54,
-        "firstNightReminder": "Point to the player marked **KNOW**.",
+        "firstNightReminder": "Point to the player marked *KNOW*.",
         "otherNight": 75,
-        "otherNightReminder": "If the player marked **KNOW** died today or tonight, point to the new player marked **KNOW**.",
+        "otherNightReminder": "If the player marked *KNOW* died today or tonight, point to the new player marked *KNOW*.",
         "reminders": [
             "Known"
         ],
@@ -85,9 +85,9 @@
         "team": "townsfolk",
         "ability": "Each night, learn a completely fresh character.",
         "firstNight": 74,
-        "firstNightReminder": "Show the  a character token you have never shown any player.",
+        "firstNightReminder": "Show the Pioneer a character token you have never shown any player.",
         "otherNight": 94,
-        "otherNightReminder": "Show the  a character token you have never shown any player.",
+        "otherNightReminder": "Show the Pioneer a character token you have never shown any player.",
         "reminders": [],
         "image": [
             "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/pioneer.png",
@@ -133,9 +133,9 @@
         "team": "townsfolk",
         "ability": "Each night, you may choose 2 players (not yourself): while you have chosen equal good & evil players, they are safe from evil.",
         "firstNight": 22,
-        "firstNightReminder": "The Ahimsaka might choose 2 players. If they do, mark them as **CHOSEN**. ",
+        "firstNightReminder": "The Ahimsaka might choose 2 players. If they do, mark them as *CHOSEN*. ",
         "otherNight": 10,
-        "otherNightReminder": "The Ahimsaka might choose 2 players. If they do, mark them as **CHOSEN**. ",
+        "otherNightReminder": "The Ahimsaka might choose 2 players. If they do, mark them as *CHOSEN*. ",
         "reminders": [
             "Chosen",
             "Chosen",
@@ -158,9 +158,9 @@
         "team": "townsfolk",
         "ability": "Each night, you learn & gain an in-play ability until dusk. Players with an ability you have are drunk (if you choose them, you are instead).",
         "firstNight": 15,
-        "firstNightReminder": "Show the Rogue a character token. Until dusk, treat them as though they have the ability. Mark the other players with that ability as **DRUNK**",
+        "firstNightReminder": "Show the Rogue a character token. Until dusk, treat them as though they have the ability. Mark the other players with that ability as *DRUNK*",
         "otherNight": 11,
-        "otherNightReminder": "Show the Rogue a character token. Until dusk, treat them as though they have the ability. Mark the other players with that ability as **DRUNK**",
+        "otherNightReminder": "Show the Rogue a character token. Until dusk, treat them as though they have the ability. Mark the other players with that ability as *DRUNK*",
         "reminders": [
             "Stolen",
             "Drunk",
@@ -176,8 +176,8 @@
         "id": "convive_shadowslam",
         "name": "Convive",
         "team": "townsfolk",
-        "firstNightReminder": "The Convive points at a player. Indicate the direction of that player's closest Outsider from that player. If that player is the Drunk, additionally show the Drunk token and remove the 'is the Drunk' reminder token from them.",
-        "otherNightReminder": "The Convive points at a player. Indicate the direction of that player's closest Outsider from that player. If that player is the Drunk, additionally show the Drunk token and remove the 'is the Drunk' reminder token from them.",
+        "firstNightReminder": "The Convive points at a player. Indicate the direction of that player's closest Outsider from that player. If that player is the Drunk, additionally show the Drunk token and remove the *is the Drunk* reminder token from them.",
+        "otherNightReminder": "The Convive points at a player. Indicate the direction of that player's closest Outsider from that player. If that player is the Drunk, additionally show the Drunk token and remove the *is the Drunk* reminder token from them.",
         "firstNight": 33,
         "otherNight": 42,
         "setup": true,
@@ -216,7 +216,7 @@
         "team": "townsfolk",
         "firstNight": 0,
         "otherNight": 60,
-        "otherNightReminder": "Swap the Demon and another player's tokens. Mark the previous Demon with **BEEN THE DEMON** and inform the players of the character change.",
+        "otherNightReminder": "Swap the Demon and another player's tokens. Mark the previous Demon with *BEEN THE DEMON* and inform the players of the character change.",
         "reminders": [
             "Been the Demon",
             "Been the Demon",
@@ -265,7 +265,7 @@
         "team": "townsfolk",
         "firstNight": 0,
         "otherNight": 20,
-        "otherNightReminder": "The Landlord chooses a player. If a chosen player dies later tonight, wake a living Outsider and show the **YOU ARE** info token & a Townsfolk character token.",
+        "otherNightReminder": "The Landlord chooses a player. If a chosen player dies later tonight, wake a living Outsider and show the *YOU ARE* info token & a Townsfolk character token.",
         "reminders": [
             "Chosen",
             "Chosen",
@@ -351,7 +351,7 @@
         "name": "Despot",
         "team": "townsfolk",
         "firstNight": 15,
-        "firstNightReminder": "Wake the Despot and inform them which Demon they are. Swap their character token for that Demon and mark them with **IS THE DESPOT**.",
+        "firstNightReminder": "Wake the Despot and inform them which Demon they are. Swap their character token for that Demon and mark them with *IS THE DESPOT*.",
         "otherNight": 0,
         "reminders": [
             "is the Despot",
@@ -428,8 +428,8 @@
         "id": "mercenary_shadowslam",
         "name": "Mercenary",
         "team": "townsfolk",
-        "firstNightReminder": "Take a player selection from the demon",
-        "otherNightReminder": "If the Mercenary died in the night, show the player.",
+        "firstNightReminder": "Mark a good player with *TARGET*. Wake the Demon and point to the player.",
+        "otherNightReminder": "If the Mercenary died in the night, point to the player marked *TARGET*.",
         "firstNight": 4,
         "otherNight": 0,
         "reminders": [
@@ -627,7 +627,7 @@
         "team": "outsider",
         "firstNight": 0,
         "otherNight": 59,
-        "otherNightReminder": "If the Recombobulator died, wake the Demon and show them the **THIS CHARACTER SELECTED YOU** & Recombobulator tokens. If the Demon chose a player, wake them next. Show the **YOU ARE** token & their new character token.",
+        "otherNightReminder": "If the Recombobulator died, wake the Demon and show them the *THIS CHARACTER SELECTED YOU* & Recombobulator tokens. If the Demon chose a player, wake them next. Show the *YOU ARE* token & their new character token.",
         "reminders": [
             "Died"
         ],
@@ -734,7 +734,7 @@
         "team": "outsider",
         "firstNight": 0,
         "otherNight": 10,
-        "otherNightReminder": "If an evil player changed character from the Tailor today, show them the **YOU ARE** token, then their new character token.",
+        "otherNightReminder": "If an evil player changed character from the Tailor today, show them the *YOU ARE* token, then their new character token.",
         "reminders": [
             "No Ability"
         ],
@@ -807,7 +807,7 @@
         "name": "Paranoiac",
         "team": "outsider",
         "firstNight": 8,
-        "firstNightReminder": "If all other players are evil, wake all players except the Paranoiac, show them the **YOU ARE** info token and a thumbs down. Then show them the **THIS PLAYER IS** & Paranoiac tokens, then point at the Paranoiac.",
+        "firstNightReminder": "If all other players are evil, wake all players except the Paranoiac, show them the *YOU ARE* info token and a thumbs down. Then show them the *THIS PLAYER IS* & Paranoiac tokens, then point at the Paranoiac.",
         "otherNight": 0,
         "reminders": [],
         "setup": false,
@@ -829,10 +829,9 @@
         "id": "dissovant_shadowslam",
         "name": "Dissovant",
         "team": "minion",
-        "firstNightReminder": "Show the Dissovant their two good neighbours and prompt them to choose one of them. The Dissovant may indicate they wish to poison the other. Wake the chosen player and inform them they are evil, and place the Dissident reminder on the other. If the Dissovant chose to poison the Dissident, place the Poisoned reminder on them and the No Ability reminder on the Dissovant.",
-        "otherNightReminder": "The Dissovant may indicate they wish to poison the Dissident. If they do, place the Poisoned reminder on the Dissident until dusk and the No Ability reminder on the Dissovant.",
+        "firstNightReminder": "Show the Dissovant their two good neighbours and prompt them to choose one of them. Mark the chosen player as *POISONED*.",
         "firstNight": 37,
-        "otherNight": 11,
+        "otherNight": 0,
         "reminders": [
             "Poisoned",
             "Evil"
@@ -850,9 +849,9 @@
         "name": "Sentry",
         "team": "minion",
         "firstNight": 29,
-        "firstNightReminder": "Show the character tokens of all in-play Outsiders.",
+        "firstNightReminder": "Show the character tokens of all in-play Outsiders. The Sentry might choose a player & not in-play Outsider character. Wake the player and show them the *YOU ARE* info token & their new character token.",
         "otherNight": 22,
-        "otherNightReminder": "The Sentry might choose a player & not in-play Outsider character. Wake the player and show them the **YOU ARE** info token & their new character token.",
+        "otherNightReminder": "The Sentry might choose a player & not in-play Outsider character. Wake the player and show them the *YOU ARE* info token & their new character token.",
         "reminders": [
             "No Ability"
         ],
@@ -882,7 +881,7 @@
         "name": "Biblioclast",
         "team": "minion",
         "firstNight": 29,
-        "firstNightReminder": "For each Outsider that is not in-play, prompt the Biblioclast to choose a character. Mark each chosen character with **FALSE**",
+        "firstNightReminder": "For each Outsider that is not in-play, prompt the Biblioclast to choose a character. Subsequent choices must be directly above or below the previous choices on the script sheet. Mark each chosen character with *FALSE*",
         "otherNight": 0,
         "reminders": [
             "False",
@@ -904,9 +903,9 @@
         "name": "Graverobber",
         "team": "minion",
         "firstNight": 26,
-        "firstNightReminder": "Show the Grimoire for as long as the Graverobber needs. If the Graverobber chooses a player, mark the player as **BODYSNATCHED**.",
+        "firstNightReminder": "Show the Grimoire for as long as the Graverobber needs. If the Graverobber chooses a player, mark the player as *BODYSNATCHED*.",
         "otherNight": 11,
-        "otherNightReminder": "Show the Grimoire for as long as the Graverobber needs. If the Graverobber chooses a player, mark the player as **BODYSNATCHED**.",
+        "otherNightReminder": "Show the Grimoire for as long as the Graverobber needs. If the Graverobber chooses a player, mark the player as *BODYSNATCHED*.",
         "reminders": [
             "Bodysnatched"
         ],
@@ -957,11 +956,11 @@
     },
     {
         "id": "brother_callow_shadowslam",
-        "name": "Brother Callow",
+        "name": "Blood & Bone",
         "team": "minion",
         "firstNight": 0,
         "otherNight": 56,
-        "otherNightReminder": "Brother Callow chooses some amount of players. For each player chosen, place a **LIVES** reminder in the centre of the left side of the Grimoire, as a reminder to yourself to place it later. When a good player dies, you may mark them with **LIVES** instead of them dying. Then, mark each player chosen as **DEAD**.",
+        "otherNightReminder": "Brother Callow chooses some amount of players. For each player chosen, place a *LIVES* reminder in the centre of the left side of the Grimoire, as a reminder to yourself to place it later. When a good player dies, you may mark them with *LIVES* instead of them dying. Then, mark each player chosen as *DEAD*.",
         "reminders": [
             "Dead",
             "Dead",
@@ -1005,9 +1004,9 @@
         "name": "The Mechanism",
         "team": "demon",
         "firstNight": 46,
-        "firstNightReminder": "Mark each player 1 step clockwise of each evil player as **POISONED**. Rotate it if it is on an evil player.",
+        "firstNightReminder": "Mark each player 1 step clockwise of each evil player as *POISONED*. Rotate it if it is on an evil player.",
         "otherNight": 42,
-        "otherNightReminder": "Move each **POISONED** reminder 1 step clockwise. Rotate it if it is on an evil player.",
+        "otherNightReminder": "Move each *POISONED* reminder 1 step clockwise. Rotate it if it is on an evil player.",
         "reminders": [
             "Poisoned",
             "Poisoned",
@@ -1031,7 +1030,7 @@
         "id": "the_queens_shadowslam",
         "name": "The Queens",
         "team": "demon",
-        "otherNightReminder": "Each The Queens points to a player. Mark one of the players chosen, or a Demon, with the Dead reminder token.",
+        "otherNightReminder": "Each The Queens points to a player. Mark one of the players chosen, or a Demon, with the *DEAD* reminder token.",
         "firstNight": 0,
         "otherNight": 26,
         "reminders": [
@@ -1073,7 +1072,7 @@
         "name": "Vaudevillian",
         "team": "demon",
         "firstNight": 20,
-        "firstNightReminder": "Place the 'is the Marionette' reminder tokens on each good player next to the Demon. Wake the Demon and show them both Marionettes.",
+        "firstNightReminder": "Place the *is the Marionette* reminder tokens on each good player next to the Demon. Wake the Demon and show them both Marionettes.",
         "otherNight": 26,
         "otherNightReminder": "The Vaudevillian points to a player. That player dies. Any abilities that would fail to work tonight, might work anyway.",
         "reminders": [
@@ -1094,9 +1093,9 @@
         "name": "Necronaut",
         "team": "demon",
         "firstNight": 12,
-        "firstNightReminder": "Mark a good player with the 'Phylactery' reminder. Wake the Necronaut and show them the player, then show them the Minion token they have.",
+        "firstNightReminder": "Mark a good player with the *Phylactery* reminder. Wake the Necronaut and point to the player, then show them the Minion token they have.",
         "otherNight": 49,
-        "otherNightReminder": "The Necronaut points to a player. If they killed a Minion, decide which Minion ability the Phylactery gained and show them the token.",
+        "otherNightReminder": "The Necronaut points to a player. If they killed a Minion, decide which Minion ability the *Phylactery* gained and show them the token.",
         "reminders": [
             "Dead",
             "Phylactery",
@@ -1127,7 +1126,7 @@
         "name": "Krown",
         "team": "demon",
         "otherNight": 55,
-        "otherNightReminder": "At dusk, if no player is Krown & a player has signalled, wake the first player to have signalled. Show them they are the evil Krown, then put them to sleep. At night, wake the Krown and ask them to choose a player. If the Storyteller is Krown, choose a player. Mark that player as dead.",
+        "otherNightReminder": "At dusk, if no player is Krown & a player has signalled, wake the first player to have signalled and mark them with *TAKEN THE KROWN*. Show them they are the evil Krown, then put them to sleep. At night, wake the Krown and ask them to choose a player. If the Storyteller is Krown, choose a player. Mark that player as *DEAD*.",
         "reminders": [
             "Dead",
             "Taken the Krown"
@@ -1146,7 +1145,7 @@
         "name": "Sclera",
         "team": "demon",
         "firstNight": 37,
-        "firstNightReminder": "Show the **THIS PLAYER IS** info token and indicate the Outsider category on script, then point at each Outsider player.",
+        "firstNightReminder": "Show the *THIS PLAYER IS* info token and indicate the Outsider category on script, then point at each Outsider player.",
         "otherNight": 55,
         "otherNightReminder": "The Sclera chooses a player. If the player is an Outsider, prompt them to choose another player. Repeat this until they do not choose an Outsider.",
         "reminders": [
@@ -1171,7 +1170,7 @@
         "team": "demon",
         "firstNight": 0,
         "otherNight": 55,
-        "otherNightReminder": "The Byguyle chooses a player. If a player is marked as **NOMINATOR**, kill a different player of that player's character type.",
+        "otherNightReminder": "The Byguyle chooses a player. If a player is marked as *NOMINATOR*, kill a different player of that player's character type.",
         "reminders": [
             "Dead",
             "Dead",
@@ -1202,7 +1201,32 @@
         "ability": "Each night*, choose any players: the 1st dies & if all others are the 1st's character, they die. [Some characters are duplicates, +? Outsiders]",
         "jinxes": [],
         "special": [],
-        "image": []
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/demon/tegumenta.png",
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/demon/good/tegumenta.png"
+        ]
+    },
+    {
+        "id": "gaiemzho_shadowslam",
+        "name": "Gaiem'Zho",
+        "team": "demon",
+        "firstNight": 0,
+        "otherNight": 51,
+        "otherNightReminder": "Each night except the first, publicly announced it's time to play \"Who's The Demon!\". Briefly wake all players and remind them to make their choice now. Put all players back to sleep, and have all players point at their guess. Determine who is being pointed at the most, other than the Demon. Mark all players pointing at those players as *DEAD*.",
+        "reminders": [
+            "Dead",
+            "Dead",
+            "Dead",
+            "Dead"
+        ],
+        "setup": false,
+        "ability": "Each night*, alive players secretly guess who the Demon is among alive players. The largest sets of wrong guesses die.",
+        "jinxes": [],
+        "special": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/demon/gaiemzho.png",
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/demon/good/gaiemzho.png"
+        ]
     },
     {
         "id": "parasite_shadowslam",
