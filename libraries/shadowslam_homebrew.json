@@ -342,7 +342,28 @@
         "jinxes": [],
         "special": [],
         "image": [
-            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/artificer.png"
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/artificer.png",
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/evil/artificer.png"
+        ]
+    },
+    {
+        "id": "despot_shadowslam",
+        "name": "Despot",
+        "team": "townsfolk",
+        "firstNight": 15,
+        "firstNightReminder": "Wake the Despot and inform them which Demon they are. Swap their character token for that Demon and mark them with **IS THE DESPOT**.",
+        "otherNight": 0,
+        "reminders": [
+            "is the Despot",
+            "Drunk"
+        ],
+        "setup": false,
+        "ability": "You are a Demon (except for Minion & Demon info). On the final day, if another Demon lives, you are drunk.",
+        "jinxes": [],
+        "special": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/despot.png",
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/evil/despot.png"
         ]
     },
     {
@@ -457,6 +478,27 @@
         "image": [
             "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/paladin.png",
             "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/evil/paladin.png"
+        ]
+    },
+    {
+        "id": "reptile_rouser_shadowslam",
+        "name": "Reptile Rouser",
+        "team": "townsfolk",
+        "firstNight": 0,
+        "otherNight": 0,
+        "reminders": [
+            "Drunk",
+            "Drunk",
+            "Drunk",
+            "Drunk"
+        ],
+        "setup": true,
+        "ability": "Minions are drunk & cannot affect setup, even if you are dead. [+1 Minion]",
+        "jinxes": [],
+        "special": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/reptile_rouser.png",
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/evil/reptile_rouser.png"
         ]
     },
     {
@@ -914,6 +956,51 @@
         ]
     },
     {
+        "id": "brother_callow_shadowslam",
+        "name": "Brother Callow",
+        "team": "minion",
+        "firstNight": 0,
+        "otherNight": 56,
+        "otherNightReminder": "Brother Callow chooses some amount of players. For each player chosen, place a **LIVES** reminder in the centre of the left side of the Grimoire, as a reminder to yourself to place it later. When a good player dies, you may mark them with **LIVES** instead of them dying. Then, mark each player chosen as **DEAD**.",
+        "reminders": [
+            "Dead",
+            "Dead",
+            "Dead",
+            "Lives",
+            "Lives",
+            "Lives"
+        ],
+        "setup": true,
+        "ability": "Each night*, you may choose players: they die. For each time you chose, a good player might not die.",
+        "jinxes": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/minion/brother_callow.png",
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/minion/good/brother_callow.png"
+        ]
+    },
+    {
+        "id": "minotaur_shadowslam",
+        "name": "Minotaur",
+        "team": "minion",
+        "firstNight": 0,
+        "otherNight": 0,
+        "reminders": [
+            "Poisoned",
+            "Poisoned",
+            "False",
+            "False",
+            "False",
+            "False"
+        ],
+        "setup": true,
+        "ability": "Drunk or poisoned players' neighbours receive false info from their own abilities. [+1-2 poisoned Outsiders]",
+        "jinxes": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/minion/minotaur.png",
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/minion/good/minotaur.png"
+        ]
+    },
+    {
         "id": "the_mechanism_shadowslam",
         "name": "The Mechanism",
         "team": "demon",
@@ -1148,6 +1235,8 @@
         "ability": "Players who are \"mad\" they might be wrong might be executed.",
         "jinxes": [],
         "special": [],
-        "image": []
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/loric/shadowslam.png"
+            ]
     }
 ]
