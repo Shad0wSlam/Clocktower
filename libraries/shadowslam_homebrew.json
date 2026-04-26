@@ -825,8 +825,8 @@
         ]
     },
     {
-        "id": "birefringent_shadowslam",
-        "name": "Birefringent",
+        "id": "geologist_shadowslam",
+        "name": "Geologist",
         "team": "outsider",
         "firstNight": 0,
         "otherNight": 0,
@@ -839,13 +839,13 @@
         "jinxes": [
             {
                 "id": "census_taker_shadowslam",
-                "reason": "If the Census Taker guesses wrong, their information is unaffected by the Birefringent."
+                "reason": "If the Census Taker guesses wrong, their information is unaffected by the Geologist."
             }
         ],
         "special": [],
         "image": [
-            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/birefringent.png",
-            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/evil/birefringent.png"
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/geologist.png",
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/evil/geologist.png"
         ]
     },
     {
