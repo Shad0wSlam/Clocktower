@@ -221,7 +221,7 @@
             "Voted"
         ],
         "setup": false,
-        "ability": "Each night*, learn the amount of evil players who voted on today's execution.",
+        "ability": "Each night*, you learn how many evil players voted on today's execution.",
         "jinxes": [],
         "special": [],
         "image": [
@@ -476,7 +476,8 @@
         ],
         "special": [],
         "image": [
-            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/mercenary.png"
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/mercenary.png",
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/evil/mercenary.png"
         ],
         "flavour": "Any mark for a price. Some find the cost too great, but I never find my target so."
     },
