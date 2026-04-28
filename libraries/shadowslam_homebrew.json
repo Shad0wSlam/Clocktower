@@ -9,9 +9,9 @@
         "name": "Thanatologist",
         "team": "townsfolk",
         "firstNight": 54,
-        "firstNightReminder": "Point to the player marked *KNOW*.",
+        "firstNightReminder": "Point to the player marked *KNOWN*.",
         "otherNight": 75,
-        "otherNightReminder": "If the player marked *KNOW* died today or tonight, point to the new player marked *KNOW*.",
+        "otherNightReminder": "If the player marked *KNOWN* died today or tonight, point to the new player marked *KNOWN*.",
         "reminders": [
             "Known"
         ],
@@ -20,7 +20,8 @@
         "jinxes": [],
         "special": [],
         "image": [
-            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/thanatologist.png"
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/thanatologist.png",
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/evil/thanatologist.png"
         ]
     },
     {
@@ -225,7 +226,8 @@
         "jinxes": [],
         "special": [],
         "image": [
-            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/ordinator.png"
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/ordinator.png",
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/evil/ordinator.png"
         ]
     },
     {
@@ -920,7 +922,8 @@
         ],
         "special": [],
         "image": [
-            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/minion/sentry.png"
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/minion/sentry.png",
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/minion/good/sentry.png"
         ]
     },
     {
