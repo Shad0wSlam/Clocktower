@@ -1,0 +1,174 @@
+[
+  {
+    "id": "_meta",
+    "author": "ShadowSlam",
+    "name": "The Rise & Fall of Holmes",
+    "firstNight": [
+      "dusk",
+      "wraith",
+      "philosopher",
+      "minioninfo",
+      "demoninfo",
+      "sentry_shadowslam",
+      "lleech",
+      "cerenovus",
+      "thanatologist_shadowslam",
+      "clockmaker",
+      "seamstress",
+      "steward",
+      "noble",
+      "balloonist",
+      "dawn"
+    ],
+    "otherNight": [
+      "dusk",
+      "wraith",
+      "philosopher",
+      "sentry_shadowslam",
+      "cerenovus",
+      "nodashii",
+      "vortox",
+      "vigormortis",
+      "lleech",
+      "barber",
+      "thanatologist_shadowslam",
+      "oracle",
+      "seamstress",
+      "balloonist",
+      "dawn"
+    ]
+  },
+  "steward",
+  "noble",
+  "clockmaker",
+  {
+    "id": "thanatologist_shadowslam",
+    "name": "Thanatologist",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/thanatologist.png"
+    ],
+    "team": "townsfolk",
+    "ability": "You start knowing a player. Each night*, if they died today or tonight, learn their character type and know a new player.",
+    "firstNight": 54,
+    "otherNight": 75,
+    "firstNightReminder": "Point to the player marked *KNOW*.",
+    "otherNightReminder": "If the player marked *KNOW* died today or tonight, point to the new player marked *KNOW*.",
+    "reminders": [
+      "Known"
+    ],
+    "special": []
+  },
+  "balloonist",
+  "oracle",
+  "savant",
+  "seamstress",
+  "philosopher",
+  "fisherman",
+  "cannibal",
+  {
+    "id": "census_taker_shadowslam",
+    "name": "Census Taker",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/census_taker.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/evil/census_taker.png"
+    ],
+    "team": "townsfolk",
+    "ability": "If you guess (once) that today is the 1st day no Outsiders live, learn the Demon, but if wrong get false info. [-1 to +1 Outsiders]",
+    "firstNight": 0,
+    "otherNight": 0,
+    "reminders": [
+      "Guess Used"
+    ],
+    "setup": true,
+    "jinxes": [
+      {
+        "id": "marionette",
+        "reason": "If the Marionette thinks that they are the Census Taker, an Outsider might have been added or removed during setup."
+      }
+    ],
+    "special": []
+  },
+  {
+    "id": "tactician_shadowslam",
+    "name": "Tactician",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/tactician.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/evil/tactician.png"
+    ],
+    "team": "townsfolk",
+    "ability": "If the Demon kills you, the Demon's ability becomes \"Each night*, a player might die.\"",
+    "firstNight": 0,
+    "otherNight": 0,
+    "reminders": [
+      "Injured"
+    ],
+    "setup": true,
+    "special": []
+  },
+  "barber",
+  "mutant",
+  "politician",
+  {
+    "id": "geologist_shadowslam",
+    "name": "Geologist",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/geologist.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/evil/geologist.png"
+    ],
+    "team": "outsider",
+    "ability": "All sober & healthy Townsfolk info is either true or false.",
+    "firstNight": 0,
+    "otherNight": 0,
+    "reminders": [
+      "True",
+      "False"
+    ],
+    "jinxes": [
+      {
+        "id": "census_taker_shadowslam",
+        "reason": "If the Census Taker guesses wrong, their information is unaffected by the Geologist."
+      }
+    ],
+    "special": []
+  },
+  "cerenovus",
+  "wraith",
+  {
+    "id": "sentry_shadowslam",
+    "name": "Sentry",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/minion/sentry.png"
+    ],
+    "team": "minion",
+    "ability": "You know the in-play Outsiders. Once per game, at night, choose a player and a not in-play Outsider they become. [-1 to +1 Outsiders]",
+    "firstNight": 29,
+    "otherNight": 22,
+    "firstNightReminder": "Show the character tokens of all in-play Outsiders. The Sentry might choose a player &amp; not in-play Outsider character. Wake the player and show them the *YOU ARE* info token &amp; their new character token.",
+    "otherNightReminder": "The Sentry might choose a player &amp; not in-play Outsider character. Wake the player and show them the *YOU ARE* info token &amp; their new character token.",
+    "reminders": [
+      "No Ability"
+    ],
+    "setup": true,
+    "jinxes": [
+      {
+        "id": "heretic",
+        "reason": "The Sentry cannot start knowing the Heretic, and cannot create one."
+      },
+      {
+        "id": "damsel",
+        "reason": "If a Sentry creates a Damsel, the Storyteller chooses which player it is."
+      },
+      {
+        "id": "politician",
+        "reason": "If the Sentry turns an evil player into the Politician, they can't turn good due to their own ability."
+      }
+    ],
+    "special": []
+  },
+  "mastermind",
+  "nodashii",
+  "vigormortis",
+  "vortox",
+  "lleech",
+  "bootlegger"
+]

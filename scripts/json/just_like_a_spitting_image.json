@@ -1,0 +1,324 @@
+[
+  {
+    "id": "_meta",
+    "author": "ShadowSlam",
+    "name": "Just Like A Spitting Image",
+    "firstNight": [
+      "dusk",
+      "apprentice",
+      "barista",
+      "necronaut_shadowslam",
+      "boffin",
+      "rogue_shadowslam",
+      "despot_shadowslam",
+      "minioninfo",
+      "lunatic",
+      "summoner",
+      "ahimsaka_shadowslam",
+      "demoninfo",
+      "sailor",
+      "godfather",
+      "dawn"
+    ],
+    "otherNight": [
+      "dusk",
+      "barista",
+      "bonecollector",
+      "tailor_shadowslam",
+      "ahimsaka_shadowslam",
+      "rogue_shadowslam",
+      "sailor",
+      "innkeeper",
+      "landlord_shadowslam",
+      "gambler",
+      "summoner",
+      "lunatic",
+      "shabaloth",
+      "po",
+      "necronaut_shadowslam",
+      "byguyle_shadowslam",
+      "brother_callow_shadowslam",
+      "godfather",
+      "gossip",
+      "dawn"
+    ]
+  },
+  "sailor",
+  {
+    "id": "ahimsaka_shadowslam",
+    "name": "Ahimsaka",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/ahimsaka.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/evil/ahimsaka.png"
+    ],
+    "team": "townsfolk",
+    "ability": "Each night, you may choose 2 players (not yourself): while you have chosen equal good & evil players, they are safe from evil.",
+    "firstNight": 22,
+    "otherNight": 10,
+    "firstNightReminder": "The Ahimsaka might choose 2 players. If they do, mark them as *CHOSEN*. ",
+    "otherNightReminder": "The Ahimsaka might choose 2 players. If they do, mark them as *CHOSEN*. ",
+    "reminders": [
+      "Chosen",
+      "Chosen",
+      "Chosen",
+      "Chosen",
+      "Chosen",
+      "Chosen",
+      "Chosen",
+      "Chosen"
+    ]
+  },
+  {
+    "id": "landlord_shadowslam",
+    "name": "Landlord",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/landlord.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/evil/landlord.png"
+    ],
+    "team": "townsfolk",
+    "ability": "Each night, choose a player (not yourself): when they die at night, a living Outsider becomes a Townsfolk. [+0 or +1 Outsider]",
+    "firstNight": 0,
+    "otherNight": 20,
+    "otherNightReminder": "The Landlord chooses a player. If a chosen player dies later tonight, wake a living Outsider and show the *YOU ARE* info token &amp; a Townsfolk character token.",
+    "reminders": [
+      "Chosen",
+      "Chosen",
+      "Chosen",
+      "Chosen"
+    ],
+    "setup": true,
+    "special": []
+  },
+  {
+    "id": "rogue_shadowslam",
+    "name": "Rogue",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/rogue.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/evil/rogue.png"
+    ],
+    "team": "townsfolk",
+    "ability": "Each night, you learn & gain an in-play ability until dusk. Players with an ability you have are drunk (if you choose them, you are instead).",
+    "firstNight": 15,
+    "otherNight": 11,
+    "firstNightReminder": "Show the Rogue a character token. Until dusk, treat them as though they have the ability. Mark the other players with that ability as *DRUNK*",
+    "otherNightReminder": "Show the Rogue a character token. Until dusk, treat them as though they have the ability. Mark the other players with that ability as *DRUNK*",
+    "reminders": [
+      "Stolen",
+      "Drunk",
+      "Drunk"
+    ]
+  },
+  "innkeeper",
+  "gambler",
+  "gossip",
+  {
+    "id": "artificer_shadowslam",
+    "name": "Artificer",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/artificer.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/evil/artificer.png"
+    ],
+    "team": "townsfolk",
+    "ability": "Once per game, privately tell the Storyteller a modification to a Minion & Demon ability each, if they agree.",
+    "firstNight": 0,
+    "otherNight": 0,
+    "reminders": [
+      "No Ability",
+      "Modified",
+      "Modified"
+    ],
+    "special": []
+  },
+  {
+    "id": "despot_shadowslam",
+    "name": "Despot",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/despot.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/evil/despot.png"
+    ],
+    "team": "townsfolk",
+    "ability": "You are a Demon (except for Minion & Demon info). On the final day, if another Demon lives, you are drunk.",
+    "firstNight": 15,
+    "otherNight": 0,
+    "firstNightReminder": "Wake the Despot and inform them which Demon they are. Swap their character token for that Demon and mark them with *IS THE DESPOT*.",
+    "reminders": [
+      "is the Despot",
+      "Drunk"
+    ],
+    "special": []
+  },
+  "tealady",
+  {
+    "id": "paladin_shadowslam",
+    "name": "Paladin",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/paladin.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/evil/paladin.png"
+    ],
+    "team": "townsfolk",
+    "ability": "Evil players you nominate are drunk until next dusk, unless they are already drunk or poisoned.",
+    "firstNight": 0,
+    "otherNight": 0,
+    "reminders": [
+      "Drunk",
+      "Drunk"
+    ],
+    "setup": true,
+    "special": []
+  },
+  {
+    "id": "reptile_rouser_shadowslam",
+    "name": "Reptile Rouser",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/reptile_rouser.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/evil/reptile_rouser.png"
+    ],
+    "team": "townsfolk",
+    "ability": "Minions are drunk & cannot affect setup, even if you are dead. [+1 Minion]",
+    "firstNight": 0,
+    "otherNight": 0,
+    "reminders": [
+      "Drunk",
+      "Drunk",
+      "Drunk",
+      "Drunk"
+    ],
+    "setup": true,
+    "special": []
+  },
+  "pacifist",
+  "goon",
+  "lunatic",
+  {
+    "id": "king_of_storms_shadowslam",
+    "name": "King of Storms",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/king_of_storms.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/evil/king_of_storms.png"
+    ],
+    "team": "outsider",
+    "ability": "When a player dies, their good neighbour might die & so forth.",
+    "firstNight": 0,
+    "otherNight": 0,
+    "reminders": [
+      "Dead",
+      "Dead",
+      "Dead"
+    ],
+    "special": []
+  },
+  {
+    "id": "tailor_shadowslam",
+    "name": "Tailor",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/tailor.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/evil/tailor.png"
+    ],
+    "team": "outsider",
+    "ability": "The first time an evil player dies by execution, they live & become a not in-play character of their type, even if you are dead.",
+    "firstNight": 0,
+    "otherNight": 10,
+    "otherNightReminder": "If an evil player changed character from the Tailor today, show them the *YOU ARE* token, then their new character token.",
+    "reminders": [
+      "No Ability"
+    ],
+    "jinxes": [
+      {
+        "id": "summoner",
+        "reason": "If the living Summoner is removed from play, the Storyteller has the Summoner ability."
+      }
+    ],
+    "special": []
+  },
+  "godfather",
+  {
+    "id": "brother_callow_shadowslam",
+    "name": "Blood &amp; Bone",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/minion/brother_callow.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/minion/good/brother_callow.png"
+    ],
+    "team": "minion",
+    "ability": "Each night*, you may choose players: they die. For each time you chose, a good player might not die.",
+    "firstNight": 0,
+    "otherNight": 56,
+    "otherNightReminder": "Brother Callow chooses some amount of players. For each player chosen, place a *LIVES* reminder in the centre of the left side of the Grimoire, as a reminder to yourself to place it later. When a good player dies, you may mark them with *LIVES* instead of them dying. Then, mark each player chosen as *DEAD*.",
+    "reminders": [
+      "Dead",
+      "Dead",
+      "Dead",
+      "Lives",
+      "Lives",
+      "Lives"
+    ],
+    "setup": true
+  },
+  "summoner",
+  "boffin",
+  "shabaloth",
+  "po",
+  {
+    "id": "byguyle_shadowslam",
+    "name": "Byguyle",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/demon/byguyle.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/demon/good/byguyle.png"
+    ],
+    "team": "demon",
+    "ability": "Each night*, choose a player: they die. If you were nominated today, another player of your nominator's type dies. [Even Townsfolk]",
+    "firstNight": 0,
+    "otherNight": 55,
+    "otherNightReminder": "The Byguyle chooses a player. If a player is marked as *NOMINATOR*, kill a different player of that player's character type.",
+    "reminders": [
+      "Dead",
+      "Dead",
+      "Nominator"
+    ],
+    "setup": true,
+    "special": []
+  },
+  {
+    "id": "necronaut_shadowslam",
+    "name": "Necronaut",
+    "image": [
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/demon/necronaut.png",
+      "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/demon/good/necronaut.png"
+    ],
+    "team": "demon",
+    "ability": "Each night*, choose a player: they die. A good player (you know who) has a Minion ability you wake for. Killed Minions grant another.",
+    "firstNight": 12,
+    "otherNight": 49,
+    "firstNightReminder": "Mark a good player with the *Phylactery* reminder. Wake the Necronaut and point to the player, then show them the Minion token they have.",
+    "otherNightReminder": "The Necronaut points to a player. If they killed a Minion, decide which Minion ability the *Phylactery* gained and show them the token.",
+    "reminders": [
+      "Dead",
+      "Phylactery",
+      "1",
+      "2",
+      "3"
+    ],
+    "setup": true,
+    "jinxes": [
+      {
+        "id": "scarletwoman",
+        "reason": "If the Necronaut's good player has the Scarlet Woman ability & it would cause them to become the Demon, a living Minion does instead."
+      },
+      {
+        "id": "marionette",
+        "reason": "If the Necronaut's good player has the Marionette ability, they think they have their ability but do not."
+      },
+      {
+        "id": "summoner",
+        "reason": "The Necronaut may only choose evil players for the Summoner ability. If they create a second living Demon, deaths tonight are arbitrary."
+      }
+    ],
+    "special": []
+  },
+  "barista",
+  "bonecollector",
+  "judge",
+  "apprentice",
+  "bishop",
+  "bootlegger",
+  "spiritofivory"
+]
