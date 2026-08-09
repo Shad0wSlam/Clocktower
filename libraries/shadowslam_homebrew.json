@@ -55,7 +55,7 @@
             "Know"
         ],
         "setup": true,
-        "ability": "You start knowing 2 players, at least 1 of which is good. Each night*, if any are dead, know new players.",
+        "ability": "You start knowing 2 players, at least 1 of which is good. Each night*, if either are dead, know new players.",
         "jinxes": [],
         "special": [],
         "image": [
@@ -132,11 +132,11 @@
         "id": "ahimsaka_shadowslam",
         "name": "Ahimsaka",
         "team": "townsfolk",
-        "ability": "Each night, you may choose 2 players (not yourself): while you have chosen equal good & evil players, they are safe from evil.",
+        "ability": "Each night, you may choose 2 players (not yourself): while equal good & evil players are chosen, they are safe from evil.",
         "firstNight": 22,
-        "firstNightReminder": "The Ahimsaka might choose 2 players. If they do, mark them as *CHOSEN*. ",
+        "firstNightReminder": "The Ahimsaka might choose 2 players. If they do, mark them as *CHOSEN*.",
         "otherNight": 10,
-        "otherNightReminder": "The Ahimsaka might choose 2 players. If they do, mark them as *CHOSEN*. ",
+        "otherNightReminder": "The Ahimsaka might choose 2 players. If they do, mark them as *CHOSEN*.",
         "reminders": [
             "Chosen",
             "Chosen",
@@ -264,6 +264,25 @@
         "special": [],
         "image": [
             "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/wandering.png"
+        ]
+    },
+    {
+        "id": "mystagogue_shadowslam",
+        "name": "Mystagogue",
+        "team": "townsfolk",
+        "firstNight": 0,
+        "otherNight": 91,
+        "setup": false,
+        "reminders": [
+            "Been the Demon",
+            "Been the Demon"
+        ],
+        "ability": "Each night*, learn 2 players. If the Demon player has changed since dawn, each has been the Demon since dawn.",
+        "jinxes": [],
+        "special": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/mystagogue.png",
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/townsfolk/evil/mystagogue.png"
         ]
     },
     {
@@ -779,7 +798,7 @@
             "No Ability"
         ],
         "setup": false,
-        "ability": "The first time an evil player dies by execution, they live & become a not in-play character of their type, even if you are dead.",
+        "ability": "The first time an evil player dies by execution, they live & become a not in-play character of their type, even if you died (not on the final day).",
         "jinxes": [
             {
                 "id": "summoner",
@@ -852,6 +871,36 @@
         ]
     },
     {
+        "id": "emissary_shadowslam",
+        "name": "Emissary",
+        "team": "outsider",
+        "firstNight": 0,
+        "otherNight": 0,
+        "reminders": [
+            "Has Ability",
+            "Has Ability",
+            "Has Ability",
+            "Has Ability",
+            "Has Ability",
+            "Has Ability",
+            "Has Ability"
+        ],
+        "setup": false,
+        "ability": "The Storyteller has a Minion ability. Each night, you may choose a Townsfolk: gain that ability & they gain another Minion.",
+        "not_ability": "Each night, you may choose a Townsfolk: gain that ability. The Storyteller has 1 more Minion ability than you have Townsfolk.",
+        "jinxes": [
+            {
+                "id": "phantasm_shadowslam",
+                "reason": "If the Storyteller would gain the Phantasm ability, a Minion gains it, and learns this."
+            }
+        ],
+        "special": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/emissary.png",
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/evil/emissary.png"
+        ]
+    },
+    {
         "id": "paranoiac_shadowslam",
         "name": "Paranoiac",
         "team": "outsider",
@@ -873,6 +922,26 @@
             "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/evil/paranoiac.png"
         ],
         "flavour": "In case I don't see ya, good afternoon, good evening, and good night."
+    },
+    {
+        "id": "madcap_shadowslam",
+        "name": "Madcap",
+        "team": "outsider",
+        "firstNight": 48,
+        "firstNightReminder": "Wake the Madcap and point in a direction.",
+        "otherNight": 0,
+        "reminders": [
+            "Clockwise",
+            "Counterclockwise"
+        ],
+        "setup": false,
+        "ability": "You start knowing a direction. When players are learned due to an ability, 1 learned player might be 1 step further in that direction instead.",
+        "jinxes": [],
+        "special": [],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/madcap.png",
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/evil/madcap.png"
+        ]
     },
     {
         "id": "dissovant_shadowslam",
@@ -1045,6 +1114,36 @@
         "image": [
             "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/minion/minotaur.png",
             "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/minion/good/minotaur.png"
+        ]
+    },
+    {
+        "id": "phantasm_shadowslam",
+        "name": "Phantasm",
+        "team": "minion",
+        "firstNight": 0,
+        "otherNight": 0,
+        "reminders": [
+            "the Demon"
+        ],
+        "setup": false,
+        "ability": "The Demon acts while dead & the player you've most recently nominated is \"the Demon\" instead, even if you die.",
+        "jinxes": [
+            {
+                "id": "engineer",
+                "reason": "The Engineer ability is not affected by the Phantasm."
+            },
+            {
+                "id": "hatter",
+                "reason": "The Hatter ability is not affected by the Phantasm."
+            },
+            {
+                "id": "plaguedoctor",
+                "reason": "If the Storyteller would gain the Phantasm ability, a Minion gains it, and learns this."
+            }
+        ],
+        "image": [
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/minion/phantasm.png",
+            "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/minion/good/phantasm.png"
         ]
     },
     {
@@ -1251,7 +1350,7 @@
             "Taken the Krown"
         ],
         "setup": true,
-        "ability": "Each night*, choose a player: they die. 1st player to signal at dusk* takes the evil Krown (Minions know). [The Storyteller is Krown]",
+        "ability": "Each night*, a player might die. At dusk*, the 1st player to signal takes the evil Krown (Minions know). [The Storyteller is Krown]",
         "jinxes": [],
         "special": [],
         "image": [

@@ -215,7 +215,7 @@
       "https://raw.githubusercontent.com/Shad0wSlam/Clocktower/main/tokens/homebrew/outsider/evil/tailor.png"
     ],
     "team": "outsider",
-    "ability": "The first time an evil player dies by execution, they live & become a not in-play character of their type, even if you are dead.",
+    "ability": "The first time an evil player dies by execution, they live & become a not in-play character of their type, even if you died (not on the final day).",
     "firstNight": 0,
     "otherNight": 10,
     "otherNightReminder": "If an evil player changed character from the Tailor today, show them the *YOU ARE* token, then their new character token.",
